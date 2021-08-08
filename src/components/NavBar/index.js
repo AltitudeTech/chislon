@@ -10,14 +10,18 @@ const Menus = [
     label: "About",
     href: "/about",
     submenus: [
-      { label: "Vision & Mission", href: "/vision-and-mission" },
-      { label: "Leadership Team", href: "/leadership-team" },
+      { label: "Vision & Mission", href: "/about/vision-and-mission" },
+      { label: "Leadership Team", href: "/about/leadership-team" },
       {
         label: "Voluntary Code of Conduct",
-        href: "/voluntary-code-of-conduct",
+        href: "/about/voluntary-code-of-conduct",
       },
-      { label: "Locations", href: "/locations" },
-      { label: "Join Our Team", href: "/join-network" },
+      {
+        label: "Clients",
+        href: "/about/clients",
+      },
+      { label: "Locations", href: "/about/locations" },
+      { label: "Join Our Team", href: "/about/join-network" },
     ],
   },
   { label: "Citizenship By Investment", href: "/citizenship-by-investment" },
@@ -59,13 +63,16 @@ const Index = () => {
         />
       </NavbarBrand>
       <SocialMedia />
-      <Menu right isOpen={isOpen}>
+      <Menu right isOpen={isOpen} noOverlay={false}>
         {Menus.map(({ href, label, submenus }, index) => {
           return (
             <NavItem key={index}>
-              <Link href={href} passHref>
+              <Link href={href} passHref onClick={() => setIsOpen(false)}>
                 <NavLink onClick={() => setIsOpen(false)}>
-                  {label} {submenus && <Submenus submenus={submenus} />}
+                  {label}{" "}
+                  {submenus && (
+                    <Submenus submenus={submenus} setIsOpen={setIsOpen} />
+                  )}
                 </NavLink>
               </Link>
             </NavItem>
@@ -78,11 +85,16 @@ const Index = () => {
 
 export default Index;
 
-const Submenus = ({ submenus = [] }) => {
+const Submenus = ({ submenus = [], setIsOpen }) => {
   return (
     <div className="dropdown">
       {submenus.map((submenu, index) => (
-        <Link href={submenu.href} passHref key={index}>
+        <Link
+          href={submenu.href}
+          passHref
+          key={index}
+          onClick={() => setIsOpen(false)}
+        >
           <NavLink>{submenu.label}</NavLink>
         </Link>
       ))}
