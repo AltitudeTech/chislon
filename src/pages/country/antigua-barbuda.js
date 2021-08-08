@@ -8,7 +8,7 @@ export default () => {
       <CountryJumbo title="ANTIGUA AND BARBUDA" country="barbuda" />
       <CountryBody title="ANTIGUA AND BARBUDA" />
       <Container>
-        <h1>ANTIGUA AND BARBUDA</h1>
+        {/* <h1>ANTIGUA AND BARBUDA</h1> */}
         {/* <Row className="my-5">
           <Col sm={12} md={8}>
             <p className="text-center">

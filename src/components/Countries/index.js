@@ -43,9 +43,9 @@ export const PopularDestination = () => {
 const Countries = () => {
   return (
     <Fragment>
-      <CountryJumbo title="GLOBAL CITIZEN PROGRAMS" country="usa" />
+      <CountryJumbo title="COUNTRIES" />
       <Container>
-        <Row className="row">
+        <Row className="row my-5">
           <div className="country_wrapper">
             {flags.map((flag, index) => {
               return (

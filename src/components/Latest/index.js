@@ -9,13 +9,13 @@ const Index = () => {
     <SectionStyle>
       <Container className="my-5">
         <Row>
-          <Col md={4}>
+          {/* <Col md={4}>
             <SearchForm />
-          </Col>
-          <Col md={8}>
+          </Col> */}
+          <Col md={12}>
             <div className="newsWrapper">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map(news => {
-                return <News />;
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((_, i) => {
+                return <News key={i} />;
               })}
             </div>
           </Col>
@@ -70,10 +70,10 @@ const News = () => {
   return (
     <Fragment>
       <div className="news">
-        <div className="title">
+        <div className="title p-3">
           <h6>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h6>
         </div>
-        <div className="content">
+        <div className="content p-3">
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
             ducimus cum adipisci fuga dignissimos doloribus quia laudantium et
@@ -81,22 +81,22 @@ const News = () => {
             eum modi explicabo.
           </p>
         </div>
-        <div className="option">
+        <div className="option p-3">
           <span className="date">{moment().format("Do MMMM YYYY")}</span>
-          <Link href="">
+          {/* <Link href="">
             <a className="readMore">READ MORE</a>
-          </Link>
+          </Link> */}
         </div>
       </div>
       <style jsx>
         {`
           .news {
-            width: 280px;
+            max-width: 300px;
+            width: 100%;
             position: relative;
-            margin: 10px;
+            margin: 20px auto;
           }
           .news .title {
-            padding: 10px;
             background-color: #e5e5e5;
           }
           .news .title h6 {
@@ -104,12 +104,11 @@ const News = () => {
             text-transform: uppercase;
           }
           .news .content {
-            padding: 10px;
             background-color: #c4c4c4;
           }
           .news .option {
             background-color: #c4c4c4;
-            padding: 10px;
+
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;

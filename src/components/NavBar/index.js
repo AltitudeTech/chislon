@@ -31,7 +31,8 @@ const Menus = [
   { label: "Study Abroad", href: "/study-abroad" },
   { label: "Healthcare Abroad", href: "/healthcare-abroad" },
   { label: "International Partners", href: "/international-partner" },
-  // { label: "Countries", href: "/country" },
+  { label: "Countries", href: "/country" },
+  { label: "Industry Insight", href: "/industry-insight" },
   // { label: "About", href: "/about" },
   // { label: "Services", href: "/services" },
   // { label: "Partners", href: "/partners" },
@@ -69,7 +70,7 @@ const Index = () => {
             <NavItem key={index}>
               <Link href={href} passHref onClick={() => setIsOpen(false)}>
                 <NavLink onClick={() => setIsOpen(false)}>
-                  {label}{" "}
+                  {submenus && <Arrow />} {label}{" "}
                   {submenus && (
                     <Submenus submenus={submenus} setIsOpen={setIsOpen} />
                   )}
@@ -89,13 +90,10 @@ const Submenus = ({ submenus = [], setIsOpen }) => {
   return (
     <div className="dropdown">
       {submenus.map((submenu, index) => (
-        <Link
-          href={submenu.href}
-          passHref
-          key={index}
-          onClick={() => setIsOpen(false)}
-        >
-          <NavLink>{submenu.label}</NavLink>
+        <Link href={submenu.href} passHref key={index}>
+          <a className="nav-link" onClick={() => setIsOpen(false)}>
+            {submenu.label}
+          </a>
         </Link>
       ))}
     </div>
@@ -109,6 +107,13 @@ const SocialMedia = () => {
         <NavLink>Whatsapp</NavLink>
       </NavItem>
     </div>
+  );
+};
+const Arrow = () => {
+  return (
+    <>
+      <div className="arrow" />
+    </>
   );
 };
 

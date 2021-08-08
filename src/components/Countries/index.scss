@@ -25,21 +25,22 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  //   padding: 0 2rem;
+  // padding: 0 2rem;
   //   margin: auto;
   .country_flag {
     display: flex;
     justify-content: center;
     text-decoration: none;
     align-items: center;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     color: #fff;
     text-transform: uppercase;
-    margin-right: 2rem;
     border: 2px solid #01384b;
     background-color: #01384bd5;
-    margin-bottom: 2rem;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
   }
 }
 

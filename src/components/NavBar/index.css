@@ -127,3 +127,16 @@
   height: 240px;
   overflow: visible;
 }
+
+.arrow {
+  border-left: 8px solid #d9a900;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  display: inline-block;
+  transform: rotate(0);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
+.nav-link:hover .arrow {
+  transform: rotate(90deg);
+}
