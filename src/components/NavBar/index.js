@@ -3,6 +3,7 @@ import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
 import "./index.css";
 import { NavbarBrand, NavItem, NavLink } from "reactstrap";
+import { withTheme } from "styled-components";
 
 const Menus = [
   { label: "Home", href: "/" },
@@ -40,23 +41,14 @@ const Menus = [
   { label: "Contact Us", href: "/contact" },
 ];
 
-const Index = () => {
+const Index = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <nav
       className="navbar navbar-default"
-      style={{ backgroundColor: "#002531" }}
+      style={{ backgroundColor: props.theme.colors.main }}
     >
       <NavbarBrand href="/">
-        {/* <img
-          src="/static/images/logos/cbw_gms_bbg.png"
-          className="img-fluid"
-          style={{ maxWidth: "70px" }}
-        /> */}
         <img
           src="/static/images/whitelogo.png"
           className="img-fluid"
@@ -84,7 +76,7 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default withTheme(Index);
 
 const Submenus = ({ submenus = [], setIsOpen }) => {
   return (
