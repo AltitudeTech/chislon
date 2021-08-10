@@ -16,6 +16,7 @@ const theme = {
     white: "#FFFFFF",
     yellow: "#FFDA42",
     main: "#01172A",
+    // main: "#01172A",
     mainLight: "#01172a",
     main_: "#002531",
   },

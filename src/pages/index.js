@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Carousel from "../components/Carousel";
-import Study from "../components/Home/Study";
+import WhyChooseUs from "../components/Home/WhyChooseUs";
 import CategoryRow from "../components/Home/CategoryRow";
 import ServiceOptions from "../components/Home/ServiceOptions";
 import DoubleColumn from "../components/Home/DoubleColumn";
@@ -11,7 +11,7 @@ const Index = () => {
     <Fragment>
       <Carousel />
       <DoubleColumn />
-      {/* <Study /> */}
+      <WhyChooseUs />
       <ServiceOptions />
       {/* <CategoryRow /> */}
       <PopularDestination />
