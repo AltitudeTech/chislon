@@ -6,7 +6,7 @@ import Partners from "../../components/About/Partners";
 import Careers from "../../components/About/Careers";
 import Study from "../../components/About/Study";
 
-const Index = () => {
+const About = () => {
   return (
     <Fragment>
       <AboutJumbotron />
@@ -18,4 +18,4 @@ const Index = () => {
     </Fragment>
   );
 };
-export default Index;
+export default About;
