@@ -119,12 +119,12 @@ export const SocialMedia = () => {
           style={{ width: "30px", height: "30px", margin: "5px" }}
         />
 
-        <SocialIcon
+        {/* <SocialIcon
           network="whatsapp"
           className="icons"
           url=""
           style={{ width: "30px", height: "30px", margin: "5px" }}
-        />
+        /> */}
 
         <SocialIcon
           network="linkedin"
