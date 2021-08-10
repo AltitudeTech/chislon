@@ -7,6 +7,11 @@ const ButtonStyle = styled.button`
   font-size: 0.8rem;
   background: ${(props) => props.theme.colors.main};
   border-radius: 5px;
+  &.yellow {
+    background: ${(props) => props.theme.colors.yellow};
+    color: ${(props) => props.theme.colors.main};
+    font-weight: 600;
+  }
 `;
 
 export default ButtonStyle;
