@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Col, Container, Row } from "reactstrap";
-import { CountryJumbo } from "../components/Countries/index";
+import { CountryJumbo } from "../components/Countries";
 import ContactHere from "../components/Home/contactHere";
 import DoubleColumn from "../components/Home/DoubleColumn";
 
