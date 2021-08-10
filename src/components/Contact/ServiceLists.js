@@ -281,11 +281,7 @@ const Study = () => {
 
                 <Col md={12}>
                   <div className="form-group text-center">
-                    <ButtonStyle
-                      type="submit"
-                      className="btn submitButton"
-                      disabled={btnState}
-                    >
+                    <ButtonStyle type="submit" disabled={btnState}>
                       Send Message {btnState && <Loading />}
                     </ButtonStyle>
                   </div>

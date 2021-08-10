@@ -1,29 +1,29 @@
 import React from "react";
 import CookieConsent, { Cookies } from "react-cookie-consent";
+import { withTheme } from "styled-components";
 
-const MyCookieConsent = () => {
+const MyCookieConsent = (props) => {
   return (
     <CookieConsent
       location="bottom"
       buttonText="ACCEPT COOKIES"
       cookieName="chislon"
       contentStyle={{
-        color: "#fff",
+        color: props.theme.colors.yellow,
         margin: 0,
         paddingLeft: "10px",
       }}
       style={{
-        background: "#242424",
+        background: props.theme.colors.main,
         zIndex: 99999999999,
-        color: "#fff",
         padding: 0,
         margin: 0,
       }}
       buttonStyle={{
-        color: "#242424",
+        color: props.theme.colors.main,
         fontWeight: 700,
         fontSize: "16px",
-        background: "#ffd42d",
+        background: props.theme.colors.yellow,
         border: "0",
         borderRadius: "0px",
         boxShadow: "none",
@@ -42,4 +42,4 @@ const MyCookieConsent = () => {
   );
 };
 
-export default MyCookieConsent;
+export default withTheme(MyCookieConsent);

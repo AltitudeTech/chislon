@@ -1,8 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import Ticker from "react-ticker";
+import { withTheme } from "styled-components";
 
-export default function NewsBar() {
+function NewsBar(props) {
   const [news, setNews] = useState([]);
   const getNews = async () => {
     try {
@@ -50,7 +51,7 @@ export default function NewsBar() {
           border-right: 2px solid gray;
           padding-right: 10px;
           flex-shrink: 0;
-          color: #d9a900;
+          color: ${props.theme.colors.yellow};
           text-transform: uppercase;
           font-weight: 600;
         }
@@ -72,6 +73,8 @@ export default function NewsBar() {
     </Fragment>
   );
 }
+
+export default withTheme(NewsBar);
 
 const New = ({ singleNews }) => {
   console.log({ singleNews });

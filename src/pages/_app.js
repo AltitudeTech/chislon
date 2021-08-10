@@ -16,6 +16,7 @@ const theme = {
     white: "#FFFFFF",
     yellow: "#FFDA42",
     main: "#01172A",
+    mainLight: "#01172a",
     main_: "#002531",
   },
 };
@@ -53,7 +54,7 @@ html{
     color : ${(props) => props.theme.colors.black};
   }
   p{
-    font-family: "Georgia Regular";
+    *font-family: "Georgia Regular";
   }
   .bm-menu {
     // background: #002531; 

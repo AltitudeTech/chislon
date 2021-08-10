@@ -3,6 +3,7 @@ import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
 import "./index.css";
 import { NavbarBrand, NavItem, NavLink } from "reactstrap";
+import { SocialIcon } from "react-social-icons";
 import { withTheme } from "styled-components";
 
 const Menus = [
@@ -52,26 +53,34 @@ const Index = (props) => {
         <img
           src="/static/images/whitelogo.png"
           className="img-fluid"
-          style={{ maxWidth: "250px" }}
+          style={{ maxWidth: "200px" }}
         />
       </NavbarBrand>
       <SocialMedia />
-      <Menu right isOpen={isOpen} noOverlay={false}>
-        {Menus.map(({ href, label, submenus }, index) => {
-          return (
-            <NavItem key={index}>
-              <Link href={href} passHref onClick={() => setIsOpen(false)}>
-                <NavLink onClick={() => setIsOpen(false)}>
-                  {submenus && <Arrow />} {label}{" "}
-                  {submenus && (
-                    <Submenus submenus={submenus} setIsOpen={setIsOpen} />
-                  )}
-                </NavLink>
-              </Link>
-            </NavItem>
-          );
-        })}
-      </Menu>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <ContactPhone />
+        <Menu right isOpen={isOpen} noOverlay={false}>
+          {Menus.map(({ href, label, submenus }, index) => {
+            return (
+              <NavItem key={index}>
+                <Link href={href} passHref onClick={() => setIsOpen(false)}>
+                  <NavLink onClick={() => setIsOpen(false)}>
+                    {submenus && <Arrow />} {label}{" "}
+                    {submenus && (
+                      <Submenus submenus={submenus} setIsOpen={setIsOpen} />
+                    )}
+                  </NavLink>
+                </Link>
+              </NavItem>
+            );
+          })}
+        </Menu>
+      </div>
     </nav>
   );
 };
@@ -92,15 +101,94 @@ const Submenus = ({ submenus = [], setIsOpen }) => {
   );
 };
 
-const SocialMedia = () => {
+export const SocialMedia = () => {
   return (
-    <div>
-      <NavItem>
-        <NavLink>Whatsapp</NavLink>
-      </NavItem>
-    </div>
+    <>
+      <div className="socialIcons">
+        <SocialIcon
+          network="twitter"
+          className="icons"
+          url="//twitter.com/BroadwayChislon"
+          style={{ width: "30px", height: "30px", margin: "5px" }}
+        />
+
+        <SocialIcon
+          network="facebook"
+          className="icons"
+          url="//www.facebook.com/Chislon-broadway-417594015502295/?modal=admin_todo_tour"
+          style={{ width: "30px", height: "30px", margin: "5px" }}
+        />
+
+        <SocialIcon
+          network="whatsapp"
+          className="icons"
+          url=""
+          style={{ width: "30px", height: "30px", margin: "5px" }}
+        />
+
+        <SocialIcon
+          network="linkedin"
+          className="icons"
+          url="//www.linkedin.com/company/chislon-broadway/?viewAsMember=true"
+          style={{ width: "30px", height: "30px", margin: "5px" }}
+        />
+      </div>
+      <style jsx>{`
+        .socialIcons {
+          display: flex;
+          list-style: none;
+          align-items: center;
+        }
+        .icons {
+          width: 40px !important;
+          margin: 10px;
+        }
+        @media screen and (max-width: 540px) {
+          .socialIcons {
+            display: none;
+          }
+        }
+      `}</style>
+    </>
   );
 };
+
+const ContactPhone = withTheme((props) => {
+  return (
+    <>
+      <div className="contactPhone">
+        <Link href="tel:+2348012222222">
+          <a className="phoneBox">+234 801 2222 222</a>
+        </Link>
+        <Link href="/contact">
+          <a className="contactBox">CONTACT US</a>
+        </Link>
+      </div>
+      <style jsx>{`
+        .contactPhone {
+          display: flex;
+          margin-right: 10px;
+          font-weight: 600;
+        }
+        .contactPhone .phoneBox,
+        .contactPhone .contactBox {
+          padding: 5px 20px;
+          text-decoration: none;
+        }
+        .contactPhone .phoneBox {
+          border: 2px solid ${props.theme.colors.yellow};
+          color: ${props.theme.colors.yellow};
+        }
+        .contactPhone .contactBox {
+          border: 2px solid ${props.theme.colors.yellow};
+          background-color: ${props.theme.colors.yellow};
+          color: ${props.theme.colors.main};
+          text-transfrom: uppercase;
+        }
+      `}</style>
+    </>
+  );
+});
 const Arrow = () => {
   return (
     <>
@@ -108,11 +196,3 @@ const Arrow = () => {
     </>
   );
 };
-
-const handles = [
-  { name: "Whatsapp" },
-  { name: "Facebook" },
-  { name: "Twitter" },
-  { name: "LinkedIn" },
-  { name: "Email" },
-];

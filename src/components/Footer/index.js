@@ -5,6 +5,7 @@ import { flags } from "../Countries/index";
 
 import "./index.scss";
 import { DownloadBrochure } from "../About/Download";
+import { SocialMedia } from "../NavBar";
 
 const APP_DOMAIN = "chislonbroadway.com";
 
@@ -25,7 +26,6 @@ const Index = () => {
               src="/static/images/global_migation_services.jpg"
               className="img-fluid mb-5"
             />
-            {/* <p className="heading">The Gateway To Global Citizenship</p> */}
             <Link href="/international-partner">
               <a className="become">
                 <h6>BECOME AN INTERNATIONAL PARTNER</h6>
@@ -98,6 +98,24 @@ const Index = () => {
                 </li>
               </ul>
             </div>
+            <div
+              className=""
+              style={{ marginTop: "30px", marginRight: "14px" }}
+            >
+              <h6>LINKS</h6>
+              <ul>
+                <li>
+                  <Link href="/events">
+                    <a>Event</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/social-responsibility">
+                    <a>Social Responsibility</a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
           {/* <div className="col-md-2 footer_links">
             <h6>PROGRAMS</h6>
@@ -124,48 +142,7 @@ const Index = () => {
             <span>+234 801 2222 222</span>
             <div className="social_links">
               <h6>FOLLOW US</h6>
-              <ul className="d-flex">
-                <li>
-                  <div>
-                    <a href="" className="top low_opacity">
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="" className="bottom">
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <a href="" className="top low_opacity">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                    <a href="" className="bottom">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <a href="" className="top low_opacity">
-                      <i class="fa fa-youtube" aria-hidden="true"></i>
-                    </a>
-                    <a href="" className="bottom">
-                      <i class="fa fa-youtube" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <a href="" className="top low_opacity">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                    <a href="" className="bottom">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </li>
-              </ul>
+              <SocialMedia />
             </div>
           </div>
           <div className="col-md-4 footer_links">
@@ -197,29 +174,3 @@ const Index = () => {
   );
 };
 export default Index;
-
-export const Socials = () => {
-  return (
-    <ul className="footerSocials">
-      <li>
-        <Link href="//twitter.com/BroadwayChislon">
-          <i className="fa fa-twitter" />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="
-//www.facebook.com/Chislon-broadway-417594015502295/?modal=admin_todo_tour
-"
-        >
-          <i className="fa fa-facebook" />
-        </Link>
-      </li>
-      <li>
-        <Link href="//www.linkedin.com/company/chislon-broadway/?viewAsMember=true">
-          <i className="fa fa-linkedin" />
-        </Link>
-      </li>
-    </ul>
-  );
-};

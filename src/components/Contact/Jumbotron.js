@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
+import { withTheme } from "styled-components";
 import Jumbotron from "../Jumbotron";
 
 const ContactJumbotron = (props) => {
@@ -40,7 +41,7 @@ const ContactJumbotron = (props) => {
           padding: 20px;
         }
         .jumbotronContent h5 {
-          color: #ffda42;
+          color: ${props.theme.colors.yellow};
           font-weight: 300;
           text-transform: uppercase;
         }
@@ -48,7 +49,7 @@ const ContactJumbotron = (props) => {
           color: #fff;
         }
         .title {
-          background-color: #ffda42;
+          background-color: ${props.theme.colors.yellow};
           padding: 3px 10px;
           width: 200px;
           color: #fff;
@@ -65,4 +66,4 @@ const ContactJumbotron = (props) => {
   );
 };
 
-export default ContactJumbotron;
+export default withTheme(ContactJumbotron);

@@ -1,9 +1,11 @@
 import React, { Fragment } from "react";
+import { useRouter } from "next/router";
 import { Container, Row, Col } from "reactstrap";
 import HeadingStyle from "../styles/Heading3";
 import ButtonStyle from "../styles/ButtonStyle";
 
 export default function Download() {
+  const router = useRouter();
   return (
     <Fragment>
       <div className="download">
@@ -71,6 +73,7 @@ export default function Download() {
 }
 
 export const DownloadBrochure = ({ showImage = true, titleColor }) => {
+  const router = useRouter();
   return (
     <>
       <div className="content">
@@ -85,7 +88,14 @@ export const DownloadBrochure = ({ showImage = true, titleColor }) => {
             possimus illo atque impedit cupiditate dicta repudiandae laborum
             deleniti vitae suscipit amet?
           </p>
-          <ButtonStyle>DOWNLOAD NOW</ButtonStyle>
+          <ButtonStyle
+            onClick={() => {
+              router.push("/download-brochure");
+              global.window.scrollTo(0, 0);
+            }}
+          >
+            DOWNLOAD NOW
+          </ButtonStyle>
         </div>
       </div>
       <style jsx>{`

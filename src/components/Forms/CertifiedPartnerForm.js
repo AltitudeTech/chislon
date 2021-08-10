@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { Container, Row, Col } from "reactstrap";
 import { Loading, encode } from "../../util";
 // import Recaptcha from "react-google-invisible-recaptcha";
+import ButtonStyle from "../styles/ButtonStyle";
 import "./CertifiedPartnerForm.scss";
 
 const SweetAlert = dynamic(
@@ -410,13 +411,9 @@ const CertifiedPartnerForm = () => {
                   sitekey="6Le0zPAZAAAAAMZdhOAPB3SJFtAa_EpOlPShHgr4"
                   onResolved={() => console.log("Human detected.")}
                 /> */}
-                <button
-                  type="submit"
-                  className="btn submitButton"
-                  disabled={btnState}
-                >
+                <ButtonStyle type="submit" disabled={btnState}>
                   Send Message {btnState && <Loading />}
-                </button>
+                </ButtonStyle>
               </Col>
             </Row>
           </form>

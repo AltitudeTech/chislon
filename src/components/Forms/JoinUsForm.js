@@ -5,6 +5,7 @@ import { Container, Row, Col } from "reactstrap";
 import { Loading, encode } from "../../util";
 // import Recaptcha from "react-google-invisible-recaptcha";
 import "./CertifiedPartnerForm.scss";
+import ButtonStyle from "../styles/ButtonStyle";
 
 const SweetAlert = dynamic(
   () => {
@@ -323,13 +324,9 @@ const JoinUsForm = () => {
                   sitekey="6Le0zPAZAAAAAMZdhOAPB3SJFtAa_EpOlPShHgr4"
                   onResolved={() => console.log("Human detected.")}
                 /> */}
-                <button
-                  type="submit"
-                  className="btn submitButton"
-                  disabled={btnState}
-                >
+                <ButtonStyle type="submit" disabled={btnState}>
                   Send Message {btnState && <Loading />}
-                </button>
+                </ButtonStyle>
               </Col>
             </Row>
           </form>
