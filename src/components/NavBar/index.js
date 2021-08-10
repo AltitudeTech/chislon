@@ -170,6 +170,11 @@ const ContactPhone = withTheme((props) => {
           margin-right: 10px;
           font-weight: 600;
         }
+        @media screen and (max-width: 770px) {
+          .contactPhone {
+            display: none;
+          }
+        }
         .contactPhone .phoneBox,
         .contactPhone .contactBox {
           padding: 5px 20px;
