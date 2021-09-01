@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "reactstrap";
 import axios from "axios";
+import PhoneInput from "react-phone-number-input";
 import dynamic from "next/dynamic";
 import { Loading, encode } from "../../util";
 import SectionStyle from "../styles/SectionStyle";
 import Heading3Style from "../styles/Heading3";
 import ButtonStyle from "../styles/ButtonStyle";
+import "react-phone-number-input/style.css";
 
 const SweetAlert = dynamic(
   () => {
@@ -32,6 +34,18 @@ const Study = () => {
   const [form, setForm] = useState(initialValues);
   const [alertState, setAlertState] = useState(false);
   const [btnState, setBtnState] = useState(false);
+  const getLocation = async () => {
+    try {
+      const response = await axios(
+        `https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.GEOLOCATION_KEY}`
+      );
+      const data = await response.data;
+      setForm({ ...form, phone: data.calling_code });
+    } catch (error) {
+      console.log(error.message, 2323232);
+      setForm({ ...form, phone: "+234" });
+    }
+  };
   const getCountries = async () => {
     const result = await axios("https://restcountries.eu/rest/v2/all");
     setForm((prevValues) => ({
@@ -41,6 +55,7 @@ const Study = () => {
   };
   useEffect(() => {
     getCountries();
+    getLocation();
   }, []);
 
   const handleSubmit = (event) => {
@@ -142,7 +157,7 @@ const Study = () => {
                 </Col>
                 <Col sm={12} md={6}>
                   <div className="form-group">
-                    <label>Media Organization</label>
+                    <label>Organization</label>
                     <input
                       type="text"
                       name="media"
@@ -230,14 +245,16 @@ const Study = () => {
                 <Col sm={12} md={5}>
                   <div className="form-group">
                     <label>Phone Number</label>
-                    <input
-                      type="phone"
-                      name="phone"
-                      id="phone"
-                      className="form-control"
+                    <PhoneInput
+                      placeholder="Enter phone number"
+                      country="NG"
                       value={form.phone}
-                      onChange={handleChange}
+                      name="phone"
+                      onChange={(phone) =>
+                        setForm((prevValues) => ({ ...prevValues, phone }))
+                      }
                       required
+                      className="form-control"
                     />
                   </div>
                 </Col>
@@ -281,8 +298,12 @@ const Study = () => {
 
                 <Col md={12}>
                   <div className="form-group text-center">
-                    <ButtonStyle type="submit" disabled={btnState}>
-                      Send Message {btnState && <Loading />}
+                    <ButtonStyle
+                      className="gold"
+                      type="submit"
+                      disabled={btnState}
+                    >
+                      SUBMIT {btnState && <Loading />}
                     </ButtonStyle>
                   </div>
                 </Col>
@@ -318,6 +339,10 @@ const Study = () => {
         textarea:focus{
           resize : none ;
           outline:none ;
+        }
+        .PhoneInputInput:focus, .PhoneInputInput {
+          outline : none !important;
+          border : none !important;
         }
 
       `}

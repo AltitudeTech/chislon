@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import { withTheme } from "styled-components";
 import Jumbotron from "../Jumbotron";
 
@@ -8,6 +8,27 @@ const ContactJumbotron = (props) => {
     // <Jumbotron title="CONTACT">
     <Jumbotron>
       <section className="contactJumboBg p-5">
+        {/* <Row>
+          <Col md={{ size: 6 }}>
+            <div className="jumbotronContent">
+              <h5>GET IN TOUCH WITH US</h5>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
+                possimus illo atque impedit cupiditate dicta repudiandae laborum
+                deleniti vitae suscipit amet?
+              </p>
+              <div className="title">Telephone Number</div>
+              <p>+234 801 2222 222</p>
+              <div className="title">Email Address</div>
+              <p>info@chislonbroadway.com</p>
+              <div className="title">Office Address</div>
+              <p>info@chislonbroadway.com</p>
+            </div>
+          </Col>
+        </Row> */}
+      </section>
+      <Container>
         <Row>
           <Col md={{ size: 6 }}>
             <div className="jumbotronContent">
@@ -27,10 +48,11 @@ const ContactJumbotron = (props) => {
             </div>
           </Col>
         </Row>
-      </section>
+      </Container>
       <style jsx>{`
         .contactJumboBg {
-          background-image: url(/static/images/flags/contact.png),
+          min-height: 80vh;
+          background-image: url(/static/images/flags/contactimage.jpg),
             linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
           background-repeat: no-repeat;
           background-size: cover;
@@ -39,6 +61,7 @@ const ContactJumbotron = (props) => {
           max-width: 500px;
           background-color: rgba(0, 0, 0, 0.7);
           padding: 20px;
+          margin-bottom: 40px;
         }
         .jumbotronContent h5 {
           color: ${props.theme.colors.yellow};

@@ -12,6 +12,11 @@ const ButtonStyle = styled.button`
     color: ${(props) => props.theme.colors.main};
     font-weight: 600;
   }
+  &.gold {
+    background: ${(props) => props.theme.colors.main};
+    color: ${(props) => props.theme.colors.yellow};
+    font-weight: 800;
+  }
 `;
 
 export default ButtonStyle;
