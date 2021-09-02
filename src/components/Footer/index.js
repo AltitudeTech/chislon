@@ -127,22 +127,34 @@ const Index = () => {
               ))}
             </ul>
           </div> */}
-          <div className="col-md-3 footer_links">
-            {/* <h6>Contact Us</h6> */}
-            <h6>Countries</h6>
-            {/* <span class="d-block mb-4">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
-              possimus illo atque impedit cupiditate dicta repudiandae laborum
-              deleniti vitae suscipit amet?
-            </span> */}
-            <ul className="mb-4">
-              {flags.map((flag, index) => (
-                <li>
-                  <a href={flag.href}>{flag.name}</a>
-                </li>
-              ))}
-            </ul>
+          <div className="col-md-4 footer_links">
+            <h6 className="text-center">Countries</h6>
+            <div className="d-flex justify-content-between">
+              <div className="mr-2">
+                <h6>Citizenship By Investment</h6>
+                <ul className="mb-4">
+                  {flags
+                    .filter((flag) => flag.category == "citizenship")
+                    .map((flag, index) => (
+                      <li key={index}>
+                        <a href={flag.href}>{flag.name}</a>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+              <div className="flex-grow-1">
+                <h6>Residency By Investment</h6>
+                <ul className="mb-4">
+                  {flags
+                    .filter((flag) => flag.category == "residency")
+                    .map((flag, index) => (
+                      <li key={index}>
+                        <a href={flag.href}>{flag.name}</a>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </div>
 
             <h6>EMAIL</h6>
             <span class="d-block mb-4">contact@chislonbroadway.com</span>
@@ -153,7 +165,7 @@ const Index = () => {
               <SocialMedia />
             </div>
           </div>
-          <div className="col-md-4 footer_links">
+          <div className="col-md-3 footer_links">
             <DownloadBrochure showImage={false} titleColor="white" />
           </div>
         </div>

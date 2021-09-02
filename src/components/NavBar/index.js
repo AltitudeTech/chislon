@@ -10,7 +10,7 @@ const Menus = [
   { label: "Home", href: "/" },
   {
     label: "About",
-    href: "/about",
+    href: "#",
     submenus: [
       { label: "Vision & Mission", href: "/about/vision-and-mission" },
       { label: "Leadership Team", href: "/about/leadership-team" },
@@ -78,7 +78,12 @@ const Index = (props) => {
         }}
       >
         <ContactPhone />
-        <Menu right isOpen={isOpen} noOverlay={false}>
+        <Menu
+          right
+          isOpen={isOpen}
+          noOverlay={false}
+          customBurgerIcon={<CustomHamburger />}
+        >
           {Menus.map(({ href, label, submenus }, index) => {
             return (
               <NavItem key={index}>
@@ -100,6 +105,35 @@ const Index = (props) => {
 };
 
 export default withTheme(Index);
+
+const CustomHamburger = () => {
+  return (
+    <>
+      <div className="customBurger">
+        <span></span>
+        <span></span>
+        <div>MENU</div>
+      </div>
+      <style jsx>{`
+        .customBurger {
+          color: #fff;
+        }
+        .customBurger span {
+          background-color: #fff;
+          display: block;
+          width: 100%;
+          height: 2px;
+          margin-bottom: 6px;
+        }
+        .customBurger div {
+          font-size: 8px;
+          letter-spacing: 2px;
+          font-weight: 600;
+        }
+      `}</style>
+    </>
+  );
+};
 
 const Submenus = ({ submenus = [], setIsOpen }) => {
   return (

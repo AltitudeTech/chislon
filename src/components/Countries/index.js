@@ -40,22 +40,34 @@ export const PopularDestination = () => {
   );
 };
 
-const Countries = () => {
+const Countries = ({ category }) => {
   return (
     <Fragment>
       <CountryJumbo title="COUNTRIES" />
       <Container>
         <Row className="row my-5">
           <div className="country_wrapper">
-            {flags.map((flag, index) => {
-              return (
-                <Link href={flag.href} key={index}>
-                  <a className="country_flag">
-                    <p>{flag.name}</p>
-                  </a>
-                </Link>
-              );
-            })}
+            {!category
+              ? flags.map((flag, index) => {
+                  return (
+                    <Link href={flag.href} key={index}>
+                      <a className="country_flag">
+                        <p>{flag.name}</p>
+                      </a>
+                    </Link>
+                  );
+                })
+              : flags
+                  .filter((flag) => flag.category == category)
+                  .map((flag, index) => {
+                    return (
+                      <Link href={flag.href} key={index}>
+                        <a className="country_flag">
+                          <p>{flag.name}</p>
+                        </a>
+                      </Link>
+                    );
+                  })}
           </div>
         </Row>
       </Container>
@@ -135,28 +147,72 @@ export const flags = [
     name: "Antigua Barbuda",
     href: "/country/antigua-barbuda",
     logo: "barbuda.png",
+    category: "citizenship",
   },
-  { name: "Bulgaria", href: "/country/bulgaria", logo: "bulgaria.png" },
+  {
+    name: "Bulgaria",
+    href: "/country/bulgaria",
+    logo: "bulgaria.png",
+    category: "citizenship",
+  },
   {
     name: "Quebec, Canada",
     href: "/country/quebec-canada",
     logo: "canada.png",
+    category: "citizenship",
   },
-  { name: "Cyprus", href: "/country/cyprus", logo: "cyprus.png" },
-  { name: "Dominica", href: "/country/dominica", logo: "dominica.png" },
-  { name: "Grenada", href: "/country/grenada", logo: "grenada.png" },
-  { name: "Hungary", href: "/country/hungary", logo: "hungary.png" },
-  { name: "Montenegro", href: "/country/montenegro", logo: "montenegro.png" },
-  { name: "Portugal", href: "/country/portugal", logo: "portugal.png" },
-  // {
-  //   name: "Saint Lucia",
-  //   href: "/country/saint-lucia",
-  //   logo: "saint-lucia.png",
-  // },
+  {
+    name: "Cyprus",
+    href: "/country/cyprus",
+    logo: "cyprus.png",
+    category: "citizenship",
+  },
+  {
+    name: "Dominica",
+    href: "/country/dominica",
+    logo: "dominica.png",
+    category: "citizenship",
+  },
+  {
+    name: "Grenada",
+    href: "/country/grenada",
+    logo: "grenada.png",
+    category: "citizenship",
+  },
+  {
+    name: "Hungary",
+    href: "/country/hungary",
+    logo: "hungary.png",
+    category: "citizenship",
+  },
+  {
+    name: "Montenegro",
+    href: "/country/montenegro",
+    logo: "montenegro.png",
+    category: "citizenship",
+  },
+  {
+    name: "Portugal",
+    href: "/country/portugal",
+    logo: "portugal.png",
+    category: "residency",
+  },
+  {
+    name: "Saint Lucia",
+    href: "/country/saint-lucia",
+    logo: "saint-lucia.png",
+    category: "citizenship",
+  },
   {
     name: "United Kingdom",
     href: "/country/united-kingdom",
     logo: "united-kingdom.png",
+    category: "residency",
   },
-  { name: "USA", href: "/country/usa", logo: "usa.png" },
+  {
+    name: "USA",
+    href: "/country/usa",
+    logo: "usa.png",
+    category: "residency",
+  },
 ];

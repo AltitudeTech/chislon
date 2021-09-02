@@ -30,6 +30,7 @@ const initialValues = {
   phone: "",
   email: "",
   message: "",
+  captcha: false,
 };
 const Study = () => {
   const [form, setForm] = useState(initialValues);
@@ -66,25 +67,29 @@ const Study = () => {
   const handleSubmit = (event) => {
     setBtnState(true);
     event.preventDefault();
-    fetch("", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": event.target.getAttribute("name"),
-        ...form,
-      }),
-    })
-      .then(() => {
-        setBtnState(false);
-        setForm(initialValues);
-        setAlertState(true);
+    if (form.captch) {
+      fetch("", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": event.target.getAttribute("name"),
+          ...form,
+        }),
       })
-      .catch((error) => {
-        alert("Please, try submitting your data again");
-        setBtnState(false);
-        // setForm(initialValues);
-        console.log(error);
-      });
+        .then(() => {
+          setBtnState(false);
+          setForm(initialValues);
+          setAlertState(true);
+        })
+        .catch((error) => {
+          alert("Please, try submitting your data again");
+          setBtnState(false);
+          // setForm(initialValues);
+          console.log(error);
+        });
+    } else {
+      alert("Verify You are Human");
+    }
   };
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -308,9 +313,25 @@ const Study = () => {
                 </Col>
                 <Col md={12} md={6}>
                   <ReCAPTCHA
-                    // ref={captchaEl}
                     sitekey={process.env.GOOGLE_RECAPTCHA}
-                    onResolved={() => console.log("Human detected.")}
+                    onChange={() => {
+                      setForm((prevValues) => ({
+                        ...prevValues,
+                        captch: true,
+                      }));
+                    }}
+                    onExpired={() => {
+                      setForm((prevValues) => ({
+                        ...prevValues,
+                        captch: false,
+                      }));
+                    }}
+                    onErrored={() => {
+                      setForm((prevValues) => ({
+                        ...prevValues,
+                        captch: false,
+                      }));
+                    }}
                   />
                 </Col>
 
