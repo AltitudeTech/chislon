@@ -1,11 +1,31 @@
 .certifiedPartnerForm {
-  background-color :  red ;
+  form {
+    background-image: linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
+    padding: 20px;
+  }
   .form-control {
     box-shadow: none;
     outline: none;
+    color: #fff;
+    background-color: transparent;
+  }
+  .PhoneInputInput:focus,
+  .PhoneInputInput {
+    outline: none !important;
+    border: none !important;
+    background-color: transparent;
+    color: #fff;
+  }
+  .form-control option {
+    width: 100% !important ;
+    background: #004f69;
+    margin: 40px;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
   }
   label {
     font-weight: 700;
+    color: #fff;
   }
   .submitButton {
     background-color: #01384b;
