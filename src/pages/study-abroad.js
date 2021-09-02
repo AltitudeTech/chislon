@@ -11,7 +11,7 @@ export default () => {
       <DoubleColumn heading="Study Abroad Heading" />
       <DoubleColumn heading="Study Abroad Heading" />
       <CertifiedPartnerForm />
-      <ContactHere />
+      {/* <ContactHere /> */}
     </Fragment>
   );
 };

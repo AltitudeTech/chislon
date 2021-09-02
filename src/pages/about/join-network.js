@@ -9,7 +9,7 @@ export default () => {
       <CountryJumbo title="JOIN CHISLON" country="joinchision.png" />
       <DoubleColumn heading="Join Us Heading" />
       <DoubleColumn heading="Join Us Heading" />
-      <ContactHere />
+      {/* <ContactHere /> */}
     </Fragment>
   );
 };

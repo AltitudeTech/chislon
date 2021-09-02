@@ -13,7 +13,7 @@ export default () => {
       />
       <DoubleColumn heading="High Networth Heading" />
       <DoubleColumn heading="High Networth Heading" />
-      <ContactHere />
+      {/* <ContactHere /> */}
     </Fragment>
   );
 };

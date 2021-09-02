@@ -9,7 +9,7 @@ export default () => {
       <CountryJumbo title="VISION & MISSION" country="vision-mission.png" />
       <DoubleColumn heading="Vision" />
       <DoubleColumn heading="Mission" />
-      <ContactHere />
+      {/* <ContactHere /> */}
     </Fragment>
   );
 };

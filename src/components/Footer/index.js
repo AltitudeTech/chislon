@@ -128,16 +128,24 @@ const Index = () => {
             </ul>
           </div> */}
           <div className="col-md-3 footer_links">
-            <h6>Contact Us</h6>
-            <span class="d-block mb-4">
+            {/* <h6>Contact Us</h6> */}
+            <h6>Countries</h6>
+            {/* <span class="d-block mb-4">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
               deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
               possimus illo atque impedit cupiditate dicta repudiandae laborum
               deleniti vitae suscipit amet?
-            </span>
+            </span> */}
+            <ul className="mb-4">
+              {flags.map((flag, index) => (
+                <li>
+                  <a href={flag.href}>{flag.name}</a>
+                </li>
+              ))}
+            </ul>
 
             <h6>EMAIL</h6>
-            <span class="d-block mb-4">info@chislonbroadway.com</span>
+            <span class="d-block mb-4">contact@chislonbroadway.com</span>
             <h6>PHONE</h6>
             <span>+234 801 2222 222</span>
             <div className="social_links">

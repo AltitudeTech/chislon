@@ -18,7 +18,7 @@ export default () => {
       <DoubleColumn heading="International Partner Heading" />
       {/* <TextTop title="Become an International Partner" /> */}
       <CertifiedPartnerForm />
-      <ContactHere />
+      {/* <ContactHere /> */}
     </Fragment>
   );
 };

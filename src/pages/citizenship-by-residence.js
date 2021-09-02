@@ -10,7 +10,7 @@ export default () => {
       <CountryJumbo title="CITIZENSHIP BY RESIDENCE" country="residence.png" />
       <DoubleColumn heading="Citizenship By Residency Heading" />
       <DoubleColumn heading="Citizenship By Residency Heading" />
-      <ContactHere />
+      {/* <ContactHere /> */}
     </Fragment>
   );
 };

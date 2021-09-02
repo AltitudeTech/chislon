@@ -8,7 +8,7 @@ const DownloadB = () => {
     <Fragment>
       <CountryJumbo title="DOWNLOAD BROCHURE" country="healthcare.png" />
       <DownloadBrochureForm />
-      <ContactHere />
+      {/* <ContactHere /> */}
     </Fragment>
   );
 };

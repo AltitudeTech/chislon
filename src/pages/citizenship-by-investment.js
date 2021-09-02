@@ -13,7 +13,7 @@ export default () => {
       />
       <DoubleColumn heading="Citizenship By Investment Heading" />
       <DoubleColumn heading="Citizenship By Investment Heading" />
-      <ContactHere />
+      {/* <ContactHere /> */}
     </Fragment>
   );
 };

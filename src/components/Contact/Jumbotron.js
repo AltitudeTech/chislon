@@ -21,9 +21,9 @@ const ContactJumbotron = (props) => {
               <div className="title">Telephone Number</div>
               <p>+234 801 2222 222</p>
               <div className="title">Email Address</div>
-              <p>info@chislonbroadway.com</p>
+              <p>contact@chislonbroadway.com</p>
               <div className="title">Office Address</div>
-              <p>info@chislonbroadway.com</p>
+              <p>contact@chislonbroadway.com</p>
             </div>
           </Col>
         </Row> */}
@@ -42,9 +42,9 @@ const ContactJumbotron = (props) => {
               <div className="title">Telephone Number</div>
               <p>+234 801 2222 222</p>
               <div className="title">Email Address</div>
-              <p>info@chislonbroadway.com</p>
-              <div className="title">Office Address</div>
-              <p>info@chislonbroadway.com</p>
+              <p>contact@chislonbroadway.com</p>
+              {/* <div className="title">Office Address</div>
+              <p>contact@chislonbroadway.com</p> */}
             </div>
           </Col>
         </Row>

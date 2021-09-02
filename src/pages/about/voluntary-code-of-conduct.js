@@ -12,7 +12,7 @@ export default () => {
       />
       <DoubleColumn heading="Voluntary Code Of Conduct Heading" />
       <DoubleColumn heading="Voluntary Code Of Conduct Heading" />
-      <ContactHere />
+      {/* <ContactHere /> */}
     </Fragment>
   );
 };

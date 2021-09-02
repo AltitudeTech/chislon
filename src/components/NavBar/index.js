@@ -23,7 +23,7 @@ const Menus = [
         href: "/about/clients",
       },
       // { label: "Locations", href: "/about/locations" },
-      { label: "Join Our Team", href: "/about/join-network" },
+      { label: "Career", href: "/about/career" },
     ],
   },
   { label: "Citizenship By Investment", href: "/citizenship-by-investment" },
