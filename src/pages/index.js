@@ -14,7 +14,7 @@ const Index = () => {
       <WhyChooseUs />
       <ServiceOptions />
       {/* <CategoryRow /> */}
-      <PopularDestination />
+      {/* <PopularDestination /> */}
     </Fragment>
   );
 };

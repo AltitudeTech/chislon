@@ -6,7 +6,7 @@ import Jumbotron from "../Jumbotron";
 const ContactJumbotron = (props) => {
   return (
     // <Jumbotron title="CONTACT">
-    <Jumbotron>
+    <Jumbotron hideGradientBg>
       <section className="contactJumboBg p-5">
         {/* <Row>
           <Col md={{ size: 6 }}>

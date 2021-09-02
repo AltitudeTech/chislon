@@ -152,6 +152,57 @@ export const SocialMedia = () => {
     </>
   );
 };
+export const SocialMedia2 = () => {
+  return (
+    <>
+      <div className="socialIcons">
+        <SocialIcon
+          network="twitter"
+          className="icons"
+          url="//twitter.com/BroadwayChislon"
+          style={{ width: "30px", height: "30px", margin: "5px" }}
+        />
+
+        <SocialIcon
+          network="facebook"
+          className="icons"
+          url="//www.facebook.com/Chislon-broadway-417594015502295/?modal=admin_todo_tour"
+          style={{ width: "30px", height: "30px", margin: "5px" }}
+        />
+
+        {/* <SocialIcon
+          network="whatsapp"
+          className="icons"
+          url=""
+          style={{ width: "30px", height: "30px", margin: "5px" }}
+        /> */}
+
+        <SocialIcon
+          network="linkedin"
+          className="icons"
+          url="//www.linkedin.com/company/chislon-broadway/?viewAsMember=true"
+          style={{ width: "30px", height: "30px", margin: "5px" }}
+        />
+      </div>
+      <style jsx>{`
+        .socialIcons {
+          display: flex;
+          list-style: none;
+          align-items: center;
+        }
+        .icons {
+          width: 40px !important;
+          margin: 10px;
+        }
+        @media screen and (max-width: 540px) {
+          .socialIcons {
+            display: none;
+          }
+        }
+      `}</style>
+    </>
+  );
+};
 
 const ContactPhone = withTheme((props) => {
   return (

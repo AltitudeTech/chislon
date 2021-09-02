@@ -4,13 +4,14 @@ import { Jumbotron, Button } from "reactstrap";
 const Index = (props) => {
   return (
     <Fragment>
-      <section className="myJumbo" style={{ backgroundColor: "red" }}>
+      <section className="myJumbo">
         <Jumbotron
           style={{
             padding: 0,
             minHeight: "100px",
-            backgroundImage:
-              "linear-gradient(160.13deg, #003E52 -0.69%, #00B8F2 100%)",
+            backgroundImage: props.hideGradientBg
+              ? null
+              : "linear-gradient(160.13deg, #003E52 -0.69%, #00B8F2 100%)",
           }}
         >
           {props.title && (

@@ -93,8 +93,10 @@ const Study = () => {
       <Row>
         <Col md={{ size: 8, offset: 2 }}>
           <div className="formWrapper">
-            <Heading3Style>Enquiry Form</Heading3Style>
-            <p>Send us a message</p>
+            <Heading3Style style={{ color: "#fff" }}>
+              Enquiry Form
+            </Heading3Style>
+            <p style={{ color: "#fff" }}>Send us a message</p>
             <form
               name="contact_form"
               method="POST"
@@ -109,7 +111,7 @@ const Study = () => {
                 onConfirm={() => setAlertState(false)}
               />
               <Row>
-                <Col sm={12} md={1}>
+                {/* <Col sm={12} md={1}>
                   <div className="form-group">
                     <label>Salutation</label>
                     <select
@@ -126,8 +128,8 @@ const Study = () => {
                       <option value="Prof.">Prof.</option>
                     </select>
                   </div>
-                </Col>
-                <Col sm={12} md={5}>
+                </Col> */}
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>First Name</label>
                     <input
@@ -317,20 +319,27 @@ const Study = () => {
         .serviceSectionStyle{
           padding : 5rem 3rem ;
           background-color: #f2f2f2 ;
+          // background-image: linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
         }
-       .formWrapper{
-         margin : 20px auto ;
-         background-color : #e5e5e5 ;
-         padding : 30px ;
+        .formWrapper{
+          margin : 20px auto ;
+          background-color : #e5e5e5 ;
+          padding : 30px ;
+          background-image: linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
         }
         .formWrapper label{
           display : block ;
+          color : #fff ;
+          font-weight : bold ;
         }
-        .form-group .form-control {
+        .form-group .form-control, option {
           border-radius: 0;
-          border: 0;
+          // border: 0;
           box-shadow: none; 
+          color : #fff ;
+          background-color : transparent ;
         }
+        
         .form-group .form-control:focus {
           box-shadow: -1px 3px 11px -3px #01384B;
           border : 1px solid #01384B ;
