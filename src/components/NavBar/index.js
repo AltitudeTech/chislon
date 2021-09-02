@@ -24,6 +24,7 @@ const Menus = [
       },
       // { label: "Locations", href: "/about/locations" },
       { label: "Career", href: "/about/career" },
+      { label: "How We Work", href: "/about/how-we-work" },
     ],
   },
   { label: "Citizenship By Investment", href: "/citizenship-by-investment" },
@@ -33,7 +34,20 @@ const Menus = [
   { label: "Study Abroad", href: "/study-abroad" },
   { label: "Healthcare Abroad", href: "/healthcare-abroad" },
   { label: "International Partners", href: "/international-partner" },
-  { label: "Countries", href: "/country" },
+  {
+    label: "Countries",
+    href: "/#",
+    submenus: [
+      {
+        label: "Citizenship By Investment",
+        href: "/country/citizenship-by-investment",
+      },
+      {
+        label: "Residency By Investment",
+        href: "/country/citizenship-by-residence",
+      },
+    ],
+  },
   { label: "Industry Insight", href: "/industry-insight" },
   // { label: "About", href: "/about" },
   // { label: "Services", href: "/services" },

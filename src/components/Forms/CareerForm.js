@@ -3,7 +3,7 @@ import axios from "axios";
 import dynamic from "next/dynamic";
 import { Container, Row, Col } from "reactstrap";
 import { Loading, encode } from "../../util";
-import Recaptcha from "react-google-invisible-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 import "./CertifiedPartnerForm.scss";
 import ButtonStyle from "../styles/ButtonStyle";
 
@@ -29,7 +29,7 @@ const initialValues = {
   existing_client: "",
   question: "",
 };
-const JoinUsForm = () => {
+const CareerForm = () => {
   const captchaEl = useRef(null);
   const [form, setForm] = useState(initialValues);
   const [alertState, setAlertState] = useState(false);
@@ -319,9 +319,9 @@ const JoinUsForm = () => {
             </Row>
             <Row className="mb-5">
               <Col md={12}>
-                <Recaptcha
+                <ReCAPTCHA
                   ref={captchaEl}
-                  sitekey="6Le0zPAZAAAAAMZdhOAPB3SJFtAa_EpOlPShHgr4"
+                  sitekey={process.env.GOOGLE_RECAPTCHA}
                   onResolved={() => console.log("Human detected.")}
                 />
                 <ButtonStyle type="submit" disabled={btnState}>
@@ -336,7 +336,7 @@ const JoinUsForm = () => {
   );
 };
 
-export default JoinUsForm;
+export default CareerForm;
 
 export const TextTop = ({ title }) => {
   return (

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row, Col } from "reactstrap";
 import axios from "axios";
 import PhoneInput from "react-phone-number-input";
+import ReCAPTCHA from "react-google-recaptcha";
 import dynamic from "next/dynamic";
 import { Loading, encode } from "../../util";
 import SectionStyle from "../styles/SectionStyle";
@@ -43,9 +44,13 @@ const Study = () => {
       setForm({ ...form, phone: data.calling_code });
     } catch (error) {
       console.log(error.message, 2323232);
-      setForm({ ...form, phone: "+234" });
+      setForm((prevValues) => ({
+        ...prevValues,
+        phone: "+234",
+      }));
     }
   };
+
   const getCountries = async () => {
     const result = await axios("https://restcountries.eu/rest/v2/all");
     setForm((prevValues) => ({
@@ -143,7 +148,7 @@ const Study = () => {
                     />
                   </div>
                 </Col>
-                <Col sm={12} md={5}>
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Last Name</label>
                     <input
@@ -171,7 +176,7 @@ const Study = () => {
                     />
                   </div>
                 </Col>
-                <Col sm={12} md={5}>
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Position</label>
                     <input
@@ -207,7 +212,7 @@ const Study = () => {
                     </select>
                   </div>
                 </Col>
-                <Col sm={12} md={5}>
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label htmlFor="">
                       COUNTRY OF RESIDENCE{" "}
@@ -244,7 +249,7 @@ const Study = () => {
                     />
                   </div>
                 </Col>
-                <Col sm={12} md={5}>
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Phone Number</label>
                     <PhoneInput
@@ -252,9 +257,13 @@ const Study = () => {
                       country="NG"
                       value={form.phone}
                       name="phone"
-                      onChange={(phone) =>
-                        setForm((prevValues) => ({ ...prevValues, phone }))
-                      }
+                      onChange={(phone) => {
+                        console.log(phone);
+                        setForm((prevValues) => ({
+                          ...prevValues,
+                          phone,
+                        }));
+                      }}
                       required
                       className="form-control"
                     />
@@ -274,7 +283,7 @@ const Study = () => {
                     />
                   </div>
                 </Col>
-                <Col sm={12} md={5}>
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Your Message</label>
                     <textarea
@@ -284,21 +293,28 @@ const Study = () => {
                       value={form.message}
                       onChange={handleChange}
                       required
-                      rows="10"
+                      rows="5"
                     />
                   </div>
                 </Col>
                 <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Note</label>
-                    <p>
+                    <p className="text-white">
                       All information provided is kept highly confidential and
                       subject to our privacy policy.
                     </p>
                   </div>
                 </Col>
+                <Col md={12} md={6}>
+                  <ReCAPTCHA
+                    // ref={captchaEl}
+                    sitekey={process.env.GOOGLE_RECAPTCHA}
+                    onResolved={() => console.log("Human detected.")}
+                  />
+                </Col>
 
-                <Col md={12}>
+                <Col md={12} className="my-4">
                   <div className="form-group text-center">
                     <ButtonStyle
                       className="gold"
@@ -319,7 +335,6 @@ const Study = () => {
         .serviceSectionStyle{
           padding : 5rem 3rem ;
           background-color: #f2f2f2 ;
-          // background-image: linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
         }
         .formWrapper{
           margin : 20px auto ;
@@ -352,6 +367,15 @@ const Study = () => {
         .PhoneInputInput:focus, .PhoneInputInput {
           outline : none !important;
           border : none !important;
+          background-color : transparent ;
+          color : #fff ;
+        }
+        .form-control option {
+          width : 100% !important ;
+          background: #004F69;
+          margin: 40px;
+          color: #fff;
+          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
         }
 
       `}

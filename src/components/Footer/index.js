@@ -41,16 +41,16 @@ const Index = () => {
           </div>
           <div className="col-md-2 footer_links">
             <div className="" style={{ marginRight: "14px" }}>
-              <h6>PROGRAM</h6>
+              <h6>SERVICES</h6>
               <ul>
-                <li>
-                  <Link href="/residency-by-investment">
-                    <a>Residence by Investment</a>
-                  </Link>
-                </li>
                 <li>
                   <Link href="/citizenship-by-investment">
                     <a>Citizenship by Investment</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/residency-by-investment">
+                    <a>Residency by Investment</a>
                   </Link>
                 </li>
                 <li>
@@ -79,7 +79,7 @@ const Index = () => {
               className=""
               style={{ marginTop: "30px", marginRight: "14px" }}
             >
-              <h6>OTHER PROGRAMS</h6>
+              <h6>OTHER SERVICES</h6>
               <ul>
                 <li>
                   <Link href={`https://research.${APP_DOMAIN}`}>
