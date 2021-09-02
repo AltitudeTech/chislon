@@ -21,11 +21,11 @@ const Index = () => {
       <div className="container-fluid footer">
         <div className="row" style={{ position: "relative", zIndex: "5" }}>
           <div className="col-md-3 footer_links">
-            <img
+            {/* <img
               style={{ maxWidth: "250px" }}
               src="/static/images/global_migation_services.jpg"
               className="img-fluid mb-5"
-            />
+            /> */}
             <Link href="/international-partner">
               <a className="become">
                 <h6>BECOME AN INTERNATIONAL PARTNER</h6>

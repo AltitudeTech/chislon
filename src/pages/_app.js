@@ -83,7 +83,7 @@ export default class MyApp extends App {
       <ThemeProvider theme={theme}>
         <Layout>
           <CookieConsent />
-          <Addthis />
+          {/* <Addthis /> */}
           <GlobalStyle />
           <Component {...pageProps} />
         </Layout>

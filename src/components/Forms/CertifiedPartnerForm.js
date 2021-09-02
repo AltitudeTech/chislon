@@ -207,7 +207,7 @@ const CertifiedPartnerForm = () => {
               <Col md={6}>
                 <div className="form-group">
                   <label htmlFor="">
-                    GENEDER <span className="text-danger">*</span>
+                    GENDER <span className="text-danger">*</span>
                   </label>
                   <select
                     name="gender"
@@ -412,7 +412,7 @@ const CertifiedPartnerForm = () => {
                   onResolved={() => console.log("Human detected.")}
                 /> */}
                 <ButtonStyle type="submit" disabled={btnState}>
-                  Send Message {btnState && <Loading />}
+                  SUBMIT {btnState && <Loading />}
                 </ButtonStyle>
               </Col>
             </Row>

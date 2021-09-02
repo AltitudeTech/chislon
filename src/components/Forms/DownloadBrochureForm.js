@@ -150,7 +150,7 @@ const DownloadBrochureForm = () => {
                   onResolved={() => console.log("Human detected.")}
                 /> */}
                 <ButtonStyle type="submit" disabled={btnState}>
-                  Send Message {btnState && <Loading />}
+                  SUBMIT {btnState && <Loading />}
                 </ButtonStyle>
               </Col>
             </Row>
