@@ -22,7 +22,7 @@ const Menus = [
         label: "Clients",
         href: "/about/clients",
       },
-      { label: "Locations", href: "/about/locations" },
+      // { label: "Locations", href: "/about/locations" },
       { label: "Join Our Team", href: "/about/join-network" },
     ],
   },
