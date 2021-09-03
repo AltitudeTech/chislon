@@ -5,6 +5,7 @@ import CategoryRow from "../components/Home/CategoryRow";
 import ServiceOptions from "../components/Home/ServiceOptions";
 import DoubleColumn from "../components/Home/DoubleColumn";
 import { PopularDestination } from "../components/Countries";
+import ClientSection from "../components/Home/ClientSection";
 import FAQBox from "../components/Home/FAQBox";
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
       <DoubleColumn />
       <WhyChooseUs />
       <FAQBox />
+      <ClientSection />
       <ServiceOptions />
       {/* <CategoryRow /> */}
       {/* <PopularDestination /> */}
