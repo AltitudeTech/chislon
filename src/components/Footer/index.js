@@ -29,7 +29,7 @@ const Index = () => {
             </span>
 
             <h6>EMAIL</h6>
-            <span class="d-block mb-4">info@chislonbroadway.com</span>
+            <span class="d-block mb-4">contact@chislonbroadway.com</span>
             <h6>PHONE</h6>
             <span>+234 801 2222 222</span>
             <div className="social_links">
