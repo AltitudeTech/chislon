@@ -5,6 +5,7 @@ import CategoryRow from "../components/Home/CategoryRow";
 import ServiceOptions from "../components/Home/ServiceOptions";
 import DoubleColumn from "../components/Home/DoubleColumn";
 import { PopularDestination } from "../components/Countries";
+import FAQBox from "../components/Home/FAQBox";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Carousel />
       <DoubleColumn />
       <WhyChooseUs />
+      <FAQBox />
       <ServiceOptions />
       {/* <CategoryRow /> */}
       {/* <PopularDestination /> */}

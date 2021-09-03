@@ -48,11 +48,11 @@ const Menus = [
       },
     ],
   },
-  { label: "Industry Insight", href: "/industry-insight" },
+  // { label: "Industry Insight", href: "/industry-insight" },
   // { label: "About", href: "/about" },
   // { label: "Services", href: "/services" },
   // { label: "Partners", href: "/partners" },
-  // { label: "Latest News", href: "/latest-news" },
+  { label: "NEWS", href: "/latest-news" },
   { label: "Contact Us", href: "/contact" },
 ];
 
