@@ -8,17 +8,17 @@ import CookieConsent from "../components/Common/CookieConsent";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 const Addthis = dynamic(() => import("../components/Common/AddThis"), {
   ssr: false,
-  loading: () => <p style={{ display: "none" }} />
+  loading: () => <p style={{ display: "none" }} />,
 });
 const theme = {
   colors: {
     black: "#212121",
     white: "#FFFFFF",
-    yellow: "#FFDA42"
-  }
+    yellow: "#FFDA42",
+  },
 };
 
-Router.events.on("routeChangeStart", url => {
+Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
   NProgress.start();
 });
@@ -41,14 +41,14 @@ html{
     margin : 0 ;
     font-size : 15px ;
     font-weight : 200 ;
-    color : ${props => props.theme.colors.black};
+    color : ${(props) => props.theme.colors.black};
   }
   h1,h2,h3,h4,h5,h6{
     font-family: 'Nexa Heavy';
   }
   a,a:visited{
     text-decoration: none;
-    color : ${props => props.theme.colors.black};
+    color : ${(props) => props.theme.colors.black};
   }
   p{
     font-family: "Georgia Regular";
@@ -72,7 +72,7 @@ export default class MyApp extends App {
       <ThemeProvider theme={theme}>
         <Layout>
           <CookieConsent />
-          <Addthis />
+          {/* <Addthis /> */}
           <GlobalStyle />
           <Component {...pageProps} />
         </Layout>
