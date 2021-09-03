@@ -5247,6 +5247,11 @@ react-dom@^16.9.0:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
+react-icons@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
+  integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
+
 react-invisible-recaptcha@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/react-invisible-recaptcha/-/react-invisible-recaptcha-0.3.1.tgz#bb2416e4a586c09e7717ac1743faa05f7cfc5190"
