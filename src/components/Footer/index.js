@@ -32,49 +32,12 @@ const Index = () => {
                 <p>Discover the advantage of working with ChislonBroadway</p>
               </a>
             </Link>
-            <Link href="/join-network">
+            {/* <Link href="/join-network">
               <a className="become">
                 <h6>JOIN CHISLONBROADWAY NETWORK</h6>
                 <p>Discover the benefits for generations to come</p>
               </a>
-            </Link>
-          </div>
-          <div className="col-md-2 footer_links">
-            <div className="" style={{ marginRight: "14px" }}>
-              <h6>SERVICES</h6>
-              <ul>
-                <li>
-                  <Link href="/citizenship-by-investment">
-                    <a>Citizenship by Investment</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/residency-by-investment">
-                    <a>Residency by Investment</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/high-networth-investors">
-                    <a>High Net Worth Investors</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/work-abroad">
-                    <a>Work Abroad</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/study-abroad">
-                    <a>Study Abroad</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/healthcare-abroad">
-                    <a>Healthcare Abroad</a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            </Link> */}
             <div
               className=""
               style={{ marginTop: "30px", marginRight: "14px" }}
@@ -117,6 +80,43 @@ const Index = () => {
               </ul>
             </div>
           </div>
+          <div className="col-md-2 footer_links">
+            <div className="" style={{ marginRight: "14px" }}>
+              <h6>SERVICES</h6>
+              <ul>
+                <li>
+                  <Link href="/citizenship-by-investment">
+                    <a>Citizenship by Investment</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/residency-by-investment">
+                    <a>Residency by Investment</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/high-networth-investors">
+                    <a>High Net Worth Investors</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/work-abroad">
+                    <a>Work Abroad</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/study-abroad">
+                    <a>Study Abroad</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/healthcare-abroad">
+                    <a>Healthcare Abroad</a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
           {/* <div className="col-md-2 footer_links">
             <h6>PROGRAMS</h6>
             <ul>
@@ -153,20 +153,20 @@ const Index = () => {
                       </li>
                     ))}
                 </ul>
-              </div>
-            </div>
 
-            <h6>EMAIL</h6>
-            <span class="d-block mb-4">contact@chislonbroadway.com</span>
-            <h6>PHONE</h6>
-            <span>+234 801 2222 222</span>
-            <div className="social_links">
-              <h6>FOLLOW US</h6>
-              <SocialMedia />
+                <h6>EMAIL</h6>
+                <span class="d-block mb-4">contact@chislonbroadway.com</span>
+                <h6>PHONE</h6>
+                <span>+234 801 2222 222</span>
+              </div>
             </div>
           </div>
           <div className="col-md-3 footer_links">
             <DownloadBrochure showImage={false} titleColor="white" />
+            <div className="social_links">
+              <h6>FOLLOW US</h6>
+              <SocialMedia />
+            </div>
           </div>
         </div>
       </div>

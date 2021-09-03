@@ -49,9 +49,6 @@ const DownloadBrochureForm = () => {
       });
   };
 
-  const onResolved = () => {
-    alert("Recaptcha resolved with response: " + recaptcha.getResponse());
-  };
   const handleChange = (event) => {
     const { name, value } = event.target;
     setForm((prevValues) => ({

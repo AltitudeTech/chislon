@@ -40,15 +40,24 @@
 }
 
 .downloadBrochureForm {
+  form {
+    background-image: linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
+    padding: 20px;
+  }
   .form-control {
     box-shadow: none;
     outline: none;
+    box-shadow: none;
+    outline: none;
+    color: #fff;
+    background-color: transparent;
   }
   .row {
     margin-top: 10px;
   }
   label {
     font-weight: 600;
+    color: #fff;
   }
   .submitButton {
     background-color: #01384b;
