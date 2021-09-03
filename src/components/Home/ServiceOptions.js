@@ -26,9 +26,9 @@ const ServiceOptions = () => {
               <a href="/residency-by-investment" className="top_text">
                 <p>RESIDENCY BY INVESTMENT</p>
               </a>
-              <div className="label">
+              {/* <div className="label">
                 <p>RESIDENCY BY INVESTMENT</p>
-              </div>
+              </div> */}
             </div>
           </Col>
           <Col md={4}>
