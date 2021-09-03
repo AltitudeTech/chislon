@@ -13,7 +13,7 @@ const items = [
     src: "/static/images/home/sliders/1.png",
     altText: "Slide 1",
     // caption: "ACCESS HIGHLY PAID JOBS ABROAD",
-    caption: "BECOME A GLOBAL CITIZEN",
+    caption: "BECOMING A GLOBAL CITIZEN",
   },
   {
     src: "/static/images/home/sliders/3.png",
