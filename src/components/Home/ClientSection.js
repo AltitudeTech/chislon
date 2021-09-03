@@ -81,21 +81,27 @@ const ClientSection = (props) => {
       </Row>
       <style>
         {`
-        .clientBoxStyle{}
-        .clientDescription{
-            padding: 6rem 20px ;
+        .clientBoxStyle{
             background-color: #E4E6EB ;
         }
+        .clientDescription{
+            padding: 6rem 20px ;
+            background-color: #c0c2c9 ;
+        }
         .clientButton{
-            background-color: transparent;
+            // background-color: transparent;
             border: 1px solid #b2b2b2;
             padding: 5px 20px;
             text-decoration: none;
+            color:#fff ;
+            transition: all 0.5s linear;
+            background-color: ${props.theme.colors.main};
         }
         .clientButton:hover{
             text-decoration: none;
-            background-color: #b2b2b2;
-            color:#fff ;
+            color: #fff;
+            border-radius: 8px;
+            display: inline-block;
         }
         .clientBox{
             overflow:hidden;
