@@ -1,6 +1,7 @@
 .option_wrapper {
   //   max-width: 350px;
   margin: auto;
+  text-align: center;
   height: 300px;
   position: relative;
   overflow: hidden;
@@ -15,7 +16,8 @@
   //   }
   // }
   img {
-    width: 100%;
+    // width: 100%;
+    width: auto;
     height: 300px;
     z-index: -1;
     // filter: grayscale(100%);

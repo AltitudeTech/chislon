@@ -7,7 +7,11 @@ import CertifiedPartnerForm from "../components/Forms/CertifiedPartnerForm";
 export default () => {
   return (
     <Fragment>
-      <CountryJumbo title="WORK ABROAD" country="workabroad.png" />
+      <CountryJumbo
+        title="WORK ABROAD"
+        hasExtension
+        country="workabroad.jpeg"
+      />
       <DoubleColumn heading="Work Abroad Heading" />
       <DoubleColumn heading="Work Abroad Heading" />
       <CertifiedPartnerForm />

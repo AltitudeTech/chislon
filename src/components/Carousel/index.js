@@ -22,7 +22,7 @@ const items = [
     caption: "SECURE YOUR FUTURE PROSPERITY",
   },
   {
-    src: "/static/images/home/sliders/2.png",
+    src: "/static/images/home/sliders/3.jpeg",
     altText: "Slide 2",
     // caption: "ACCESS HIGHLY PAID JOBS ABROAD",
     caption: "ACCESS HIGHLY PAID JOBS",

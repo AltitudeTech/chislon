@@ -33,7 +33,7 @@ const ServiceOptions = () => {
           </Col>
           <Col md={4}>
             <div className="option_wrapper">
-              <img src="/static/images/temp_bg.jpg" alt="" />
+              <img src="/static/images/citizenship.jpeg" alt="" />
               <a href="/citizenship-by-investment" className="top_text">
                 <p>CITIZENSHIP BY INVESTMENT</p>
               </a>
@@ -44,7 +44,7 @@ const ServiceOptions = () => {
           </Col>
           <Col md={4}>
             <div className="option_wrapper">
-              <img src="/static/images/temp_bg.jpg" alt="" />
+              <img src="/static/images/highnetworth.jpeg" alt="" />
               <a href="/high-networth-investors" className="top_text">
                 <p>HIGH NETWORTH INVESTORS</p>
               </a>
@@ -79,7 +79,7 @@ const ServiceOptions = () => {
           </Col>
           <Col md={4}>
             <div className="option_wrapper">
-              <img src="/static/images/temp_bg.jpg" alt="" />
+              <img src="/static/images/healthcare.jpeg" alt="" />
               <a href="/healthcare-abroad" className="top_text">
                 <p>HEALTHCARE ABROAD</p>
               </a>

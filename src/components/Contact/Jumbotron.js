@@ -47,15 +47,22 @@ const ContactJumbotron = (props) => {
               <p>contact@chislonbroadway.com</p> */}
             </div>
           </Col>
+          <Col md={{ size: 6 }}>
+            <img
+              src="/static/images/contact/contactbody.jpeg"
+              style={{ width: "100%" }}
+            />
+          </Col>
         </Row>
       </Container>
       <style jsx>{`
         .contactJumboBg {
           min-height: 80vh;
-          background-image: url(/static/images/flags/contactimage.jpg),
+          background-image: url(/static/images/contact/contact.jpeg),
             linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
           background-repeat: no-repeat;
           background-size: cover;
+          background-position: center;
         }
         .jumbotronContent {
           max-width: 500px;
