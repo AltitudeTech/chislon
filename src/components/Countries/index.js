@@ -77,14 +77,16 @@ const Countries = ({ category }) => {
 
 export default Countries;
 
-export const CountryJumbo = ({ title, country = "usa" }) => (
+export const CountryJumbo = ({ title, country = "usa", hasExtension }) => (
   <Fragment>
     <Jumbotron
       fluid
       className="addOverlay"
       // style={{ backgroundImage: `url('/static/images/flags/study about.png')` }}
       style={{
-        backgroundImage: `url('/static/images/flags/homeflags/${country}.png')`,
+        backgroundImage: `url('/static/images/flags/homeflags/${
+          hasExtension ? country : country + ".png"
+        }')`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",

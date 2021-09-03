@@ -33,7 +33,12 @@ const ClientSection = (props) => {
       </Row>
       <Row className="" noGutters>
         <Col sm="12" md={{ size: 8 }}>
-          <div className="clientBox mt-5">
+          <div
+            className="clientBox mt-5"
+            style={{
+              backgroundImage: "url(/static/images/client/government.jpeg)",
+            }}
+          >
             {/* <img
               className="bgImage"
               src="/static/images/flags/joinchision.png"

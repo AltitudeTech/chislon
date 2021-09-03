@@ -7,12 +7,13 @@ import DoubleColumn from "../components/Home/DoubleColumn";
 import { PopularDestination } from "../components/Countries";
 import ClientSection from "../components/Home/ClientSection";
 import FAQBox from "../components/Home/FAQBox";
+import VisaImage from "../components/Home/VisaImage";
 
 const Index = () => {
   return (
     <Fragment>
       <Carousel />
-      <DoubleColumn />
+      <DoubleColumn firstColumn={<VisaImage />} />
       <WhyChooseUs />
       <FAQBox />
       <ClientSection />
