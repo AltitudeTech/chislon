@@ -7,13 +7,13 @@ import { withTheme } from "styled-components";
 const FAQBox = (props) => {
   return (
     <SectionStyle className="faqBoxStyle p-0">
-      <Row className="mt-0">
+      <Row className="mt-0" noGutters>
         <Col sm="12" md={{ size: 8 }}>
           <div className="faqBox">
-            <img
+            {/* <img
               className="bgImage"
               src="/static/images/flags/joinchision.png"
-            />
+            /> */}
             <div className="content">
               <h1
                 style={{
@@ -24,7 +24,7 @@ const FAQBox = (props) => {
                 Investor <br /> Immigration
               </h1>
               <Link href="/faqs">
-                <a className="browseFAQ">Browse FAQ</a>
+                <a className="browseFAQ">Browse FREQUENTLY ASKED QUESTION</a>
               </Link>
             </div>
           </div>
