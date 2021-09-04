@@ -10,7 +10,7 @@ import "./index.scss";
 
 const items = [
   {
-    src: "/static/images/home/sliders/1.jpeg",
+    src: "/static/images/home/sliders/home.jpg",
     altText: "Slide 1",
     // caption: "ACCESS HIGHLY PAID JOBS ABROAD",
     caption: "BECOMING A GLOBAL CITIZEN",
