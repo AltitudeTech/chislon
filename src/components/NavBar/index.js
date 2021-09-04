@@ -128,7 +128,7 @@ const CustomHamburger = () => {
         .customBurger div {
           font-size: 8px;
           letter-spacing: 2px;
-          font-weight: 600;
+          font-weight: 500;
         }
       `}</style>
     </>

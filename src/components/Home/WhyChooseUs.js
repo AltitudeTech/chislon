@@ -33,10 +33,10 @@ const WhyChooseUs = (props) => {
         <Col sm="12" md={{ size: 6 }}>
           <div>
             <img
-              className="img-fluid"
+              className="img-fluid mt-5"
               loading="lazy"
               style={{ maxWidth: "80%" }}
-              src="/static/images/Home/work-visa.png"
+              src="/static/images/Home/work-visa.jpeg"
               alt="choose us now"
             />
           </div>

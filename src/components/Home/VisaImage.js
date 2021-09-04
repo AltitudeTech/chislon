@@ -7,3 +7,11 @@ export default function VisaImage() {
     </div>
   );
 }
+
+export const WorkVisa = () => {
+  return (
+    <div>
+      <img src="/static/images/workvisa.jpeg" />
+    </div>
+  );
+};

@@ -9,7 +9,8 @@ export default () => {
     <Fragment>
       <CountryJumbo
         title="HIGH NETWORTH INVESTMENT"
-        country="highnetworth.png"
+        hasExtension
+        country="highnetworth.jpg"
       />
       <DoubleColumn heading="High Networth Heading" />
       <DoubleColumn heading="High Networth Heading" />

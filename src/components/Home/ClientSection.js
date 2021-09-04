@@ -10,7 +10,7 @@ const ClientSection = (props) => {
       <Row className="" noGutters>
         <Col sm="12" md={{ size: 4 }}>
           <div className="clientDescription">
-            <h1>Private</h1>
+            <h1>Private Investor</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
               eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
@@ -23,7 +23,12 @@ const ClientSection = (props) => {
           </div>
         </Col>
         <Col sm="12" md={{ size: 8 }}>
-          <div className="clientBox mt-5">
+          <div
+            className="clientBox mt-5"
+            style={{
+              backgroundImage: "url(/static/images/client/private.jpeg)",
+            }}
+          >
             {/* <img
               className="bgImage"
               src="/static/images/flags/joinchision.png"
@@ -47,7 +52,7 @@ const ClientSection = (props) => {
         </Col>
         <Col sm="12" md={{ size: 4 }}>
           <div className="clientDescription">
-            <h1>Government</h1>
+            <h1>Government Entity</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
               eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
@@ -63,7 +68,7 @@ const ClientSection = (props) => {
       <Row className="" noGutters>
         <Col sm="12" md={{ size: 4 }}>
           <div className="clientDescription">
-            <h1>Corporate</h1>
+            <h1>Corporate Investor</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
               eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
@@ -95,23 +100,26 @@ const ClientSection = (props) => {
             background-color: #E4E6EB ;
         }
         .clientDescription{
-            padding: 6rem 20px ;
-            background-color: #c0c2c9 ;
+          padding: 6rem 20px ;
+          background-color: #c0c2c9 ;
+        }
+        .clientDescription h1{
+          text-transform: uppercase;
         }
         .clientButton{
             // background-color: transparent;
             border: 1px solid #b2b2b2;
             padding: 5px 20px;
             text-decoration: none;
-            color:#fff ;
+            color: ${props.theme.colors.yellow};
             transition: all 0.5s linear;
+            font-weight: 600 ;
             background-color: ${props.theme.colors.main};
         }
         .clientButton:hover{
             text-decoration: none;
-            color: #fff;
+            color: ${props.theme.colors.yellow};
             border-radius: 8px;
-            display: inline-block;
         }
         .clientBox{
             overflow:hidden;

@@ -43,8 +43,11 @@ const ContactJumbotron = (props) => {
               <p>+234 801 2222 222</p>
               <div className="title">Email Address</div>
               <p>contact@chislonbroadway.com</p>
-              {/* <div className="title">Office Address</div>
-              <p>contact@chislonbroadway.com</p> */}
+              <div className="title">Office Address</div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur accusamus a, harum, voluptates inventore
+              </p>
             </div>
           </Col>
           <Col md={{ size: 6 }}>
