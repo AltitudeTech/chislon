@@ -110,14 +110,16 @@ const ClientSection = (props) => {
             // background-color: transparent;
             border: 1px solid #b2b2b2;
             padding: 5px 20px;
-            text-decoration: uppercase;
+            text-decoration: none;
+            text-transform: uppercase;
             color: ${props.theme.colors.yellow};
             transition: all 0.5s linear;
             font-weight: 600 ;
             background-color: ${props.theme.colors.main};
         }
         .clientButton:hover{
-            text-decoration: uppercase;
+            text-decoration: none;
+            text-transform: uppercase;
             color: ${props.theme.colors.yellow};
             border-radius: 8px;
         }

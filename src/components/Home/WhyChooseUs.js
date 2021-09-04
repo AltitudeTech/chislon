@@ -1,7 +1,8 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
-import SectionStyle from "../styles/SectionStyle";
+import Collapsible from "react-collapsible";
 import { withTheme } from "styled-components";
+import SectionStyle from "../styles/SectionStyle";
 
 const WhyChooseUs = (props) => {
   return (
@@ -27,7 +28,8 @@ const WhyChooseUs = (props) => {
               tempore! Magnam minima quos obcaecati, possimus illo atque impedit
               cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
             </p>
-            <ChislonStats />
+            {/* <ChislonStats /> */}
+            <WhyChislon />
           </div>
         </Col>
         <Col sm="12" md={{ size: 6 }}>
@@ -164,4 +166,66 @@ const Visas = [
   { text: "Student Visa", image: "student-visa.png" },
   { text: "Tourist Visa", image: "tourist-visa.png" },
   { text: "Work Visa", image: "work-visa.png" },
+];
+
+const WhyChislon = () => {
+  return (
+    <>
+      {ChislonReasons.map(({ reason, id }) => (
+        <Collapsible
+          key={id}
+          className="mb-2"
+          trigger={<Tab reason={reason} id={id} />}
+        >
+          <div style={{
+            backgroundColor: "#fff",
+            border: "1px solid #3B82F6",
+            padding: "10px",
+            marginBottom: "2px"
+          }}>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
+              ducimus labore voluptas soluta minima, ipsum exercitationem in ab
+              ratione, nostrum quam delectus nam reprehenderit eveniet maxime
+              qui a. Iure, in.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
+              doloremque illo odio ducimus soluta nam ea distinctio, eos ab
+              deserunt assumenda laudantium in, nihil maiores tempore accusamus
+              perferendis unde vitae.
+            </p>
+          </div>
+        </Collapsible>
+      ))}
+    </>
+  );
+}
+
+const Tab = ({ reason, id }) => (
+  <div
+    className={`flex justify-between bg-yellow-500 text-white p-2 cursor-pointer`}
+    style={{
+      display : 'flex',
+      justifyContent:"space-between",
+      text:"#fff",
+      fontWeight: 'bold',
+      cursor : "pointer",
+      backgroundColor: '#3B82F6',
+      padding: "10px"
+    }}
+  >
+    <p className="uppercase" style={{textTransform:"uppercase"}}>
+      {id}. {reason}
+    </p>
+    <p>+</p>
+  </div>
+);
+
+const ChislonReasons = [
+  { id: "1", reason: "Title Here" },
+  { id: "2", reason: "Title Here" },
+  { id: "3", reason: "Title Here" },
+  { id: "4", reason: "Title Here" },
+  { id: "5", reason: "Title Here" },
 ];

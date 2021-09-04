@@ -10,15 +10,24 @@ const ServiceOptions = () => {
       <Container>
         <Row>
           <Col md={12}>
-            <HeadingStyle
+            {/* <HeadingStyle className="underlineBorder"
               style={{
                 margin: "2rem 0",
-                textAlign: "center",
+                // textAlign: "center",
                 fontSize: "2.5rem",
               }}
             >
               SERVICES
-            </HeadingStyle>
+            </HeadingStyle> */}
+            <h5 className="underlineBorder"
+              style={{
+                margin: "2rem 0",
+                // textAlign: "center",
+                fontSize: "2.5rem",
+              }}
+            >
+              SERVICES
+            </h5>
           </Col>
           <Col md={4}>
             <div className="option_wrapper">
@@ -90,6 +99,23 @@ const ServiceOptions = () => {
           </Col>
         </Row>
       </Container>
+      <style jsx>{`
+      .underlineBorder{
+        position: relative;
+        padding-bottom: 5px;
+      }
+
+      .underlineBorder::before{
+        content: "" ;
+        position: absolute ;
+        width: 100px ;
+        height :  5px ;
+        background-color: #01172A ;
+        bottom : 0 ;
+        left : 0 ;
+      }
+      `}
+      </style>
     </SectionStyle>
   );
 };
