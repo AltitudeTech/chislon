@@ -7,7 +7,7 @@ import CertifiedPartnerForm from "../components/Forms/CertifiedPartnerForm";
 export default () => {
   return (
     <Fragment>
-      <CountryJumbo title="STUDY ABROAD" country="studyabroad.png" />
+      <CountryJumbo title="STUDY ABROAD" hasExtension country="studyabroad.jpg" />
       <DoubleColumn heading="Study Abroad Heading" />
       <DoubleColumn heading="Study Abroad Heading" />
       <CertifiedPartnerForm />

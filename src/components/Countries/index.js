@@ -81,7 +81,8 @@ export const CountryJumbo = ({ title, country = "usa", hasExtension }) => (
   <Fragment>
     <Jumbotron
       fluid
-      className="addOverlay"
+      className="d-flex justify-content-center align-items-center"
+      // className="addOverlay"
       // style={{ backgroundImage: `url('/static/images/flags/study about.png')` }}
       style={{
         backgroundImage: `url('/static/images/flags/homeflags/${
@@ -90,6 +91,7 @@ export const CountryJumbo = ({ title, country = "usa", hasExtension }) => (
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
+        minHeight: "50vh"
       }}
     >
       <Container
@@ -98,10 +100,10 @@ export const CountryJumbo = ({ title, country = "usa", hasExtension }) => (
       >
         <div className="jumboText text-center text-white">
           <h1 className="display-6">{title}</h1>
-          <p className="lead">
+          {/* <p className="lead">
             Review available options. Obtain personalized advice. Make the right
             choice.
-          </p>
+          </p> */}
         </div>
       </Container>
     </Jumbotron>

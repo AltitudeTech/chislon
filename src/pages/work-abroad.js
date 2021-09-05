@@ -11,7 +11,7 @@ export default () => {
       <CountryJumbo
         title="WORK ABROAD"
         hasExtension
-        country="workabroad.jpeg"
+        country="workabroad.jpg"
       />
       <DoubleColumn heading="Work Abroad Heading" secondColumn={<WorkVisa />} />
       <DoubleColumn heading="Work Abroad Heading" />

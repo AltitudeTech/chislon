@@ -31,7 +31,7 @@ const ServiceOptions = () => {
           </Col>
           <Col md={4}>
             <div className="option_wrapper">
-              <img src="/static/images/temp_bg.jpg" alt="" />
+              <img src="/static/images/flags/homeflags/residency.jpg" alt="" />
               <a href="/residency-by-investment" className="top_text">
                 <p>RESIDENCY BY INVESTMENT</p>
               </a>
@@ -42,7 +42,7 @@ const ServiceOptions = () => {
           </Col>
           <Col md={4}>
             <div className="option_wrapper">
-              <img src="/static/images/citizenship.jpeg" alt="" />
+              <img src="/static/images/flags/homeflags/citizenship.jpeg" alt="" />
               <a href="/citizenship-by-investment" className="top_text">
                 <p>CITIZENSHIP BY INVESTMENT</p>
               </a>
@@ -66,7 +66,7 @@ const ServiceOptions = () => {
         <Row className="row">
           <Col md={4}>
             <div className="option_wrapper">
-              <img src="/static/images/temp_bg.jpg" alt="" />
+              <img src="/static/images/flags/homeflags/workabroad.jpg" alt="" />
               <a href="/work-abroad" className="top_text">
                 <p>WORK ABROAD</p>
               </a>
@@ -77,7 +77,7 @@ const ServiceOptions = () => {
           </Col>
           <Col md={4}>
             <div className="option_wrapper">
-              <img src="/static/images/temp_bg.jpg" alt="" />
+              <img src="/static/images/flags/homeflags/studyabroad.jpg" alt="" />
               <a href="/study-abroad" className="top_text">
                 <p>STUDY ABROAD</p>
               </a>
@@ -88,7 +88,7 @@ const ServiceOptions = () => {
           </Col>
           <Col md={4}>
             <div className="option_wrapper">
-              <img src="/static/images/healthcare.jpeg" alt="" />
+              <img src="/static/images/flags/homeflags/healthcare.jpeg" alt="" />
               <a href="/healthcare-abroad" className="top_text">
                 <p>HEALTHCARE ABROAD</p>
               </a>

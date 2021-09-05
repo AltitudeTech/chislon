@@ -5,7 +5,7 @@ import { CountryJumbo } from "../components/Countries/index";
 export default () => {
   return (
     <Fragment>
-      <CountryJumbo title="RESIDENCY BY INVESTMENT" />
+      <CountryJumbo title="RESIDENCY BY INVESTMENT" country="residency.jpg" hasExtension />
       <Container>
         <Row>
           <Col md={12}>
