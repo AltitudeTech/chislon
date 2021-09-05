@@ -217,13 +217,13 @@ export const flags = [
   },
   {
     name: "Spain",
-    href: "/country/saint-lucia",
+    href: "/country/spain",
     logo: "saint-lucia.png",
     category: "residency",
   },
   {
     name: "Greece",
-    href: "/country/saint-lucia",
+    href: "/country/greece",
     logo: "saint-lucia.png",
     category: "residency",
   },
