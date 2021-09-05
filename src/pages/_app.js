@@ -10,6 +10,11 @@ const Addthis = dynamic(() => import("../components/Common/AddThis"), {
   ssr: false,
   loading: () => <p style={{ display: "none" }} />,
 });
+
+const Tawkto = dynamic(() => import("../components/Tawkto"), {
+  ssr: false,
+  loading: () => <p style={{ display: "none" }} />,
+});
 const theme = {
   colors: {
     black: "#212121",
@@ -82,6 +87,7 @@ export default class MyApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <Layout>
+        <Tawkto />
           <CookieConsent />
           {/* <Addthis /> */}
           <GlobalStyle />
