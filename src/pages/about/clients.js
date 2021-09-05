@@ -6,7 +6,7 @@ import ThreeColumn from "../../components/Home/ThreeColumn";
 export default () => {
   return (
     <Fragment>
-      <CountryJumbo title="CLIENTS" country="vision-mission.png" />
+      <CountryJumbo title="CLIENTS" hasExtension country="client.jpg" />
       <ThreeColumn heading="Clients" />
       {/* <ContactHere /> */}
     </Fragment>

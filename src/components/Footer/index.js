@@ -1,11 +1,13 @@
 import React, { Fragment } from "react";
-import { NavItem, NavLink } from "reactstrap";
 import Link from "next/link";
+import { NavItem, NavLink } from "reactstrap";
+import { useRouter } from "next/router";
 import { flags } from "../Countries/index";
-
-import "./index.scss";
 import { DownloadBrochure } from "../About/Download";
 import { SocialMedia } from "../NavBar";
+import ButtonStyle from "../styles/ButtonStyle";
+
+import "./index.scss";
 
 const APP_DOMAIN = "chislonbroadway.com";
 
@@ -16,6 +18,7 @@ const Footerlinks = [
 ];
 
 const Index = () => {
+   const router = useRouter();
   return (
     <Fragment>
       <div className="container-fluid footer">
@@ -32,12 +35,17 @@ const Index = () => {
                 <p>Discover the advantage of working with ChislonBroadway</p>
               </a>
             </Link>
-            {/* <Link href="/join-network">
-              <a className="become">
-                <h6>JOIN CHISLONBROADWAY NETWORK</h6>
-                <p>Discover the benefits for generations to come</p>
-              </a>
-            </Link> */}
+           
+              <ButtonStyle
+            className="yellow mb-2"
+            onClick={() => {
+              router.push("/relocate-to-africa");
+              global.window.scrollTo(0, 0);
+            }}
+          >
+           RELOCATE TO AFRICA
+          </ButtonStyle>
+              
             <div
               className=""
               style={{ marginTop: "30px", marginRight: "14px" }}

@@ -6,7 +6,7 @@ import DownloadBrochureForm from "../components/Forms/DownloadBrochureForm";
 const DownloadB = () => {
   return (
     <Fragment>
-      <CountryJumbo title="DOWNLOAD BROCHURE" country="healthcare.png" />
+      <CountryJumbo title="DOWNLOAD BROCHURE" hasExtension country="workabroad.jpeg" />
       <DownloadBrochureForm />
       {/* <ContactHere /> */}
     </Fragment>
