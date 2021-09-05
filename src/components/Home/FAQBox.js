@@ -24,7 +24,7 @@ const FAQBox = (props) => {
                 {/* Investor <br /> Immigration */}
               </h1>
               <Link href="/faqs">
-                <a className="browseFAQ">FREQUENTLY ASKED QUESTION</a>
+                <a className="browseFAQ">FREQUENTLY ASKED QUESTIONS</a>
               </Link>
             </div>
           </div>

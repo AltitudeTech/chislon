@@ -53,7 +53,8 @@ const ServiceOptions = () => {
           </Col>
           <Col md={4}>
             <div className="option_wrapper">
-              <img src="/static/images/highnetworth.jpeg" alt="" />
+              {/* <img src="/static/images/highnetworth.jpeg" alt="" /> */}
+              <img src="/static/images/flags/homeflags/highnetworth.jpg" alt="" />
               <a href="/high-networth-investors" className="top_text">
                 <p>HIGH NETWORTH INVESTORS</p>
               </a>

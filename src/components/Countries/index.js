@@ -40,10 +40,10 @@ export const PopularDestination = () => {
   );
 };
 
-const Countries = ({ category }) => {
+const Countries = ({ category, title="COUNTRIES", country = null, hasExtension = false }) => {
   return (
     <Fragment>
-      <CountryJumbo title="COUNTRIES" />
+      <CountryJumbo title={title} country={country} hasExtension={hasExtension} />
       <Container>
         <Row className="row my-5">
           <div className="country_wrapper">
@@ -94,18 +94,26 @@ export const CountryJumbo = ({ title, country = "usa", hasExtension }) => (
         minHeight: "50vh"
       }}
     >
-      <Container
+      {/* <Container
         fluid
         className="d-flex justify-content-center align-items-center"
-      >
-        <div className="jumboText text-center text-white">
-          <h1 className="display-6">{title}</h1>
+        style={{ border: "1px solid red" }}
+      > */}
+        <div className="jumboText text-center text-white" style={{
+          position: "absolute",
+          bottom : 0,
+          left: 0,
+          padding: "10px",
+          backgroundColor: "rgba(0, 0, 0, 0.6)"
+        }}>
+          <h1 className="m-0 p-0">{title}</h1>
+          {/* <h1 className="display-6 pl-4">{title}</h1> */}
           {/* <p className="lead">
             Review available options. Obtain personalized advice. Make the right
             choice.
           </p> */}
         </div>
-      </Container>
+      {/* </Container> */}
     </Jumbotron>
   </Fragment>
 );
@@ -163,7 +171,7 @@ export const flags = [
     name: "Quebec, Canada",
     href: "/country/quebec-canada",
     logo: "canada.png",
-    category: "citizenship",
+    category: "residency",
   },
   {
     name: "Cyprus",
@@ -206,6 +214,18 @@ export const flags = [
     href: "/country/saint-lucia",
     logo: "saint-lucia.png",
     category: "citizenship",
+  },
+  {
+    name: "Spain",
+    href: "/country/saint-lucia",
+    logo: "saint-lucia.png",
+    category: "residency",
+  },
+  {
+    name: "Greece",
+    href: "/country/saint-lucia",
+    logo: "saint-lucia.png",
+    category: "residency",
   },
   {
     name: "United Kingdom",

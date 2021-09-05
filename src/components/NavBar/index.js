@@ -28,7 +28,8 @@ const Menus = [
     ],
   },
   { label: "Citizenship By Investment", href: "/citizenship-by-investment" },
-  { label: "Residency By Investment", href: "/citizenship-by-residence" },
+  // { label: "Residency By Investment", href: "/citizenship-by-residence" },
+  { label: "Residency By Investment", href: "/residency-by-investment" },
   { label: "High Networth", href: "/high-networth-investors" },
   { label: "Work Abroad", href: "/work-abroad" },
   { label: "Study Abroad", href: "/study-abroad" },
@@ -44,7 +45,7 @@ const Menus = [
       },
       {
         label: "Residency By Investment",
-        href: "/country/citizenship-by-residence",
+        href: "/country/residence-by-investment",
       },
     ],
   },

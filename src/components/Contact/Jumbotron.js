@@ -31,7 +31,7 @@ const ContactJumbotron = (props) => {
       <Container>
         <Row>
           <Col md={{ size: 6 }}>
-            <div className="jumbotronContent">
+            <div className="jumbotronContent" style={{height : '100%'}}>
               <h5>GET IN TOUCH WITH US</h5>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
@@ -53,7 +53,7 @@ const ContactJumbotron = (props) => {
           <Col md={{ size: 6 }}>
             <img
               src="/static/images/contact/contactbody.jpeg"
-              style={{ width: "100%" }}
+              style={{ height: "100%" }}
             />
           </Col>
         </Row>

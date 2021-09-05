@@ -4,7 +4,7 @@ import Countries from "../../components/Countries";
 const Country = () => {
   return (
     <Fragment>
-      <Countries category="citizenship" />
+      <Countries category="citizenship" country="countries.jpeg" hasExtension />
     </Fragment>
   );
 };
