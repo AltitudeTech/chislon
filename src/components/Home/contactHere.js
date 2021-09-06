@@ -5,10 +5,11 @@ import Link from "next/link";
 import { withTheme } from "styled-components";
 
 const ContactHere = (props) => {
+  const { noBg = null } = props;
   return (
     <Container
       fluid
-      style={{ width: "100%", backgroundColor: props.theme.colors.yellow }}
+      style={{ width: "100%", backgroundColor: `${!noBg ? props.theme.colors.yellow : 'transparent'}`, }}
     >
       <Row style={{ margin: 0, padding: "3rem 0" }}>
         <Col sm={{ size: 12 }} style={{ textAlign: "center" }}>

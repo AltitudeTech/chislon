@@ -7,11 +7,15 @@ import CareerForm from "../../components/Forms/CareerForm";
 export default () => {
   return (
     <Fragment>
-      <CountryJumbo title="CAREER" country="joinchision.png" />
-      <DoubleColumn heading="Career Heading" />
+      <CountryJumbo title="CAREER" hasExtension country="career_main.jpg" />
+      <DoubleColumn heading="Career Heading" secondColumn={<SecondColumn />} />
       <DoubleColumn heading="Career Heading" />
       {/* <ContactHere /> */}
       <CareerForm />
     </Fragment>
   );
 };
+
+const SecondColumn = () => {
+  return <img src="/static/images/flags/homeflags/career_body.jpg" /> ;
+}

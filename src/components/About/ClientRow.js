@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import { Row, Col } from "reactstrap";
 import SectionStyle from "../styles/SectionStyle";
+import DoubleColumn from "../Home/DoubleColumn";
+import ContactHere from "../Home/contactHere";
 import { withTheme } from "styled-components";
 
 const ClientSection = (props) => {
@@ -33,12 +35,14 @@ const ClientSection = (props) => {
               suscipit, possimus consectetur, odio tenetur quas doloremque
               magnam non? Eveniet, unde!
             </p>
-            <Link href="/contact">
+            {/* <Link href="/contact">
               <a className="clientButton">Contact</a>
-            </Link>
+            </Link> */}
           </div>
         </Col>
       </Row>
+      <DoubleColumn heading="" />
+      <ContactHere noBg />
       <Row className="" noGutters>
         <Col sm="12" md={{ size: 6 }}>
           <div className="clientDescription">
@@ -52,9 +56,9 @@ const ClientSection = (props) => {
               suscipit, possimus consectetur, odio tenetur quas doloremque
               magnam non? Eveniet, unde!
             </p>
-            <Link href="/about/client">
+            {/* <Link href="/about/client">
               <a className="clientButton">Contact</a>
-            </Link>
+            </Link> */}
           </div>
         </Col>
         <Col sm="12" md={{ size: 6 }}>
@@ -71,6 +75,8 @@ const ClientSection = (props) => {
           </div>
         </Col>
       </Row>
+      <DoubleColumn heading="" />
+      <ContactHere noBg />
       <Row className="" noGutters>
         <Col sm="12" md={{ size: 6 }}>
           <div
@@ -97,12 +103,14 @@ const ClientSection = (props) => {
               suscipit, possimus consectetur, odio tenetur quas doloremque
               magnam non? Eveniet, unde!
             </p>
-            <Link href="/about/client">
+            {/* <Link href="/about/client">
               <a className="clientButton">Contact</a>
-            </Link>
+            </Link> */}
           </div>
         </Col>
       </Row>
+      <DoubleColumn heading="" />
+      <ContactHere noBg />
       <style>
         {`
         .clientBoxStyle{
@@ -112,7 +120,7 @@ const ClientSection = (props) => {
         }
         .clientDescription{
           padding: 6rem 20px ;
-          background-color: #c0c2c9 ;
+          // background-color: #c0c2c9 ;
         }
         .clientDescription h1{
           text-transform: uppercase;
