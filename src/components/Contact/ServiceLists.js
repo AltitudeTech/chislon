@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "reactstrap";
 import axios from "axios";
+import PhoneInput from "react-phone-number-input";
+import ReCAPTCHA from "react-google-recaptcha";
 import dynamic from "next/dynamic";
 import { Loading, encode } from "../../util";
 import SectionStyle from "../styles/SectionStyle";
 import Heading3Style from "../styles/Heading3";
 import ButtonStyle from "../styles/ButtonStyle";
+import "react-phone-number-input/style.css";
 
 const SweetAlert = dynamic(
   () => {
@@ -27,11 +30,28 @@ const initialValues = {
   phone: "",
   email: "",
   message: "",
+  captcha: false,
 };
 const Study = () => {
   const [form, setForm] = useState(initialValues);
   const [alertState, setAlertState] = useState(false);
   const [btnState, setBtnState] = useState(false);
+  const getLocation = async () => {
+    try {
+      const response = await axios(
+        `https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.GEOLOCATION_KEY}`
+      );
+      const data = await response.data;
+      setForm({ ...form, phone: data.calling_code });
+    } catch (error) {
+      console.log(error.message, 2323232);
+      setForm((prevValues) => ({
+        ...prevValues,
+        phone: "+234",
+      }));
+    }
+  };
+
   const getCountries = async () => {
     const result = await axios("https://restcountries.eu/rest/v2/all");
     setForm((prevValues) => ({
@@ -41,30 +61,35 @@ const Study = () => {
   };
   useEffect(() => {
     getCountries();
+    getLocation();
   }, []);
 
   const handleSubmit = (event) => {
     setBtnState(true);
     event.preventDefault();
-    fetch("", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": event.target.getAttribute("name"),
-        ...form,
-      }),
-    })
-      .then(() => {
-        setBtnState(false);
-        setForm(initialValues);
-        setAlertState(true);
+    if (form.captch) {
+      fetch("", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": event.target.getAttribute("name"),
+          ...form,
+        }),
       })
-      .catch((error) => {
-        alert("Please, try submitting your data again");
-        setBtnState(false);
-        // setForm(initialValues);
-        console.log(error);
-      });
+        .then(() => {
+          setBtnState(false);
+          setForm(initialValues);
+          setAlertState(true);
+        })
+        .catch((error) => {
+          alert("Please, try submitting your data again");
+          setBtnState(false);
+          // setForm(initialValues);
+          console.log(error);
+        });
+    } else {
+      alert("Verify You are Human");
+    }
   };
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -78,10 +103,12 @@ const Study = () => {
       <Row>
         <Col md={{ size: 8, offset: 2 }}>
           <div className="formWrapper">
-            <Heading3Style>Enquiry Form</Heading3Style>
-            <p>Send us a message</p>
+            <Heading3Style style={{ color: "#fff" }}>
+              Enquiry Form
+            </Heading3Style>
+            <p style={{ color: "#fff" }}>Send us a message</p>
             <form
-              name="contact_form"
+              name="institute_contact_form"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
@@ -94,7 +121,7 @@ const Study = () => {
                 onConfirm={() => setAlertState(false)}
               />
               <Row>
-                <Col sm={12} md={1}>
+                {/* <Col sm={12} md={1}>
                   <div className="form-group">
                     <label>Salutation</label>
                     <select
@@ -111,8 +138,8 @@ const Study = () => {
                       <option value="Prof.">Prof.</option>
                     </select>
                   </div>
-                </Col>
-                <Col sm={12} md={5}>
+                </Col> */}
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>First Name</label>
                     <input
@@ -126,7 +153,7 @@ const Study = () => {
                     />
                   </div>
                 </Col>
-                <Col sm={12} md={5}>
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Last Name</label>
                     <input
@@ -142,7 +169,7 @@ const Study = () => {
                 </Col>
                 <Col sm={12} md={6}>
                   <div className="form-group">
-                    <label>Media Organization</label>
+                    <label>Organization</label>
                     <input
                       type="text"
                       name="media"
@@ -154,7 +181,7 @@ const Study = () => {
                     />
                   </div>
                 </Col>
-                <Col sm={12} md={5}>
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Position</label>
                     <input
@@ -190,7 +217,7 @@ const Study = () => {
                     </select>
                   </div>
                 </Col>
-                <Col sm={12} md={5}>
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label htmlFor="">
                       COUNTRY OF RESIDENCE{" "}
@@ -227,17 +254,23 @@ const Study = () => {
                     />
                   </div>
                 </Col>
-                <Col sm={12} md={5}>
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Phone Number</label>
-                    <input
-                      type="phone"
-                      name="phone"
-                      id="phone"
-                      className="form-control"
+                    <PhoneInput
+                      placeholder="Enter phone number"
+                      country="NG"
                       value={form.phone}
-                      onChange={handleChange}
+                      name="phone"
+                      onChange={(phone) => {
+                        console.log(phone);
+                        setForm((prevValues) => ({
+                          ...prevValues,
+                          phone,
+                        }));
+                      }}
                       required
+                      className="form-control"
                     />
                   </div>
                 </Col>
@@ -255,7 +288,7 @@ const Study = () => {
                     />
                   </div>
                 </Col>
-                <Col sm={12} md={5}>
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Your Message</label>
                     <textarea
@@ -265,28 +298,51 @@ const Study = () => {
                       value={form.message}
                       onChange={handleChange}
                       required
-                      rows="10"
+                      rows="5"
                     />
                   </div>
                 </Col>
                 <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Note</label>
-                    <p>
+                    <p className="text-white">
                       All information provided is kept highly confidential and
                       subject to our privacy policy.
                     </p>
                   </div>
                 </Col>
+                <Col md={12} md={6}>
+                  <ReCAPTCHA
+                    sitekey={process.env.GOOGLE_RECAPTCHA}
+                    onChange={() => {
+                      setForm((prevValues) => ({
+                        ...prevValues,
+                        captch: true,
+                      }));
+                    }}
+                    onExpired={() => {
+                      setForm((prevValues) => ({
+                        ...prevValues,
+                        captch: false,
+                      }));
+                    }}
+                    onErrored={() => {
+                      setForm((prevValues) => ({
+                        ...prevValues,
+                        captch: false,
+                      }));
+                    }}
+                  />
+                </Col>
 
-                <Col md={12}>
+                <Col md={12} className="my-4">
                   <div className="form-group text-center">
                     <ButtonStyle
+                      className="gold"
                       type="submit"
-                      className="btn submitButton"
                       disabled={btnState}
                     >
-                      Send Message {btnState && <Loading />}
+                      SUBMIT {btnState && <Loading />}
                     </ButtonStyle>
                   </div>
                 </Col>
@@ -301,19 +357,25 @@ const Study = () => {
           padding : 5rem 3rem ;
           background-color: #f2f2f2 ;
         }
-       .formWrapper{
-         margin : 20px auto ;
-         background-color : #e5e5e5 ;
-         padding : 30px ;
+        .formWrapper{
+          margin : 20px auto ;
+          background-color : #e5e5e5 ;
+          padding : 30px ;
+          background-image: linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
         }
         .formWrapper label{
           display : block ;
+          color : #fff ;
+          font-weight : bold ;
         }
-        .form-group .form-control {
+        .form-group .form-control, option {
           border-radius: 0;
-          border: 0;
+          // border: 0;
           box-shadow: none; 
+          color : #fff ;
+          background-color : transparent ;
         }
+        
         .form-group .form-control:focus {
           box-shadow: -1px 3px 11px -3px #01384B;
           border : 1px solid #01384B ;
@@ -322,6 +384,19 @@ const Study = () => {
         textarea:focus{
           resize : none ;
           outline:none ;
+        }
+        .PhoneInputInput:focus, .PhoneInputInput {
+          outline : none !important;
+          border : none !important;
+          background-color : transparent ;
+          color : #fff ;
+        }
+        .form-control option {
+          width : 100% !important ;
+          background: #004F69;
+          margin: 40px;
+          color: #fff;
+          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
         }
 
       `}

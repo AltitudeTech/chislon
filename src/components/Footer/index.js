@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { NavItem, NavLink } from "reactstrap";
 import Link from "next/link";
 import { flags } from "../Countries/index";
+import { SocialMedia } from "../Navbar" ;
 
 import "./index.scss";
 import { DownloadBrochure } from "../About/Download";
@@ -34,48 +35,7 @@ const Index = () => {
             <span>+234 801 2222 222</span>
             <div className="social_links">
               <h6>FOLLOW US</h6>
-              <ul className="d-flex">
-                <li>
-                  <div>
-                    <a href="" className="top low_opacity">
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="" className="bottom">
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <a href="" className="top low_opacity">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                    <a href="" className="bottom">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <a href="" className="top low_opacity">
-                      <i class="fa fa-youtube" aria-hidden="true"></i>
-                    </a>
-                    <a href="" className="bottom">
-                      <i class="fa fa-youtube" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <a href="" className="top low_opacity">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                    <a href="" className="bottom">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </li>
-              </ul>
+              <SocialMedia />
             </div>
           </div>
           <div className="col-md-4 footer_links">

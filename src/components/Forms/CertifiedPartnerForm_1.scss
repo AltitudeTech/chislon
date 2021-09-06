@@ -1,0 +1,19 @@
+.certifiedPartnerForm {
+  .form-control {
+    box-shadow: none;
+    outline: none;
+  }
+  label {
+    font-weight: 700;
+  }
+  .submitButton {
+    background-color: #01384b;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 30px;
+    &:hover {
+      background-color: #00455c;
+      color: #d9a900;
+    }
+  }
+}
