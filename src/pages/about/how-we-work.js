@@ -6,7 +6,7 @@ import DoubleColumn from "../../components/Home/DoubleColumn";
 export default () => {
   return (
     <Fragment>
-      <CountryJumbo title="HOW WE WORK" country="how-we-work.jpg" hasExtension />
+      <CountryJumbo title="HOW WE WORK" country="howwework.jpg" hasExtension />
       <DoubleColumn heading="How We Work Heading" />
       <DoubleColumn heading="How We Work Heading" />
       {/* <ContactHere /> */}

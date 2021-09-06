@@ -23,15 +23,18 @@ const ClientSection = (props) => {
         </Col>
          <Col sm="12" md={{ size: 6 }}>
           <div className="clientDescription">
-            <h1>Private Investor</h1>
+            {/* <h1>Private Investor</h1> */}
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
               eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
               suscipit, possimus consectetur, odio tenetur quas doloremque
+              magnam non? Eveniet, unde! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
+              suscipit, possimus consectetur, odio tenetur quas doloremque
               magnam non? Eveniet, unde!
             </p>
-            <Link href="/about/client">
-              <a className="clientButton">Read More</a>
+            <Link href="/contact">
+              <a className="clientButton">Contact</a>
             </Link>
           </div>
         </Col>
@@ -39,15 +42,18 @@ const ClientSection = (props) => {
       <Row className="" noGutters>
         <Col sm="12" md={{ size: 6 }}>
           <div className="clientDescription">
-            <h1>Government Entity</h1>
+            {/* <h1>Government Entity</h1> */}
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
+              suscipit, possimus consectetur, odio tenetur quas doloremque
+              magnam non? Eveniet, unde! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
               eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
               suscipit, possimus consectetur, odio tenetur quas doloremque
               magnam non? Eveniet, unde!
             </p>
             <Link href="/about/client">
-              <a className="clientButton">Read More</a>
+              <a className="clientButton">Contact</a>
             </Link>
           </div>
         </Col>
@@ -81,15 +87,18 @@ const ClientSection = (props) => {
         </Col>
         <Col sm="12" md={{ size: 6 }}>
           <div className="clientDescription">
-            <h1>Corporate Investor</h1>
+            {/* <h1>Corporate Investor</h1> */}
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
+              suscipit, possimus consectetur, odio tenetur quas doloremque
+              magnam non? Eveniet, unde! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
               eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
               suscipit, possimus consectetur, odio tenetur quas doloremque
               magnam non? Eveniet, unde!
             </p>
             <Link href="/about/client">
-              <a className="clientButton">Read More</a>
+              <a className="clientButton">Contact</a>
             </Link>
           </div>
         </Col>
@@ -97,7 +106,9 @@ const ClientSection = (props) => {
       <style>
         {`
         .clientBoxStyle{
-            background-color: #E4E6EB ;
+            // background-color: #E4E6EB ;
+            margin-top : 40px ;
+            margin-bottom : 40px ;
         }
         .clientDescription{
           padding: 6rem 20px ;
@@ -112,7 +123,7 @@ const ClientSection = (props) => {
             padding: 5px 20px;
             text-decoration: none;
             text-transform: uppercase;
-            color: ${props.theme.colors.yellow};
+            color: ${props.theme.colors.yellow} !important;
             transition: all 0.5s linear;
             font-weight: 600 ;
             background-color: ${props.theme.colors.main};
