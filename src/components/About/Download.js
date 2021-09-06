@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
 import HeadingStyle from "../styles/Heading3";
+import { useRouter } from "next/router";
 import ButtonStyle from "../styles/ButtonStyle";
 
 export default function Download() {
@@ -71,6 +72,7 @@ export default function Download() {
 }
 
 export const DownloadBrochure = ({ showImage = true, titleColor }) => {
+  const router = useRouter();
   return (
     <>
       <div className="content">
@@ -85,11 +87,11 @@ export const DownloadBrochure = ({ showImage = true, titleColor }) => {
             possimus illo atque impedit cupiditate dicta repudiandae laborum
             deleniti vitae suscipit amet?
           </p>
-          <form
+           {/* <form
             style={{ maxWidth: "80%" }}
             onSubmit={(e) => {
               e.preventDefault();
-              alert("We will contact you soon");
+              alert("We wwill contact you soon");
             }}
           >
             <div className="form-group">
@@ -100,9 +102,17 @@ export const DownloadBrochure = ({ showImage = true, titleColor }) => {
                 placeholder="Email Here"
               />
             </div>
-
             <ButtonStyle>DOWNLOAD NOW</ButtonStyle>
-          </form>
+          </form> */}
+          <ButtonStyle
+            className="yellow"
+            onClick={() => {
+              router.push("https://chislonbroadway.com/download-brochure");
+              global.window.scrollTo(0, 0);
+            }}
+          >
+            DOWNLOAD NOW
+          </ButtonStyle>
         </div>
       </div>
       <style jsx>{`

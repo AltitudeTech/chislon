@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { NavItem, NavLink } from "reactstrap";
 import Link from "next/link";
-
+import { SocialMedia } from "../Navbar" ;
 import "./index.scss";
 import { DownloadBrochure, VacancyAlert } from "../About/Download";
 
@@ -33,7 +33,7 @@ const Index = () => {
             <span>+234 801 2222 222</span>
             <div className="social_links">
               <h6>FOLLOW US</h6>
-              <ul className="d-flex">
+              {/* <ul className="d-flex">
                 <li>
                   <div>
                     <a href="" className="top low_opacity">
@@ -74,7 +74,8 @@ const Index = () => {
                     </a>
                   </div>
                 </li>
-              </ul>
+              </ul> */}
+              <SocialMedia />
             </div>
           </div>
           <div className="col-md-4 footer_links">
