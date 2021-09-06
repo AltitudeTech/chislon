@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { NavItem, NavLink } from "reactstrap";
 import Link from "next/link";
-import { SocialMedia } from "../Navbar" ;
+import { SocialMedia } from "../NavBar" ;
 import "./index.scss";
 import { DownloadBrochure, VacancyAlert } from "../About/Download";
 
