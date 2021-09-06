@@ -3,7 +3,9 @@ import axios from "axios";
 import dynamic from "next/dynamic";
 import { Container, Row, Col } from "reactstrap";
 import { Loading, encode } from "../../util";
-// import Recaptcha from "react-google-invisible-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
+import PhoneInput from "react-phone-number-input";
+import ButtonStyle from "../styles/ButtonStyle";
 import "./CertifiedPartnerForm.scss";
 
 const SweetAlert = dynamic(
@@ -34,10 +36,25 @@ const initialValues = {
 };
 
 const CertifiedPartnerForm = () => {
-  const captchaEl = useRef(null);
   const [form, setForm] = useState(initialValues);
   const [alertState, setAlertState] = useState(false);
   const [btnState, setBtnState] = useState(false);
+
+  const getLocation = async () => {
+    try {
+      const response = await axios(
+        `https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.GEOLOCATION_KEY}`
+      );
+      const data = await response.data;
+      setForm({ ...form, phone: data.calling_code });
+    } catch (error) {
+      console.log(error.message, 2323232);
+      setForm((prevValues) => ({
+        ...prevValues,
+        phone: "+234",
+      }));
+    }
+  };
   const getCountries = async () => {
     const result = await axios("https://restcountries.eu/rest/v2/all");
     setForm((prevValues) => ({
@@ -47,6 +64,7 @@ const CertifiedPartnerForm = () => {
   };
   useEffect(() => {
     getCountries();
+    getLocation();
   }, []);
 
   const handleSubmit = (event) => {
@@ -72,17 +90,7 @@ const CertifiedPartnerForm = () => {
         console.log(error);
       });
   };
-  const onSubmit = () => {
-    if ("" == form.value) {
-      alert("Validation failed! Input cannot be empty.");
-      recaptcha.reset();
-    } else {
-      recaptcha.execute();
-    }
-  };
-  const onResolved = () => {
-    alert("Recaptcha resolved with response: " + recaptcha.getResponse());
-  };
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setForm((prevValues) => ({
@@ -96,7 +104,7 @@ const CertifiedPartnerForm = () => {
         <Col md={{ size: 8, offset: 2 }}>
           <form
             className="mt-5"
-            name="certified_partner_form"
+            name="talentmasters_partner_form"
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
@@ -162,12 +170,19 @@ const CertifiedPartnerForm = () => {
               <Col md={6}>
                 <div className="form-group">
                   <label htmlFor="">PHONE</label>
-                  <input
-                    type="number"
-                    name="phone"
-                    id="phone"
-                    onChange={handleChange}
+                  <PhoneInput
+                    placeholder="Enter phone number"
+                    country="NG"
                     value={form.phone}
+                    name="phone"
+                    onChange={(phone) => {
+                      console.log(phone);
+                      setForm((prevValues) => ({
+                        ...prevValues,
+                        phone,
+                      }));
+                    }}
+                    required
                     className="form-control"
                   />
                 </div>
@@ -206,7 +221,7 @@ const CertifiedPartnerForm = () => {
               <Col md={6}>
                 <div className="form-group">
                   <label htmlFor="">
-                    GENEDER <span className="text-danger">*</span>
+                    GENDER <span className="text-danger">*</span>
                   </label>
                   <select
                     name="gender"
@@ -397,7 +412,7 @@ const CertifiedPartnerForm = () => {
                     value={form.question}
                     onChange={handleChange}
                     cols="30"
-                    rows="10"
+                    rows="5"
                     className="form-control"
                   ></textarea>
                 </div>
@@ -405,18 +420,30 @@ const CertifiedPartnerForm = () => {
             </Row>
             <Row className="mb-5">
               <Col md={12}>
-                {/* <Recaptcha
-                  ref={captchaEl}
-                  sitekey="6Le0zPAZAAAAAMZdhOAPB3SJFtAa_EpOlPShHgr4"
-                  onResolved={() => console.log("Human detected.")}
-                /> */}
-                <button
-                  type="submit"
-                  className="btn submitButton"
-                  disabled={btnState}
-                >
-                  Send Message {btnState && <Loading />}
-                </button>
+                <ReCAPTCHA
+                  sitekey={process.env.GOOGLE_RECAPTCHA}
+                  onChange={() => {
+                    setForm((prevValues) => ({
+                      ...prevValues,
+                      captch: true,
+                    }));
+                  }}
+                  onExpired={() => {
+                    setForm((prevValues) => ({
+                      ...prevValues,
+                      captch: false,
+                    }));
+                  }}
+                  onErrored={() => {
+                    setForm((prevValues) => ({
+                      ...prevValues,
+                      captch: false,
+                    }));
+                  }}
+                />
+                <ButtonStyle className="mt-4" type="submit" disabled={btnState}>
+                  SUBMIT {btnState && <Loading />}
+                </ButtonStyle>
               </Col>
             </Row>
           </form>
