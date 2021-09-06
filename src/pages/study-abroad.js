@@ -10,7 +10,7 @@ export default () => {
       <CountryJumbo title="STUDY ABROAD" hasExtension country="studyabroad.jpg" />
       <DoubleColumn heading="Study Abroad Heading" />
       <DoubleColumn heading="Study Abroad Heading" />
-      <CertifiedPartnerForm />
+      {/* <CertifiedPartnerForm /> */}
       {/* <ContactHere /> */}
     </Fragment>
   );

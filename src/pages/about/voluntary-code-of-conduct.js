@@ -8,7 +8,8 @@ export default () => {
     <Fragment>
       <CountryJumbo
         title="VOLUNTARY CODE OF CONDUCT"
-        country="voluntary-code-of-conduct.png"
+        country="vcc.jpg"
+        hasExtension
       />
       <DoubleColumn heading="Voluntary Code Of Conduct Heading" />
       <DoubleColumn heading="Voluntary Code Of Conduct Heading" />

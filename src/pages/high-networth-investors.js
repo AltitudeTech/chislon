@@ -8,7 +8,7 @@ export default () => {
   return (
     <Fragment>
       <CountryJumbo
-        title="HIGH NETWORTH INVESTMENT"
+        title="HIGH NETWORTH INVESTOR"
         hasExtension
         country="highnetworth.jpg"
       />

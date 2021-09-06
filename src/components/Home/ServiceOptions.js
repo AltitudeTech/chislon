@@ -111,7 +111,7 @@ const ServiceOptions = () => {
         position: absolute ;
         width: 100px ;
         height :  5px ;
-        background-color: #01172A ;
+        background-color: #FFDA42;
         bottom : 0 ;
         left : 0 ;
       }

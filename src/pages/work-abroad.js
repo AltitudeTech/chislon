@@ -15,7 +15,7 @@ export default () => {
       />
       <DoubleColumn heading="Work Abroad Heading" secondColumn={<WorkVisa />} />
       <DoubleColumn heading="Work Abroad Heading" />
-      <CertifiedPartnerForm />
+      {/* <CertifiedPartnerForm /> */}
       {/* <ContactHere /> */}
     </Fragment>
   );
