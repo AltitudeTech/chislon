@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <div>
       {/* <Jumbotron title="FAQs" /> */}
-      <CountryJumbo title="FAQs" hasExtension country="faq.jpg" />
+      <CountryJumbo title="FAQs" hasExtension country="faq.jpeg" />
       <Container>
         <SectionStyle>
           <Row>
