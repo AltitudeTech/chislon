@@ -3,6 +3,7 @@ import Carousel from "../components/Carousel";
 import DoubleColumn from "../components/Home/DoubleColumn";
 import ClientSection from "../components/Home/ClientSection";
 import ServiceOptions from "../components/Home/ServiceOptions";
+import Statistics from "../components/Home/Statistics";
 import CertifiedPartnerForm from "../components/Forms/CertifiedPartnerForm";
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
       <div className="my-5"></div>
       <ClientSection />
       <ServiceOptions />
+      <Statistics />
       {/* <CertifiedPartnerForm /> */}
     </Fragment>
   );
