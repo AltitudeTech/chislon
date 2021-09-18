@@ -1,25 +1,28 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
-import { Container, Jumbotron, Row } from "reactstrap";
+import { Container, Jumbotron, Row, Col } from "reactstrap";
 import "./index.scss";
+import { CountryList } from "../Footer";
+import { WhyChislon } from "../Home/HowWeWork";
 
 const Countries = () => {
   return (
     <Fragment>
-      <CountryJumbo title="GLOBAL CITIZEN PROGRAMS" country="usa" />
-      <Container>
+      <CountryJumbo title="COUNTRIES HEADER" country="usa" />
+      <Container className="mt-5">
         <Row className="row">
-          <div className="country_wrapper">
-            {flags.map((flag, index) => {
-              return (
-                <Link href={flag.href} key={index}>
-                  <a className="country_flag">
-                    <p>{flag.name}</p>
-                  </a>
-                </Link>
-              );
-            })}
-          </div>
+          <Col md={12}>
+            {/* <div className="country_wrapper">
+              {CountryList.map((country, index) => {
+                return (
+                  <div href={country.href} key={index} className="country_flag">
+                    <p>{country.name}</p>
+                  </div>
+                );
+              })}
+            </div> */}
+            <WhyChislon CustomArray={CountryList} bgColor="#B848FF" />
+          </Col>
         </Row>
       </Container>
     </Fragment>

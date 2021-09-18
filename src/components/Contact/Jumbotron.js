@@ -31,7 +31,7 @@ const ContactJumbotron = (props) => {
       <Container>
         <Row>
           <Col md={{ size: 6 }}>
-            <div className="jumbotronContent" style={{height : '100%'}}>
+            <div className="jumbotronContent" style={{ height: "100%" }}>
               <h5>GET IN TOUCH WITH US</h5>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
@@ -40,7 +40,7 @@ const ContactJumbotron = (props) => {
                 deleniti vitae suscipit amet?
               </p>
               <div className="title">Telephone Number</div>
-              <p>+234 801 2222 222</p>
+              <p>+234 706 6315 900</p>
               <div className="title">Email Address</div>
               <p>contact@chislonbroadway.com</p>
               <div className="title">Office Address</div>

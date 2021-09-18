@@ -26,7 +26,7 @@ const HowWeWork = (props) => {
               deleniti vitae suscipit amet?
             </p>
             {/* <ChislonStats /> */}
-            <WhyChislon />
+            <WhyChislon CustomArray={ChislonReasons} />
           </div>
         </Col>
         <Col sm="12" md={{ size: 6 }}>
@@ -89,90 +89,14 @@ const HowWeWork = (props) => {
 
 export default withTheme(HowWeWork);
 
-const ChislonStats = withTheme((props) => {
+export const WhyChislon = ({ CustomArray = [], bgColor = "#3B82F6" }) => {
   return (
     <>
-      <div className="statsWrapper">
-        <div className="box">
-          <div className="content">
-            <p>30 +</p>
-            <p>Office Worldwide</p>
-          </div>
-        </div>
-        <div className="box">
-          <div className="content">
-            <p>25 +</p>
-            <p>Years leading the industry</p>
-          </div>
-        </div>
-        <div className="box">
-          <div className="content">
-            <p>30 +</p>
-            <p>Investment migration options</p>
-          </div>
-        </div>
-        <div className="box">
-          <div className="content">
-            <p>20, 000 +</p>
-            <p>Clients advised</p>
-          </div>
-        </div>
-        <div className="box">
-          <div className="content">
-            <p>15 +</p>
-            <p>Government advisory mandates</p>
-          </div>
-        </div>
-        <div className="box">
-          <div className="content">
-            <p>USD 10 billion +</p>
-            <p>FDI raised</p>
-          </div>
-        </div>
-      </div>
-      <style jsx>{`
-        .statsWrapper {
-          display: grid;
-          grid-template-columns: auto auto;
-        }
-        @media screen and (max-width: 500px) {
-          .statsWrapper {
-            display: grid;
-            grid-template-columns: auto;
-          }
-        }
-        .statsWrapper .box {
-          padding: 20px 5px;
-          display: flex;
-          align-items: flex-end;
-          color: ${props.theme.colors.main};
-        }
-        .statsWrapper .box p:first-child {
-          font-size: 30px;
-          font-weight: 400;
-        }
-      `}</style>
-    </>
-  );
-});
-
-const Visas = [
-  { text: "Medical Visa", image: "medical-visa.png" },
-  { text: "Investor Visa", image: "investor-visa.png" },
-  { text: "Residency Visa", image: "residency-visa.png" },
-  { text: "Student Visa", image: "student-visa.png" },
-  { text: "Tourist Visa", image: "tourist-visa.png" },
-  { text: "Work Visa", image: "work-visa.png" },
-];
-
-const WhyChislon = () => {
-  return (
-    <>
-      {ChislonReasons.map(({ reason, id }) => (
+      {CustomArray.map(({ name, id }) => (
         <Collapsible
           key={id}
           className="mb-2"
-          trigger={<Tab reason={reason} id={id} />}
+          trigger={<Tab name={name} id={id} bgColor={bgColor} />}
         >
           <div
             style={{
@@ -201,7 +125,7 @@ const WhyChislon = () => {
   );
 };
 
-const Tab = ({ reason, id }) => (
+const Tab = ({ name, id, bgColor }) => (
   <div
     className={`flex justify-between bg-yellow-500 text-white p-2 cursor-pointer`}
     style={{
@@ -210,20 +134,20 @@ const Tab = ({ reason, id }) => (
       text: "#fff",
       fontWeight: "bold",
       cursor: "pointer",
-      backgroundColor: "#3B82F6",
+      backgroundColor: bgColor,
       padding: "10px",
     }}
   >
     <p className="uppercase" style={{ textTransform: "uppercase" }}>
-      {id}. {reason}
+      {id}. {name}
     </p>
     <p>+</p>
   </div>
 );
 
 const ChislonReasons = [
-  { id: "1", reason: "PRE UNIVERSITY" },
-  { id: "2", reason: "BACHELOR DEGREE" },
-  { id: "3", reason: "MASTERS DEGREE" },
-  { id: "4", reason: "DOCTORAL" },
+  { id: "1", name: "PRE UNIVERSITY" },
+  { id: "2", name: "BACHELOR DEGREE" },
+  { id: "3", name: "MASTERS DEGREE" },
+  { id: "4", name: "DOCTORAL" },
 ];
