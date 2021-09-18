@@ -10,14 +10,18 @@ import "./index.css";
 const Menus = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  {
-    label: "Services",
-    href: "#",
-    submenus: [
-      { label: "Student Recruitment", href: "/student-recruitment" },
-      { label: "Exam Preps", href: "/exam-preps" },
-    ],
-  },
+  { label: "Admissions", href: "/admissions" },
+  { label: "Scholarships", href: "/scholarships" },
+  { label: "Study Visas", href: "/study-visas" },
+  { label: "Countries", href: "/countries" },
+  // {
+  //   label: "Services",
+  //   href: "#",
+  //   submenus: [
+  //     { label: "Student Recruitment", href: "/student-recruitment" },
+  //     { label: "Exam Preps", href: "/exam-preps" },
+  //   ],
+  // },
   { label: "Partners", href: "/partners" },
   { label: "Contact Us", href: "/contact" },
 ];
