@@ -28,6 +28,7 @@
     "react-accessible-accordion": "^3.0.0",
     "react-burger-menu": "^2.6.11",
     "react-calendar": "^2.19.2",
+    "react-collapsible": "^2.8.4",
     "react-cookie-consent": "^2.5.0",
     "react-dom": "^16.9.0",
     "react-google-recaptcha": "^2.1.0",

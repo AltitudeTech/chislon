@@ -17,7 +17,7 @@ const ServiceOptions = () => {
                 fontSize: "2.5rem",
               }}
             >
-              HOW WE WORK
+              COURSES
             </h5>
           </Col>
         </Row>
