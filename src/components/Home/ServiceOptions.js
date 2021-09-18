@@ -75,7 +75,10 @@ const ServiceOptions = () => {
           <Col md={4}>
             <div className="option_wrapper">
               <img src="/static/images/flags/homeflags/workabroad.jpg" alt="" />
-              <a href="/work-abroad" className="top_text">
+              <a
+                href="https://talentmasters.chislonbroadway.com/"
+                className="top_text"
+              >
                 <p>WORK ABROAD</p>
               </a>
               <div className="label">
