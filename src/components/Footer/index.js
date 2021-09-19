@@ -18,7 +18,7 @@ const Footerlinks = [
 ];
 
 const Index = () => {
-   const router = useRouter();
+  const router = useRouter();
   return (
     <Fragment>
       <div className="container-fluid footer">
@@ -35,17 +35,17 @@ const Index = () => {
                 <p>Discover the advantage of working with ChislonBroadway</p>
               </a>
             </Link>
-           
-              <ButtonStyle
-            className="yellow mb-2"
-            onClick={() => {
-              router.push("/relocate-to-africa");
-              global.window.scrollTo(0, 0);
-            }}
-          >
-           RELOCATE TO AFRICA
-          </ButtonStyle>
-              
+
+            <ButtonStyle
+              className="yellow mb-2"
+              onClick={() => {
+                router.push("/relocate-to-africa");
+                global.window.scrollTo(0, 0);
+              }}
+            >
+              RELOCATE TO AFRICA
+            </ButtonStyle>
+
             <div
               className=""
               style={{ marginTop: "30px", marginRight: "14px" }}
@@ -108,14 +108,14 @@ const Index = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/work-abroad">
-                    <a>Work Abroad</a>
-                  </Link>
+                  <a href="https://talentmasters.chislonbroadway.com/">
+                    Work Abroad
+                  </a>
                 </li>
                 <li>
-                  <Link href="/study-abroad">
-                    <a>Study Abroad</a>
-                  </Link>
+                  <a href="https://institute.chislonbroadway.com/">
+                    Study Abroad
+                  </a>
                 </li>
                 <li>
                   <Link href="/healthcare-abroad">
@@ -165,7 +165,7 @@ const Index = () => {
                 <h6>EMAIL</h6>
                 <span class="d-block mb-4">contact@chislonbroadway.com</span>
                 <h6>PHONE</h6>
-                <span>+234 801 2222 222</span>
+                <span>+234 706 6315 900</span>
               </div>
             </div>
           </div>

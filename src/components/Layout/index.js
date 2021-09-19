@@ -23,7 +23,7 @@ export default Index;
 const WhatsappBar = () => {
   return (
     <div className="whatsappBar">
-      <Link href="https://api.whatsapp.com/send/?phone=+2347037857172">
+      <Link href="https://api.whatsapp.com/send/?phone=+2347066315900">
         <a target="_blank">
           <FaWhatsapp
             size={25}
