@@ -10,7 +10,7 @@ import "./index.scss";
 
 const items = [
   {
-    src: "/static/images/home/sliders/1.jpg",
+    src: "/static/images/home/sliders/banner.jpg",
     altText: "Slide 1",
     caption: "",
   },
