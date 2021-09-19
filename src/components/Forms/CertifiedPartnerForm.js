@@ -18,21 +18,21 @@ const SweetAlert = dynamic(
 const initialValues = {
   countries: [],
   firstname: "",
+  middlename: "",
   lastname: "",
-  email: "",
   phone: "",
-  age: "",
-  fax_number: "",
+  email: "",
   gender: "",
-  marital_status: "",
-  nationality: "",
-  current_country_of_residence: "",
-  professional_experience: "",
-  prove_experience: "",
-  representation: "",
-  how_we_contact: "",
-  how_you_found_us: "",
-  question: "",
+  serviceRequired: "Citizenship by Investment",
+  // marital_status: "",
+  // nationality: "",
+  // current_country_of_residence: "",
+  // professional_experience: "",
+  // prove_experience: "",
+  // representation: "",
+  // how_we_contact: "",
+  // how_you_found_us: "",
+  // question: "",
 };
 
 const CertifiedPartnerForm = () => {
@@ -104,7 +104,7 @@ const CertifiedPartnerForm = () => {
         <Col md={{ size: 8, offset: 2 }}>
           <form
             className="mt-5"
-            name="talentmasters_partner_form"
+            name="talentmasters_getstartedform"
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
@@ -117,7 +117,7 @@ const CertifiedPartnerForm = () => {
               onConfirm={() => setAlertState(false)}
             />
             <Row>
-              <Col md={6}>
+              <Col md={12}>
                 <div className="form-group">
                   <label htmlFor="" className="">
                     FIRST NAME <span className="text-danger">*</span>
@@ -133,7 +133,23 @@ const CertifiedPartnerForm = () => {
                   />
                 </div>
               </Col>
-              <Col md={6}>
+              <Col md={12}>
+                <div className="form-group">
+                  <label htmlFor="">
+                    MIDDLE NAME <span className="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="middlename"
+                    id="middlename"
+                    value={form.middlename}
+                    onChange={handleChange}
+                    className="form-control"
+                    required
+                  />
+                </div>
+              </Col>
+              <Col md={12}>
                 <div className="form-group">
                   <label htmlFor="">
                     LAST NAME <span className="text-danger">*</span>
@@ -151,23 +167,7 @@ const CertifiedPartnerForm = () => {
               </Col>
             </Row>
             <Row>
-              <Col md={6}>
-                <div className="form-group">
-                  <label htmlFor="">
-                    EMAIL <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="email"
-                    id="email"
-                    onChange={handleChange}
-                    value={form.email}
-                    className="form-control"
-                    required
-                  />
-                </div>
-              </Col>
-              <Col md={6}>
+              <Col md={12}>
                 <div className="form-group">
                   <label htmlFor="">PHONE</label>
                   <PhoneInput
@@ -187,37 +187,53 @@ const CertifiedPartnerForm = () => {
                   />
                 </div>
               </Col>
-            </Row>
-            <Row>
-              <Col md={6}>
+              <Col md={12}>
                 <div className="form-group">
-                  <label htmlFor="">FAX NUMBER</label>
+                  <label htmlFor="">
+                    EMAIL <span className="text-danger">*</span>
+                  </label>
                   <input
-                    type="number"
-                    name="fax_number"
-                    id="fax_number"
+                    type="text"
+                    name="email"
+                    id="email"
                     onChange={handleChange}
-                    value={form.fax_number}
+                    value={form.email}
                     className="form-control"
                     required
                   />
                 </div>
               </Col>
-              <Col md={6}>
+              <Col md={12}>
                 <div className="form-group">
-                  <label htmlFor="">AGE</label>
-                  <input
-                    type="number"
-                    name="age"
-                    id="age"
+                  <label htmlFor="">
+                    SERVICE REQUIRED <span className="text-danger">*</span>
+                  </label>
+                  <select
+                    type="text"
+                    name="serviceRequired"
+                    id="serviceRequired"
                     onChange={handleChange}
-                    value={form.age}
+                    value={form.serviceRequired}
                     className="form-control"
-                  />
+                    required
+                  >
+                    <option value="Citizenship by Investment">
+                      Citizenship by Investment
+                    </option>
+                    <option value="Residency by Investment">
+                      Residency by Investment
+                    </option>
+                    <option value="High Networth Investor">
+                      High Networth Investor
+                    </option>
+                    <option value="Work Abroad">Work Abroad</option>
+                    <option value="Study Abroad">Study Abroad</option>
+                    <option value="Healthcare Abroad">Healthcare Abroad</option>
+                  </select>
                 </div>
               </Col>
             </Row>
-            <Row>
+            {/* <Row>
               <Col md={6}>
                 <div className="form-group">
                   <label htmlFor="">
@@ -418,6 +434,7 @@ const CertifiedPartnerForm = () => {
                 </div>
               </Col>
             </Row>
+             */}
             <Row className="mb-5">
               <Col md={12}>
                 <ReCAPTCHA
@@ -441,7 +458,17 @@ const CertifiedPartnerForm = () => {
                     }));
                   }}
                 />
-                <ButtonStyle className="mt-4" type="submit" disabled={btnState}>
+                <ButtonStyle
+                  className="mt-4"
+                  style={{
+                    backgroundColor: "#004E68",
+                    padding: "80xp 25px",
+                    color: "#fff",
+                    fontWeight: "bold",
+                  }}
+                  type="submit"
+                  disabled={btnState}
+                >
                   SUBMIT {btnState && <Loading />}
                 </ButtonStyle>
               </Col>

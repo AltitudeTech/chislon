@@ -13,11 +13,16 @@
     background-color: transparent;
   }
   .PhoneInputInput:focus,
-  .PhoneInputInput {
+  .PhoneInputInput,
+  select {
+    width: 100%;
     outline: none !important;
     border: none !important;
     background-color: transparent;
     color: #fff;
+  }
+  .PhoneInputCountryIconImg {
+    max-width: 100px;
   }
   .form-control option {
     width: 100% !important ;

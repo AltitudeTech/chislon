@@ -12,6 +12,7 @@ const Menus = [
   { label: "Methodology", href: "/methodology" },
   { label: "Employers", href: "/employers" },
   { label: "Job Seeker", href: "/job-seekers" },
+  { label: "Countries", href: "/countries" },
   { label: "Partners", href: "/partners" },
   { label: "Contact Us", href: "/contact" },
 ];

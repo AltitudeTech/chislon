@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { NavItem, NavLink } from "reactstrap";
 import Link from "next/link";
 import { flags } from "../Countries/index";
-import { SocialMedia } from "../NavBar" ;
+import { SocialMedia } from "../NavBar";
 
 import "./index.scss";
 import { DownloadBrochure, VacancyAlert } from "../About/Download";
@@ -20,7 +20,7 @@ const Index = () => {
     <Fragment>
       <div className="container-fluid footer">
         <div className="row" style={{ position: "relative", zIndex: "5" }}>
-          <div className="col-md-4 footer_links">
+          <div className="col-md-3 footer_links">
             <h6>Contact Us</h6>
             <span class="d-block mb-4">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
@@ -80,11 +80,23 @@ const Index = () => {
               </ul> */}
             </div>
           </div>
-          <div className="col-md-4 footer_links">
-            <DownloadBrochure showImage={false} titleColor="white" />
-            <VacancyAlert />
+          <div className="col-md-2 footer_links">
+            <div className="" style={{ marginRight: "14px" }}>
+              <h6>COUNTRIES</h6>
+              <ul>
+                {/* USA, UK, IRELAND, CANADA, AUSTRALIA,  */}
+                {CountryList.map((country, i) => (
+                  <li key={i}>
+                    <Link href="/countries">
+                      <a>{country.name}</a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="col-md-4 footer_links">
+
+          <div className="col-md-3 footer_links">
             <div className="" style={{ marginRight: "14px" }}>
               <h6>OTHER PROGRAMS</h6>
               <ul>
@@ -105,6 +117,10 @@ const Index = () => {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="col-md-4 footer_links">
+            <DownloadBrochure showImage={false} titleColor="white" />
+            <VacancyAlert />
           </div>
         </div>
       </div>
@@ -158,3 +174,14 @@ export const Socials = () => {
     </ul>
   );
 };
+
+export const CountryList = [
+  { id: 1, name: "USA" },
+  { id: 2, name: "UK" },
+  { id: 3, name: "IRELAND" },
+  { id: 4, name: "CANADA" },
+  { id: 5, name: "AUSTRALIA" },
+  { id: 6, name: "GERMANY" },
+  { id: 7, name: "MALTA" },
+  { id: 8, name: "NEW ZEALAND" },
+];
