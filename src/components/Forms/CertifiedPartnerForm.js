@@ -243,7 +243,7 @@ const CertifiedPartnerForm = () => {
                     name="multiSelect"
                     onChange={handleMultiSelect}
                   />
-                  <select
+                  {/* <select
                     type="text"
                     name="serviceRequired"
                     id="serviceRequired"
@@ -264,7 +264,7 @@ const CertifiedPartnerForm = () => {
                     <option value="Work Abroad">Work Abroad</option>
                     <option value="Study Abroad">Study Abroad</option>
                     <option value="Healthcare Abroad">Healthcare Abroad</option>
-                  </select>
+                  </select> */}
                 </div>
               </Col>
             </Row>
