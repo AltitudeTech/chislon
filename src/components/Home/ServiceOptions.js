@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Container, Row, Col } from "reactstrap";
 import SectionStyle from "../styles/SectionStyle";
 import HeadingStyle from "../styles/Heading3";
@@ -107,8 +108,29 @@ const ServiceOptions = () => {
           </Col>
         </Row>
       </Container>
+      <Container fluid>
+        <Row>
+          <Col md={12} className="text-center">
+            <Link href="/get-started">
+              <a className="getStarted">GET STARTED</a>
+            </Link>
+          </Col>
+        </Row>
+      </Container>
       <style jsx>
         {`
+          .getStarted {
+            color: #fff;
+            background-color: #4e0303da;
+            border: 1px solid #4e0303da;
+            padding: 8px 25px;
+            font-weight: bold;
+            border-radius: 7px;
+          }
+          .getStarted:hover {
+            background-color: #4e0303;
+            text-decoration: none;
+          }
           .underlineBorder {
             position: relative;
             padding-bottom: 5px;
