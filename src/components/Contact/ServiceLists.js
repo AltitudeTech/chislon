@@ -108,7 +108,7 @@ const Study = () => {
             </Heading3Style>
             <p style={{ color: "#fff" }}>Send us a message</p>
             <form
-              name="research_contact_form"
+              name="talenmasters_contact_form"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"

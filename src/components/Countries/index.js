@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import { Container, Jumbotron, Row } from "reactstrap";
+import { CountryList } from "../Footer";
 import "./index.scss";
 
 const Countries = () => {
@@ -8,7 +9,7 @@ const Countries = () => {
     <Fragment>
       <CountryJumbo title="GLOBAL CITIZEN PROGRAMS" country="usa" />
       <Container>
-        <Row className="row">
+        <Row className="row mt-5">
           <div className="country_wrapper">
             {flags.map((flag, index) => {
               return (

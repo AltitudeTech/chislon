@@ -10,6 +10,7 @@ const Menus = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Migration Research", href: "/migration-research" },
+  { label: "Countries", href: "/countries" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -156,8 +157,8 @@ const ContactPhone = withTheme((props) => {
   return (
     <>
       <div className="contactPhone">
-        <Link href="tel:+2348012222222">
-          <a className="phoneBox">+234 801 2222 222</a>
+        <Link href="tel:+2347066315900">
+          <a className="phoneBox">+234 706 6315 900</a>
         </Link>
         <Link href="/contact">
           <a className="contactBox">CONTACT US</a>
