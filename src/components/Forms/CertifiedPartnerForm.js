@@ -5,15 +5,27 @@ import { Container, Row, Col } from "reactstrap";
 import { Loading, encode } from "../../util";
 import ReCAPTCHA from "react-google-recaptcha";
 import PhoneInput from "react-phone-number-input";
+import Select from "react-select";
+import makeAnimated from "react-select/animated";
 import ButtonStyle from "../styles/ButtonStyle";
 import "./CertifiedPartnerForm.scss";
 
+const animatedComponents = makeAnimated();
 const SweetAlert = dynamic(
   () => {
     return import("sweetalert2-react");
   },
   { ssr: false }
 );
+
+const options = [
+  { value: "Citizenship by Investment", label: "Citizenship by Investment" },
+  { value: "Residency by Investment", label: "Residency by Investment" },
+  { value: "High Networth Investor", label: "High Networth Investor" },
+  { value: "Work Abroad", label: "Work Abroad" },
+  { value: "Study Abroad", label: "Study Abroad" },
+  { value: "Healthcare Abroad", label: "Healthcare Abroad" },
+];
 
 const initialValues = {
   countries: [],
@@ -24,6 +36,7 @@ const initialValues = {
   email: "",
   gender: "",
   serviceRequired: "Citizenship by Investment",
+  mutltiSelect: [options[0]],
   // marital_status: "",
   // nationality: "",
   // current_country_of_residence: "",
@@ -70,25 +83,30 @@ const CertifiedPartnerForm = () => {
   const handleSubmit = (event) => {
     setBtnState(true);
     event.preventDefault();
-    fetch("", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": event.target.getAttribute("name"),
-        ...form,
-      }),
-    })
-      .then(() => {
-        setBtnState(false);
-        setForm(initialValues);
-        setAlertState(true);
+    if (form.mutltiSelect.length < 1) {
+      alert("Please Select a service");
+    } else {
+      fetch("", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": event.target.getAttribute("name"),
+          ...form,
+        }),
       })
-      .catch((error) => {
-        alert("Please, try submitting your data again");
-        setBtnState(false);
-        // setForm(initialValues);
-        console.log(error);
-      });
+        .then(() => {
+          setBtnState(false);
+          setForm(initialValues);
+          setAlertState(true);
+        })
+        .catch((error) => {
+          alert("Please, try submitting your data again");
+          setBtnState(false);
+          // setForm(initialValues);
+          console.log(error);
+        });
+    }
+    setBtnState(false);
   };
 
   const handleChange = (event) => {
@@ -98,6 +116,14 @@ const CertifiedPartnerForm = () => {
       [name]: value,
     }));
   };
+
+  const handleMultiSelect = (value) => {
+    setForm((prevValues) => ({
+      ...prevValues,
+      mutltiSelect: [...value],
+    }));
+  };
+
   return (
     <Container className="mb-5 certifiedPartnerForm">
       <Row>
@@ -208,6 +234,15 @@ const CertifiedPartnerForm = () => {
                   <label htmlFor="">
                     SERVICE REQUIRED <span className="text-danger">*</span>
                   </label>
+                  <Select
+                    isMulti
+                    components={animatedComponents}
+                    className="multiSelect"
+                    defaultValue={options[0]}
+                    options={options}
+                    name="multiSelect"
+                    onChange={handleMultiSelect}
+                  />
                   <select
                     type="text"
                     name="serviceRequired"

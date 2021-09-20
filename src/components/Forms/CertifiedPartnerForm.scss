@@ -6,15 +6,22 @@
   .row {
     margin-top: 10px;
   }
-  .form-control {
+  .form-control,
+  select {
     box-shadow: none;
     outline: none;
     color: #fff;
     background-color: transparent;
   }
+  .multiSelect {
+    margin-bottom: 20px;
+  }
+  .multiSelect div:first-child {
+    background-color: transparent;
+  }
   .PhoneInputInput:focus,
   .PhoneInputInput,
-  select {
+  .PhoneInputCountrySelect {
     width: 100%;
     outline: none !important;
     border: none !important;
