@@ -48,7 +48,7 @@ const ServiceOptions = () => {
             <div className="option_wrapper">
               {/* <img src="/static/images/highnetworth.jpeg" alt="" /> */}
               <img
-                src="/static/images/flags/homeflags/highnetworth.jpg"
+                src="/static/images/flags/homeflags/bachelor-degree.jpeg"
                 alt=""
               />
               <a href="/high-networth-investors" className="top_text">
@@ -68,7 +68,7 @@ const ServiceOptions = () => {
         <Row className="row">
           <Col md={4}>
             <div className="option_wrapper">
-              <img src="/static/images/flags/homeflags/workabroad.jpg" alt="" />
+              <img src="/static/images/flags/homeflags/masters.jpeg" alt="" />
               <a href="/work-abroad" className="top_text">
                 <p>MASTERS DEGREE</p>
               </a>
@@ -86,10 +86,7 @@ const ServiceOptions = () => {
         <Row>
           <Col md={4}>
             <div className="option_wrapper">
-              <img
-                src="/static/images/flags/homeflags/studyabroad.jpg"
-                alt=""
-              />
+              <img src="/static/images/flags/homeflags/doctoral.jpeg" alt="" />
               <a
                 href="https://institute.chislonbroadway.com/"
                 className="top_text"
