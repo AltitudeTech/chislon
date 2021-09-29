@@ -18,7 +18,7 @@ const ServiceOptions = () => {
                 fontSize: "2.5rem",
               }}
             >
-              COURSES
+              JOBS IN HIGH DEMAND
             </h5>
           </Col>
         </Row>
@@ -26,14 +26,14 @@ const ServiceOptions = () => {
           <Col md={4}>
             <div className="option_wrapper">
               <img
-                src="/static/images/flags/homeflags/citizenship.jpeg"
+                src="/static/images/flags/homeflags/healthcare.jpeg"
                 alt=""
               />
               <a href="/citizenship-by-investment" className="top_text">
-                <p>PRE UNIVERSITY</p>
+                <p>HEALTHCARE</p>
               </a>
               <div className="label">
-                <p>PRE UNIVERSITY</p>
+                <p>HEALTHCARE</p>
               </div>
             </div>
           </Col>
@@ -46,16 +46,15 @@ const ServiceOptions = () => {
         <Row>
           <Col md={4}>
             <div className="option_wrapper">
-              {/* <img src="/static/images/highnetworth.jpeg" alt="" /> */}
               <img
-                src="/static/images/flags/homeflags/highnetworth.jpg"
+                src="/static/images/flags/homeflags/technology.jpeg"
                 alt=""
               />
               <a href="/high-networth-investors" className="top_text">
-                <p>BACHELOR DEGREE</p>
+                <p>TECHNOLOGY</p>
               </a>
               <div className="label">
-                <p>BACHELOR DEGREE</p>
+                <p>TECHNOLOGY</p>
               </div>
             </div>
           </Col>
@@ -70,10 +69,10 @@ const ServiceOptions = () => {
             <div className="option_wrapper">
               <img src="/static/images/flags/homeflags/workabroad.jpg" alt="" />
               <a href="/work-abroad" className="top_text">
-                <p>MASTERS DEGREE</p>
+                <p>SCIENCES</p>
               </a>
               <div className="label">
-                <p>MASTERS DEGREE</p>
+                <p>SCIENCES</p>
               </div>
             </div>
           </Col>
@@ -94,10 +93,10 @@ const ServiceOptions = () => {
                 href="https://institute.chislonbroadway.com/"
                 className="top_text"
               >
-                <p>DOCTORAL</p>
+                <p>EDUCATION</p>
               </a>
               <div className="label">
-                <p>DOCTORAL</p>
+                <p>EDUCATION</p>
               </div>
             </div>
           </Col>

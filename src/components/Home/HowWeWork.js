@@ -140,14 +140,14 @@ const Tab = ({ name, id, bgColor }) => (
   >
     <p className="uppercase" style={{ textTransform: "uppercase" }}>
       {id}. {name}
-    </p>
+  </p>
     <p>+</p>
   </div>
 );
 
 const ChislonReasons = [
-  { id: "1", name: "PRE UNIVERSITY" },
-  { id: "2", name: "BACHELOR DEGREE" },
-  { id: "3", name: "MASTERS DEGREE" },
-  { id: "4", name: "DOCTORAL" },
+  { id: "1", name: "ASSESSMENT" },
+  { id: "2", name: "DOCUMENTATION" },
+  { id: "3", name: "VISA APPPLICATION" },
+  { id: "4", name: "FOLLOW UP" },
 ];

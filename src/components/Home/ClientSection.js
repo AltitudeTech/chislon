@@ -10,7 +10,7 @@ const ClientSection = (props) => {
       <Row className="" noGutters>
         <Col sm="12" md={{ size: 4 }}>
           <div className="clientDescription">
-            <h1>Access World Class Education</h1>
+            <h1>Access World Class Jobs</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
               eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
@@ -26,7 +26,7 @@ const ClientSection = (props) => {
           <div
             className="clientBox mt-5"
             style={{
-              backgroundImage: "url(/static/images/client/private.jpeg)",
+              backgroundImage: "url(/static/images/client/jobs.jpeg)",
             }}
           >
             {/* <img
@@ -41,14 +41,9 @@ const ClientSection = (props) => {
           <div
             className="clientBox mt-5"
             style={{
-              backgroundImage: "url(/static/images/client/government.jpeg)",
+              backgroundImage: "url(/static/images/client/dream.jpeg)",
             }}
-          >
-            {/* <img
-              className="bgImage"
-              src="/static/images/flags/joinchision.png"
-            /> */}
-          </div>
+          ></div>
         </Col>
         <Col sm="12" md={{ size: 4 }}>
           <div className="clientDescription">
