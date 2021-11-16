@@ -17,7 +17,7 @@ const ClientSection = (props) => {
               suscipit, possimus consectetur, odio tenetur quas doloremque
               magnam non? Eveniet, unde!
             </p>
-            <Link href="/about/client">
+            <Link href="/about/clients">
               <a className="clientButton">Read More</a>
             </Link>
           </div>
@@ -59,7 +59,7 @@ const ClientSection = (props) => {
               suscipit, possimus consectetur, odio tenetur quas doloremque
               magnam non? Eveniet, unde!
             </p>
-            <Link href="/about/client">
+            <Link href="/about/clients">
               <a className="clientButton">Read More</a>
             </Link>
           </div>
@@ -75,7 +75,7 @@ const ClientSection = (props) => {
               suscipit, possimus consectetur, odio tenetur quas doloremque
               magnam non? Eveniet, unde!
             </p>
-            <Link href="/about/client">
+            <Link href="/about/clients">
               <a className="clientButton">Read More</a>
             </Link>
           </div>
