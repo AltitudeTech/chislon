@@ -51,21 +51,27 @@ const ContactJumbotron = (props) => {
             </div>
           </Col>
           <Col md={{ size: 6 }}>
-            <img
-              src="/static/images/contact/contactbody.jpeg"
-              style={{ height: "100%" }}
-            />
+            <div className="getInTouch">
+              <h1>GET IN TOUCH 24 HOURS A DAY</h1>
+            </div>
           </Col>
         </Row>
       </Container>
       <style jsx>{`
         .contactJumboBg {
           min-height: 80vh;
-          background-image: url(/static/images/contact/contact.jpeg),
+          // background-image: url(/static/images/contact/contact.jpeg),
+          background-image: url(/static/images/contact/contactbody.jpeg),
             linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
+        }
+        .getInTouch {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
         }
         .jumbotronContent {
           max-width: 500px;

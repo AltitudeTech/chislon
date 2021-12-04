@@ -122,6 +122,12 @@ const Index = () => {
                     <a>Healthcare Abroad</a>
                   </Link>
                 </li>
+                <li>
+                  <img
+                    src="/static/images/visa.jpeg"
+                    className="img img-fliud"
+                  />
+                </li>
               </ul>
             </div>
           </div>
