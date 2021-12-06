@@ -33,11 +33,11 @@ const items = [
     // caption: "YOUR INVESTMENT ABROAD",
     caption: "ACCESS WORLD CLASS EDUCATION",
   },
-  // {
-  //   src: "/static/images/home/sliders/5.jpg",
-  //   altText: "Slide 5",
-  //   caption: "GLOBAL HEALTH CARE",
-  // },
+  {
+    src: "/static/images/home/sliders/5.jpg",
+    altText: "Slide 5",
+    caption: "PURSUE YOUR DREAM",
+  },
   // {
   //   src: "/static/images/home/sliders/6.jpg",
   //   altText: "Slide 6",
