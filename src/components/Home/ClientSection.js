@@ -83,15 +83,15 @@ const ClientSection = (props) => {
             padding: 5px 20px;
             text-decoration: none;
             text-transform: uppercase;
-            color: ${props.theme.colors.yellow};
+            color: ${props.theme.colors.main};
             transition: all 0.5s linear;
             font-weight: 600 ;
-            background-color: ${props.theme.colors.main};
+            background-color: ${props.theme.colors.yellow};
         }
         .clientButton:hover{
             text-decoration: none;
             text-transform: uppercase;
-            color: ${props.theme.colors.yellow};
+            color: ${props.theme.colors.main};
             border-radius: 8px;
         }
         .clientBox{
