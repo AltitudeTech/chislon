@@ -31,8 +31,16 @@ const Menus = [
   // { label: "Residency By Investment", href: "/citizenship-by-residence" },
   { label: "Residency By Investment", href: "/residency-by-investment" },
   { label: "High Networth Investor", href: "/high-networth-investors" },
-  { label: "Work Abroad", href: "/work-abroad" },
-  { label: "Study Abroad", href: "/study-abroad" },
+  {
+    label: "Work Abroad",
+    href: "https://talentmasters.chislonbroadway.com",
+    blank: true,
+  },
+  {
+    label: "Study Abroad",
+    href: "https://institute.chislonbroadway.com/",
+    blank: true,
+  },
   { label: "Healthcare Abroad", href: "/healthcare-abroad" },
   { label: "International Partners", href: "/international-partner" },
   {
@@ -85,11 +93,14 @@ const Index = (props) => {
           noOverlay={false}
           customBurgerIcon={<CustomHamburger />}
         >
-          {Menus.map(({ href, label, submenus }, index) => {
+          {Menus.map(({ href, label, submenus, blank }, index) => {
             return (
               <NavItem key={index}>
                 <Link href={href} passHref onClick={() => setIsOpen(false)}>
-                  <NavLink onClick={() => setIsOpen(false)}>
+                  <NavLink
+                    onClick={() => setIsOpen(false)}
+                    target={blank ? "_blank" : "_self"}
+                  >
                     {submenus && <Arrow />} {label}{" "}
                     {submenus && (
                       <Submenus submenus={submenus} setIsOpen={setIsOpen} />
