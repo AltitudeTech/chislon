@@ -15,29 +15,29 @@ const items = [
     // caption: "ACCESS HIGHLY PAID JOBS ABROAD",
     caption: "BECOMING A GLOBAL CITIZEN",
   },
-  {
-    src: "/static/images/home/sliders/2.png",
-    altText: "Slide 3",
-    // caption: "ACCESS WORLD-CLASS EDUCATION",
-    caption: "SECURE YOUR FUTURE PROSPERITY",
-  },
-  {
-    src: "/static/images/home/sliders/3.jpeg",
-    altText: "Slide 2",
-    // caption: "ACCESS HIGHLY PAID JOBS ABROAD",
-    caption: "ACCESS HIGHLY PAID JOBS",
-  },
-  {
-    src: "/static/images/home/sliders/4.jpeg",
-    altText: "Slide 4",
-    // caption: "YOUR INVESTMENT ABROAD",
-    caption: "ACCESS WORLD CLASS EDUCATION",
-  },
-  {
-    src: "/static/images/home/sliders/5.jpg",
-    altText: "Slide 5",
-    caption: "PURSUE YOUR DREAM",
-  },
+  // {
+  //   src: "/static/images/home/sliders/2.png",
+  //   altText: "Slide 3",
+  //   // caption: "ACCESS WORLD-CLASS EDUCATION",
+  //   caption: "SECURE YOUR FUTURE PROSPERITY",
+  // },
+  // {
+  //   src: "/static/images/home/sliders/3.jpeg",
+  //   altText: "Slide 2",
+  //   // caption: "ACCESS HIGHLY PAID JOBS ABROAD",
+  //   caption: "ACCESS HIGHLY PAID JOBS",
+  // },
+  // {
+  //   src: "/static/images/home/sliders/4.jpeg",
+  //   altText: "Slide 4",
+  //   // caption: "YOUR INVESTMENT ABROAD",
+  //   caption: "ACCESS WORLD CLASS EDUCATION",
+  // },
+  // {
+  //   src: "/static/images/home/sliders/5.jpg",
+  //   altText: "Slide 5",
+  //   caption: "PURSUE YOUR DREAM",
+  // },
   // {
   //   src: "/static/images/home/sliders/6.jpg",
   //   altText: "Slide 6",

@@ -30,7 +30,7 @@ const FAQBox = (props) => {
           </div>
         </Col>
         <Col sm="12" md={{ size: 5 }}>
-          <img className="img-fluid" src="/static/images/faqRight.jpeg" />
+          <img className="img-fluid" src="/static/images/faqRight.jpg" />
         </Col>
       </Row>
       <style>

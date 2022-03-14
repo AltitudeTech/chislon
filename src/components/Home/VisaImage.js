@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function VisaImage() {
+export default function VisaImage({ image = "visaImage.jpeg" }) {
   return (
     <div>
-      <img src="/static/images/visaImage.jpeg" />
+      <img src={`/static/images/${image}`} />
     </div>
   );
 }

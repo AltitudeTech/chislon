@@ -13,7 +13,8 @@ const Index = () => {
   return (
     <Fragment>
       <Carousel />
-      <DoubleColumn firstColumn={<VisaImage />} />
+      <DoubleColumn firstColumn={<VisaImage image="visaImage.jpeg" />} />
+      <DoubleColumn secondColumn={<VisaImage image="visaImage2.jpeg" />} />
       <WhyChooseUs />
       <FAQBox />
       <ClientSection />
