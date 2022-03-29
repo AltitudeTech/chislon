@@ -33,13 +33,13 @@ const Menus = [
   { label: "High Networth Investor", href: "/high-networth-investors" },
   {
     label: "Work Abroad",
-    href: "https://talentmasters.chislonbroadway.com",
-    blank: true,
+    href: "/work-abroad",
+    // blank: true,
   },
   {
     label: "Study Abroad",
-    href: "https://institute.chislonbroadway.com/",
-    blank: true,
+    href: "/study-abroad",
+    // blank: true,
   },
   { label: "Healthcare Abroad", href: "/healthcare-abroad" },
   { label: "International Partners", href: "/international-partner" },

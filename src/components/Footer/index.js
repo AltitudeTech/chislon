@@ -46,7 +46,7 @@ const Index = () => {
               RELOCATE TO AFRICA
             </ButtonStyle>
 
-            <div
+            {/* <div
               className=""
               style={{ marginTop: "30px", marginRight: "14px" }}
             >
@@ -68,7 +68,7 @@ const Index = () => {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
             <div
               className=""
               style={{ marginTop: "30px", marginRight: "14px" }}
@@ -108,14 +108,14 @@ const Index = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="https://talentmasters.chislonbroadway.com/">
-                    Work Abroad
-                  </a>
+                  <Link href="/work-abroad">
+                    <a>Work Abroad</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://institute.chislonbroadway.com/">
-                    Study Abroad
-                  </a>
+                  <Link href="/study-abroad">
+                    <a>Study Abroad</a>
+                  </Link>
                 </li>
                 <li>
                   <Link href="/healthcare-abroad">
@@ -187,7 +187,7 @@ const Index = () => {
 
       <div className="copyrightBar">
         <p>
-          Copyright 2021 <span>Chislon Broadway Visa Services</span> All Rights
+          Copyright 2022 <span>Chislon Broadway Visa Services</span> All Rights
           Reserved
         </p>
         <div className="d-flex">
