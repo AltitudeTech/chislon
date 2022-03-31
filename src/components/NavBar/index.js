@@ -10,22 +10,22 @@ const Menus = [
   { label: "Home", href: "/" },
   {
     label: "About",
-    href: "#",
-    submenus: [
-      { label: "Vision & Mission", href: "/about/vision-and-mission" },
-      { label: "Leadership Team", href: "/about/leadership-team" },
-      {
-        label: "Voluntary Code of Conduct",
-        href: "/about/voluntary-code-of-conduct",
-      },
-      {
-        label: "Clients",
-        href: "/about/clients",
-      },
-      // { label: "Locations", href: "/about/locations" },
-      { label: "Career", href: "/about/career" },
-      { label: "How We Work", href: "/about/how-we-work" },
-    ],
+    href: "/about",
+    // submenus: [
+    //   { label: "Vision & Mission", href: "/about/vision-and-mission" },
+    //   { label: "Leadership Team", href: "/about/leadership-team" },
+    //   {
+    //     label: "Voluntary Code of Conduct",
+    //     href: "/about/voluntary-code-of-conduct",
+    //   },
+    //   {
+    //     label: "Clients",
+    //     href: "/about/clients",
+    //   },
+    //   // { label: "Locations", href: "/about/locations" },
+    //   { label: "Career", href: "/about/career" },
+    //   { label: "How We Work", href: "/about/how-we-work" },
+    // ],
   },
   { label: "Citizenship By Investment", href: "/citizenship-by-investment" },
   // { label: "Residency By Investment", href: "/citizenship-by-residence" },
