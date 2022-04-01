@@ -27,38 +27,79 @@ const Menus = [
     //   { label: "How We Work", href: "/about/how-we-work" },
     // ],
   },
-  { label: "Citizenship By Investment", href: "/citizenship-by-investment" },
-  // { label: "Residency By Investment", href: "/citizenship-by-residence" },
-  { label: "Residency By Investment", href: "/residency-by-investment" },
-  { label: "High Networth Investor", href: "/high-networth-investors" },
   {
-    label: "Work Abroad",
-    href: "/work-abroad",
-    // blank: true,
-  },
-  {
-    label: "Study Abroad",
-    href: "/study-abroad",
-    // blank: true,
-  },
-  { label: "Healthcare Abroad", href: "/healthcare-abroad" },
-  { label: "International Partners", href: "/international-partner" },
-  {
-    label: "Countries",
-    href: "/#",
+    label: "Investment Migration",
+    href: "/investment-migration",
     submenus: [
       {
         label: "Citizenship By Investment",
-        href: "/country/citizenship-by-investment",
+        href: "/investment-migration/citizenship-by-investment",
       },
       {
         label: "Residency By Investment",
-        href: "/country/residence-by-investment",
+        href: "/investment-migration/residency-by-investment",
       },
     ],
   },
+  {
+    label: "Visas",
+    href: "/visas",
+    submenus: [
+      {
+        label: "USA",
+        href: "/visas/usa",
+      },
+      {
+        label: "UK",
+        href: "/visas/uk",
+      },
+      {
+        label: "Canada",
+        href: "/visas/canada",
+      },
+      {
+        label: "Australia",
+        href: "/visas/australia",
+      },
+      {
+        label: "New Zealand",
+        href: "/visas/newzealand",
+      },
+      {
+        label: "China",
+        href: "/visas/china",
+      },
+      {
+        label: "South Africa",
+        href: "/visas/south-africa",
+      },
+      {
+        label: "Singapore",
+        href: "/visas/singapore",
+      },
+      {
+        label: "EU-SCHENGEN",
+        href: "/visas/eu-schengen",
+      },
+    ],
+  },
+  // { label: "Citizenship By Investment", href: "/citizenship-by-investment" },
+  // { label: "Residency By Investment", href: "/residency-by-investment" },
+  // { label: "High Networth Investor", href: "/high-networth-investors" },
+  // {
+  //   label: "Work Abroad",
+  //   href: "/work-abroad",
+  //   // blank: true,
+  // },
+  // {
+  //   label: "Study Abroad",
+  //   href: "/study-abroad",
+  //   // blank: true,
+  // },
+  // { label: "Healthcare Abroad", href: "/healthcare-abroad" },
+  { label: "International Partners", href: "/international-partner" },
+
   // { label: "Industry Insight", href: "/industry-insight" },
-  // { label: "About", href: "/about" },
   // { label: "Services", href: "/services" },
   // { label: "Partners", href: "/partners" },
   { label: "NEWS", href: "/latest-news" },
@@ -70,11 +111,11 @@ const Index = (props) => {
   return (
     <nav
       className="navbar navbar-default"
-      style={{ backgroundColor: props.theme.colors.main }}
+      style={{ backgroundColor: props.theme.colors.white }}
     >
       <NavbarBrand href="/">
         <img
-          src="/static/images/whitelogo.png"
+          src="/static/images/darklogo.png"
           className="img-fluid"
           style={{ maxWidth: "200px" }}
         />
@@ -128,10 +169,10 @@ const CustomHamburger = () => {
       </div>
       <style jsx>{`
         .customBurger {
-          color: #fff;
+          color: #01172a;
         }
         .customBurger span {
-          background-color: #fff;
+          background-color: #01172a;
           display: block;
           width: 100%;
           height: 2px;
@@ -293,13 +334,13 @@ const ContactPhone = withTheme((props) => {
           text-decoration: none;
         }
         .contactPhone .phoneBox {
-          border: 2px solid ${props.theme.colors.yellow};
-          color: ${props.theme.colors.yellow};
+          border: 2px solid ${props.theme.colors.main};
+          color: ${props.theme.colors.main};
         }
         .contactPhone .contactBox {
-          border: 2px solid ${props.theme.colors.yellow};
-          background-color: ${props.theme.colors.yellow};
-          color: ${props.theme.colors.main};
+          border: 2px solid ${props.theme.colors.main};
+          background-color: ${props.theme.colors.main};
+          color: ${props.theme.colors.white};
           text-transfrom: uppercase;
         }
       `}</style>

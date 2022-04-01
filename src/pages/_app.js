@@ -18,7 +18,7 @@ const Tawkto = dynamic(() => import("../components/Tawkto"), {
 const theme = {
   colors: {
     black: "#212121",
-    white: "#FFFFFF",
+    white: "#fff",
     yellow: "#FFDA42",
     main: "#01172A",
     // main: "#01172A",
@@ -87,7 +87,7 @@ export default class MyApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <Layout>
-        <Tawkto />
+          <Tawkto />
           <CookieConsent />
           {/* <Addthis /> */}
           <GlobalStyle />

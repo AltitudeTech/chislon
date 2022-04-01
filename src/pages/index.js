@@ -19,7 +19,7 @@ const Index = () => {
       <WhyChooseUs />
       <FAQBox />
       <ClientSection />
-      <ServiceOptions />
+      {/* <ServiceOptions /> */}
       {/* <CategoryRow /> */}
       {/* <PopularDestination /> */}
     </Fragment>
