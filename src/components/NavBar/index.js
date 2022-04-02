@@ -11,21 +11,28 @@ const Menus = [
   {
     label: "About",
     href: "/about",
-    // submenus: [
-    //   { label: "Vision & Mission", href: "/about/vision-and-mission" },
-    //   { label: "Leadership Team", href: "/about/leadership-team" },
-    //   {
-    //     label: "Voluntary Code of Conduct",
-    //     href: "/about/voluntary-code-of-conduct",
-    //   },
-    //   {
-    //     label: "Clients",
-    //     href: "/about/clients",
-    //   },
-    //   // { label: "Locations", href: "/about/locations" },
-    //   { label: "Career", href: "/about/career" },
-    //   { label: "How We Work", href: "/about/how-we-work" },
-    // ],
+  },
+  {
+    label: "Services",
+    href: "/#",
+    submenus: [
+      {
+        label: "Bronze",
+        href: "/services/bronze",
+      },
+      {
+        label: "Silver",
+        href: "/services/silver",
+      },
+      {
+        label: "Gold",
+        href: "/services/gold",
+      },
+      {
+        label: "Platinum",
+        href: "/services/platinum",
+      },
+    ],
   },
   {
     label: "Investment Migration",
@@ -83,24 +90,12 @@ const Menus = [
       },
     ],
   },
-  // { label: "Citizenship By Investment", href: "/citizenship-by-investment" },
-  // { label: "Residency By Investment", href: "/residency-by-investment" },
-  // { label: "High Networth Investor", href: "/high-networth-investors" },
-  // {
-  //   label: "Work Abroad",
-  //   href: "/work-abroad",
-  //   // blank: true,
-  // },
-  // {
-  //   label: "Study Abroad",
-  //   href: "/study-abroad",
-  //   // blank: true,
-  // },
-  // { label: "Healthcare Abroad", href: "/healthcare-abroad" },
+  {
+    label: "Journal of Migration",
+    href: "/journal-of-migration",
+  },
   { label: "International Partners", href: "/international-partner" },
-
   // { label: "Industry Insight", href: "/industry-insight" },
-  // { label: "Services", href: "/services" },
   // { label: "Partners", href: "/partners" },
   { label: "NEWS", href: "/latest-news" },
   { label: "Contact Us", href: "/contact" },
@@ -220,12 +215,19 @@ export const SocialMedia = () => {
           style={{ width: "30px", height: "30px", margin: "5px" }}
         />
 
-        {/* <SocialIcon
+        <SocialIcon
           network="whatsapp"
           className="icons"
-          url=""
+          url="https://api.whatsapp.com/send/?phone=+2347066315900"
           style={{ width: "30px", height: "30px", margin: "5px" }}
-        /> */}
+        />
+
+        <SocialIcon
+          network="pinterest"
+          className="icons"
+          url="https://api.whatsapp.com/send/?phone=+2347066315900"
+          style={{ width: "30px", height: "30px", margin: "5px" }}
+        />
 
         <SocialIcon
           network="linkedin"

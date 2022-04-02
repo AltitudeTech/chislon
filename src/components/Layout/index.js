@@ -9,7 +9,7 @@ const Index = (props) => {
   return (
     <Fragment>
       <div className="container-fluid p-0">
-        <WhatsappBar />
+        {/* <WhatsappBar /> */}
         <NewsBar />
         <NavBar />
         {props.children}
