@@ -46,6 +46,10 @@ const Menus = [
         label: "Residency By Investment",
         href: "/investment-migration/residency-by-investment",
       },
+      {
+        label: " International Real Estate",
+        href: "/investment-migration/international-real-estate",
+      },
     ],
   },
   {
