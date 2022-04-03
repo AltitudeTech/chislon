@@ -8,18 +8,26 @@ import ImageBox from "../components/Home/ImageBox";
 import ClientSection from "../components/Home/ClientSection";
 import FAQBox from "../components/Home/FAQBox";
 import VisaImage from "../components/Home/VisaImage";
+import { CountryJumbo, PopularDestination } from "../components/Countries";
+import PopularCitizenship from "../components/Home/PopularCitizenship";
 
 const Index = () => {
   return (
     <Fragment>
-      <Carousel />
+      {/* <Carousel /> */}
+      <CountryJumbo
+        title="BECOME A GLOBAL CITIZEN"
+        hasExtension
+        country="home.jpeg"
+      />
       <ImageBox />
       <DoubleColumn firstColumn={<VisaImage image="visaImage.jpeg" />} />
       <DoubleColumn secondColumn={<VisaImage image="visaImage2.jpeg" />} />
       <WhyChooseUs />
-      <FAQBox />
-      <ClientSection />
+      {/* <FAQBox /> */}
+      {/* <ClientSection /> */}
       {/* <ServiceOptions /> */}
+      <PopularCitizenship />
       {/* <CategoryRow /> */}
       {/* <PopularDestination /> */}
     </Fragment>

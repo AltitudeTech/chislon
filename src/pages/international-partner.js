@@ -12,7 +12,7 @@ export default () => {
     <Fragment>
       <CountryJumbo
         title="INTERNATIONAL PARTNERS"
-        country="international_partner.jpeg"
+        country="inter-part.jpeg"
         hasExtension
       />
       <DoubleColumn heading="International Partner Heading" />

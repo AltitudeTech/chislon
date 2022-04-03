@@ -14,94 +14,51 @@ const Menus = [
   },
   {
     label: "Services",
-    href: "/#",
-    submenus: [
-      {
-        label: "Bronze",
-        href: "/services/bronze",
-      },
-      {
-        label: "Silver",
-        href: "/services/silver",
-      },
-      {
-        label: "Gold",
-        href: "/services/gold",
-      },
-      {
-        label: "Platinum",
-        href: "/services/platinum",
-      },
-    ],
+    href: "/services",
+  },
+  {
+    label: "Citizenship By Investment",
+    href: "/citizenship-by-investment",
+  },
+  {
+    label: "Residency By Investment",
+    href: "/residency-by-investment",
+  },
+  {
+    label: " International Real Estate",
+    href: "/international-real-estate",
   },
   {
     label: "Investment Migration",
     href: "/investment-migration",
-    submenus: [
-      {
-        label: "Citizenship By Investment",
-        href: "/investment-migration/citizenship-by-investment",
-      },
-      {
-        label: "Residency By Investment",
-        href: "/investment-migration/residency-by-investment",
-      },
-      {
-        label: " International Real Estate",
-        href: "/investment-migration/international-real-estate",
-      },
-    ],
   },
   {
-    label: "Visas",
-    href: "/visas",
-    submenus: [
-      {
-        label: "USA",
-        href: "/visas/usa",
-      },
-      {
-        label: "UK",
-        href: "/visas/uk",
-      },
-      {
-        label: "Canada",
-        href: "/visas/canada",
-      },
-      {
-        label: "Australia",
-        href: "/visas/australia",
-      },
-      {
-        label: "New Zealand",
-        href: "/visas/newzealand",
-      },
-      {
-        label: "China",
-        href: "/visas/china",
-      },
-      {
-        label: "South Africa",
-        href: "/visas/south-africa",
-      },
-      {
-        label: "Singapore",
-        href: "/visas/singapore",
-      },
-      {
-        label: "EU-SCHENGEN",
-        href: "/visas/eu-schengen",
-      },
-    ],
+    label: "Incorporation & Accounts",
+    href: "/incorporation-and-accounts",
   },
+  {
+    label: "Offshore Investment",
+    href: "/offshore-investment",
+  },
+  { label: "Countries", href: "/country" },
+  { label: "Visas", href: "/visas" },
+  // {
+  //   label: "Visas",
+  //   href: "/visas",
+  //   submenus: [
+  //     {
+  //       label: "USA",
+  //       href: "/visas/usa",
+  //     },
+  //   ],
+  // },
   {
     label: "Journal of Migration",
     href: "/journal-of-migration",
   },
   { label: "International Partners", href: "/international-partner" },
-  // { label: "Industry Insight", href: "/industry-insight" },
-  // { label: "Partners", href: "/partners" },
-  { label: "NEWS", href: "/latest-news" },
+  { label: "Insight", href: "/insight" },
+  { label: "News", href: "/latest-news" },
   { label: "Contact Us", href: "/contact" },
 ];
 

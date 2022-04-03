@@ -35,7 +35,11 @@ const Index = () => {
                 <p>Discover the advantage of working with ChislonBroadway</p>
               </a>
             </Link>
-
+            <img
+              src="/static/images/imclogo.jpg"
+              className="my-3"
+              style={{ maxWidth: "150px", display: "block" }}
+            />
             <ButtonStyle
               className="yellow mb-2"
               onClick={() => {
@@ -83,6 +87,11 @@ const Index = () => {
                 <li>
                   <Link href="/social-responsibility">
                     <a>Social Responsibility</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/faqs">
+                    <a>FAQs</a>
                   </Link>
                 </li>
               </ul>

@@ -1,12 +1,14 @@
 import React, { Fragment } from "react";
 import ServicesJumbotron from "../components/Services/Jumbotron";
-import ServiceLists from "../components/Services/ServiceLists";
+import ClientSection from "../components/Home/ClientSection";
+import { CountryJumbo } from "../components/Countries";
 
 const Index = () => {
   return (
     <Fragment>
-      <ServicesJumbotron />
-      <ServiceLists />
+      {/* <ServicesJumbotron /> */}
+      <CountryJumbo title="SERVICES" hasExtension country="service.jpeg" />
+      <ClientSection />
     </Fragment>
   );
 };

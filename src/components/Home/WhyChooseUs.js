@@ -29,13 +29,152 @@ const WhyChooseUs = (props) => {
               cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
             </p>
             {/* <ChislonStats /> */}
-            <WhyChislon />
+            {/* <WhyChislon /> */}
           </div>
         </Col>
         <Col sm="12" md={{ size: 6 }}>
           <div>
             <img
               className="img-fluid mt-5"
+              loading="lazy"
+              style={{ maxWidth: "80%" }}
+              src="/static/images/Home/work-visa.jpeg"
+              alt="choose us now"
+            />
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col sm="12" md={{ size: 5, offset: 1 }}>
+          <div>
+            <img
+              className="img-fluid"
+              loading="lazy"
+              src="/static/images/Home/work-visa.jpeg"
+              alt="choose us now"
+            />
+          </div>
+        </Col>
+        <Col sm="12" md={{ size: 6 }}>
+          <div style={{ maxWidth: "500px" }}>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
+              possimus illo atque impedit cupiditate dicta repudiandae laborum
+              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quasi deserunt cum odio tempora
+              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
+              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
+              possimus illo atque impedit cupiditate dicta repudiandae laborum
+              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quasi deserunt cum odio tempora
+              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
+              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
+            </p>
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col sm="12" md={{ size: 5, offset: 1 }}>
+          <div style={{ maxWidth: "500px" }}>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
+              possimus illo atque impedit cupiditate dicta repudiandae laborum
+              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quasi deserunt cum odio tempora
+              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
+              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
+              possimus illo atque impedit cupiditate dicta repudiandae laborum
+              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quasi deserunt cum odio tempora
+              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
+              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
+            </p>
+          </div>
+        </Col>
+        <Col sm="12" md={{ size: 6 }}>
+          <div>
+            <img
+              className="img-fluid "
+              loading="lazy"
+              style={{ maxWidth: "80%" }}
+              src="/static/images/Home/work-visa.jpeg"
+              alt="choose us now"
+            />
+          </div>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col sm="12" md={{ size: 5, offset: 1 }}>
+          <div>
+            <img
+              className="img-fluid"
+              loading="lazy"
+              src="/static/images/Home/work-visa.jpeg"
+              alt="choose us now"
+            />
+          </div>
+        </Col>
+        <Col sm="12" md={{ size: 6 }}>
+          <div style={{ maxWidth: "500px" }}>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
+              possimus illo atque impedit cupiditate dicta repudiandae laborum
+              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quasi deserunt cum odio tempora
+              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
+              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
+              possimus illo atque impedit cupiditate dicta repudiandae laborum
+              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quasi deserunt cum odio tempora
+              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
+              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
+            </p>
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col sm="12" md={{ size: 5, offset: 1 }}>
+          <div style={{ maxWidth: "500px" }}>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
+              possimus illo atque impedit cupiditate dicta repudiandae laborum
+              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quasi deserunt cum odio tempora
+              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
+              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
+              possimus illo atque impedit cupiditate dicta repudiandae laborum
+              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Quasi deserunt cum odio tempora
+              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
+              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
+            </p>
+          </div>
+        </Col>
+        <Col sm="12" md={{ size: 6 }}>
+          <div>
+            <img
+              className="img-fluid "
               loading="lazy"
               style={{ maxWidth: "80%" }}
               src="/static/images/Home/work-visa.jpeg"
@@ -177,12 +316,14 @@ const WhyChislon = () => {
           className="mb-2"
           trigger={<Tab reason={reason} id={id} />}
         >
-          <div style={{
-            backgroundColor: "#fff",
-            border: "1px solid #3B82F6",
-            padding: "10px",
-            marginBottom: "2px"
-          }}>
+          <div
+            style={{
+              backgroundColor: "#fff",
+              border: "1px solid #3B82F6",
+              padding: "10px",
+              marginBottom: "2px",
+            }}
+          >
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
               ducimus labore voluptas soluta minima, ipsum exercitationem in ab
@@ -200,22 +341,22 @@ const WhyChislon = () => {
       ))}
     </>
   );
-}
+};
 
 const Tab = ({ reason, id }) => (
   <div
     className={`flex justify-between bg-yellow-500 text-white p-2 cursor-pointer`}
     style={{
-      display : 'flex',
-      justifyContent:"space-between",
-      text:"#fff",
-      fontWeight: 'bold',
-      cursor : "pointer",
-      backgroundColor: '#3B82F6',
-      padding: "10px"
+      display: "flex",
+      justifyContent: "space-between",
+      text: "#fff",
+      fontWeight: "bold",
+      cursor: "pointer",
+      backgroundColor: "#3B82F6",
+      padding: "10px",
     }}
   >
-    <p className="uppercase" style={{textTransform:"uppercase"}}>
+    <p className="uppercase" style={{ textTransform: "uppercase" }}>
       {id}. {reason}
     </p>
     <p>+</p>

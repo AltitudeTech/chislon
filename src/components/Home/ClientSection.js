@@ -1,99 +1,101 @@
 import React from "react";
 import Link from "next/link";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 import SectionStyle from "../styles/SectionStyle";
 import { withTheme } from "styled-components";
 
 const ClientSection = (props) => {
   return (
     <SectionStyle className="clientBoxStyle p-0">
-      <Row className="" noGutters>
-        <Col sm="12" md={{ size: 4 }}>
-          <div className="clientDescription">
-            <h1>Private Investor</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
-              suscipit, possimus consectetur, odio tenetur quas doloremque
-              magnam non? Eveniet, unde!
-            </p>
-            <Link href="/about/clients">
-              <a className="clientButton">Read More</a>
-            </Link>
-          </div>
-        </Col>
-        <Col sm="12" md={{ size: 8 }}>
-          <div
-            className="clientBox mt-5"
-            style={{
-              backgroundImage: "url(/static/images/client/private.jpeg)",
-            }}
-          >
-            {/* <img
+      <Container className="my-5">
+        <Row className="" noGutters>
+          <Col sm="12" md={{ size: 6 }}>
+            <div className="clientDescription">
+              <h1>Private Investor</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                eligendi veritatis laudantium eum, sed odit ipsum ex ratione
+                omnis suscipit, possimus consectetur, odio tenetur quas
+                doloremque magnam non? Eveniet, unde!
+              </p>
+              {/* <Link href="/about/clients">
+                <a className="clientButton">Read More</a>
+              </Link> */}
+            </div>
+          </Col>
+          <Col sm="12" md={{ size: 6 }}>
+            <div
+              className="clientBox"
+              style={{
+                backgroundImage: "url(/static/images/client/private.jpeg)",
+              }}
+            >
+              {/* <img
               className="bgImage"
               src="/static/images/flags/joinchision.png"
             /> */}
-          </div>
-        </Col>
-      </Row>
-      <Row className="" noGutters>
-        <Col sm="12" md={{ size: 8 }}>
-          <div
-            className="clientBox mt-5"
-            style={{
-              backgroundImage: "url(/static/images/client/government.jpeg)",
-            }}
-          >
-            {/* <img
+            </div>
+          </Col>
+        </Row>
+        <Row className="" noGutters>
+          <Col sm="12" md={{ size: 6 }}>
+            <div
+              className="clientBox"
+              style={{
+                backgroundImage: "url(/static/images/client/government.jpeg)",
+              }}
+            >
+              {/* <img
               className="bgImage"
               src="/static/images/flags/joinchision.png"
             /> */}
-          </div>
-        </Col>
-        <Col sm="12" md={{ size: 4 }}>
-          <div className="clientDescription">
-            <h1>Government Entity</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
-              suscipit, possimus consectetur, odio tenetur quas doloremque
-              magnam non? Eveniet, unde!
-            </p>
-            <Link href="/about/clients">
-              <a className="clientButton">Read More</a>
-            </Link>
-          </div>
-        </Col>
-      </Row>
-      <Row className="" noGutters>
-        <Col sm="12" md={{ size: 4 }}>
-          <div className="clientDescription">
-            <h1>Corporate Investor</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              eligendi veritatis laudantium eum, sed odit ipsum ex ratione omnis
-              suscipit, possimus consectetur, odio tenetur quas doloremque
-              magnam non? Eveniet, unde!
-            </p>
-            <Link href="/about/clients">
-              <a className="clientButton">Read More</a>
-            </Link>
-          </div>
-        </Col>
-        <Col sm="12" md={{ size: 8 }}>
-          <div
-            className="clientBox mt-5"
-            style={{
-              backgroundImage: "url(/static/images/client/corporate.jpeg)",
-            }}
-          >
-            {/* <img
+            </div>
+          </Col>
+          <Col sm="12" md={{ size: 6 }}>
+            <div className="clientDescription">
+              <h1>Government Entity</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                eligendi veritatis laudantium eum, sed odit ipsum ex ratione
+                omnis suscipit, possimus consectetur, odio tenetur quas
+                doloremque magnam non? Eveniet, unde!
+              </p>
+              {/* <Link href="/about/clients">
+                <a className="clientButton">Read More</a>
+              </Link> */}
+            </div>
+          </Col>
+        </Row>
+        <Row className="" noGutters>
+          <Col sm="12" md={{ size: 6 }}>
+            <div className="clientDescription">
+              <h1>Corporate Investor</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                eligendi veritatis laudantium eum, sed odit ipsum ex ratione
+                omnis suscipit, possimus consectetur, odio tenetur quas
+                doloremque magnam non? Eveniet, unde!
+              </p>
+              {/* <Link href="/about/clients">
+                <a className="clientButton">Read More</a>
+              </Link> */}
+            </div>
+          </Col>
+          <Col sm="12" md={{ size: 6 }}>
+            <div
+              className="clientBox"
+              style={{
+                backgroundImage: "url(/static/images/client/corporate.jpeg)",
+              }}
+            >
+              {/* <img
               className="bgImage"
               src="/static/images/flags/joinchision.png"
             /> */}
-          </div>
-        </Col>
-      </Row>
+            </div>
+          </Col>
+        </Row>
+      </Container>
       <style>
         {`
         .clientBoxStyle{
@@ -126,7 +128,7 @@ const ClientSection = (props) => {
         }
         .clientBox{
             overflow:hidden;
-            min-height : 400px;
+            min-height : 332px;
             // max-width: 800px; 
             background-color: #AFA280;
             background-image: url(/static/images/flags/joinchision.png) ;

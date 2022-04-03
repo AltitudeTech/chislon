@@ -23,7 +23,7 @@ const ServicesJumbotron = () => {
       <style jsx>{`
         .servicesJumboBg {
           position: relative;
-          background-image: url(/static/images/services/services.jpg),
+          background-image: url(/static/images/services/service.jpeg),
             linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
           background-repeat: no-repeat;
           background-size: cover;
