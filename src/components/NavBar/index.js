@@ -28,10 +28,10 @@ const Menus = [
     label: " International Real Estate",
     href: "/international-real-estate",
   },
-  {
-    label: "Investment Migration",
-    href: "/investment-migration",
-  },
+  // {
+  //   label: "Investment Migration",
+  //   href: "/investment-migration",
+  // },
   {
     label: "Incorporation & Accounts",
     href: "/incorporation-and-accounts",
@@ -71,9 +71,13 @@ const Index = (props) => {
     >
       <NavbarBrand href="/">
         <img
-          src="/static/images/darklogo.png"
+          src="/static/images/whitelogo.png"
           className="img-fluid"
-          style={{ maxWidth: "200px" }}
+          style={{
+            maxWidth: "200px",
+            backgroundColor: props.theme.colors.main,
+            padding: "10px",
+          }}
         />
       </NavbarBrand>
       <SocialMedia />
@@ -303,7 +307,7 @@ const ContactPhone = withTheme((props) => {
         .contactPhone .contactBox {
           border: 2px solid ${props.theme.colors.main};
           background-color: ${props.theme.colors.main};
-          color: ${props.theme.colors.white};
+          color: ${props.theme.colors.yellow};
           text-transfrom: uppercase;
         }
       `}</style>

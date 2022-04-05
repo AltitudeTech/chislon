@@ -154,6 +154,79 @@ const PopularCitizenship = () => {
             </div>
           </Col>
         </Row>
+        <Row>
+          <Col md={12}>
+            <h5
+              className="underlineBorder"
+              style={{
+                margin: "2rem 0",
+                textAlign: "center",
+                fontSize: "2rem",
+              }}
+            >
+              POPULAR VISA PROGRAMS
+            </h5>
+          </Col>
+          <Col md={3}>
+            <div className="option_wrapper">
+              <img src="/static/images/flags/homeflags/residency.jpg" alt="" />
+            </div>
+            <div className="text-center">
+              <p className="my-4">Country Name Here</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </Col>
+          <Col md={3}>
+            <div className="option_wrapper">
+              <img
+                src="/static/images/flags/homeflags/citizenship.jpeg"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="my-4">Country Name Here</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </Col>
+          <Col md={3}>
+            <div className="option_wrapper">
+              {/* <img src="/static/images/highnetworth.jpeg" alt="" /> */}
+              <img
+                src="/static/images/flags/homeflags/highnetworth.jpg"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="my-4">Country Name Here</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </Col>
+          <Col md={3}>
+            <div className="option_wrapper">
+              {/* <img src="/static/images/highnetworth.jpeg" alt="" /> */}
+              <img
+                src="/static/images/flags/homeflags/highnetworth.jpg"
+                alt=""
+              />
+            </div>
+            <div className="text-center">
+              <p className="my-4">Country Name Here</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </Col>
+        </Row>
       </Container>
       <style jsx>
         {`
