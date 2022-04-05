@@ -102,13 +102,18 @@ const Index = () => {
               <h6>SERVICES</h6>
               <ul>
                 <li>
-                  <Link href="/investment-migration/citizenship-by-investment">
+                  <Link href="/citizenship-by-investment">
                     <a>Citizenship by Investment</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/investment-migration/residency-by-investment">
+                  <Link href="/residency-by-investment">
                     <a>Residency by Investment</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/testimonial">
+                    <a>Testimonial</a>
                   </Link>
                 </li>
                 <li>
