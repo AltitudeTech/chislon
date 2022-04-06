@@ -51,7 +51,7 @@ export default function ContactBox({
         <Col
           md={{ size: 5 }}
           style={{
-            backgroundImage: "url(/static/images/sideimage.jpg)",
+            backgroundImage: "url(/static/images/2.png)",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "right center",
