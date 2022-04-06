@@ -3,6 +3,8 @@ import { Col, Container, Row } from "reactstrap";
 import ButtonStyle from "../styles/ButtonStyle";
 
 export default function TopBanner({
+  image = "sideimage.jpg",
+  subtitle = "",
   title = "International Real Estate",
   buttonLabel = "REAL ESTATE ENQUIRY",
 }) {
@@ -16,6 +18,9 @@ export default function TopBanner({
         <Col md={{ size: 7, offset: 1 }}>
           <Row>
             <Col>
+              <p style={{ fontSize: "12px", textTransform: "uppercase" }}>
+                {subtitle}
+              </p>
               <p style={{ fontSize: "40px" }}>{title}</p>
             </Col>
           </Row>
@@ -58,7 +63,7 @@ export default function TopBanner({
         <Col
           md={{ size: 4 }}
           style={{
-            backgroundImage: "url(/static/images/sideimage.jpg)",
+            backgroundImage: `url(/static/images/${image})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "right center",

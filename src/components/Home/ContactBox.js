@@ -4,6 +4,8 @@ import { Col, Container, Row } from "reactstrap";
 import ButtonStyle from "../styles/ButtonStyle";
 
 export default function ContactBox({
+  image = "2.png",
+  subtitle = "",
   title = "Contact Us",
   buttonLabel = "ENQUIRY",
 }) {
@@ -18,7 +20,10 @@ export default function ContactBox({
         <Col md={{ size: 6, offset: 1 }}>
           <Row>
             <Col>
-              <p style={{ fontSize: "40px" }}>{title}</p>
+              <p style={{ fontSize: "12px", textTransform: "uppercase" }}>
+                {subtitle}
+              </p>
+              <p style={{ fontSize: "40px", fontWeight: "500" }}>{title}</p>
             </Col>
           </Row>
           <Row>
@@ -51,7 +56,7 @@ export default function ContactBox({
         <Col
           md={{ size: 5 }}
           style={{
-            backgroundImage: "url(/static/images/2.png)",
+            backgroundImage: `url(/static/images/${image})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "right center",

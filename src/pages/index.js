@@ -23,8 +23,8 @@ const Index = () => {
       /> */}
       <HomeImage />
       <ImageBox />
-      <DoubleColumn firstColumn={<VisaImage image="visaImage.jpeg" />} />
-      <DoubleColumn secondColumn={<VisaImage image="visaImage2.jpeg" />} />
+      <DoubleColumn firstColumn={<VisaImage image="passport.jpeg" />} />
+      <DoubleColumn secondColumn={<VisaImage image="visaImage.jpeg" />} />
       <WhyChooseUs />
       {/* <FAQBox /> */}
       {/* <ClientSection /> */}

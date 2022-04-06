@@ -1,15 +1,18 @@
 import React, { Fragment } from "react";
 import { Col, Container, Row } from "reactstrap";
 import { CountryJumbo } from "../components/Countries/index";
+import ContactBox from "../components/Home/ContactBox";
+import TopBanner from "../components/Home/TopBanner";
 
 export default () => {
   return (
     <Fragment>
-      <CountryJumbo
+      {/* <CountryJumbo
         title="RESIDENCY BY INVESTMENT"
         country="residency.jpg"
         hasExtension
-      />
+      /> */}
+      <TopBanner subtitle="RESIDENCY" title="Residency by Investment" />
       <Container>
         <Row>
           <Col md={12}>
@@ -69,6 +72,7 @@ export default () => {
           </Col>
         </Row>
       </Container>
+      <ContactBox />
     </Fragment>
   );
 };
