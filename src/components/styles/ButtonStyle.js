@@ -17,6 +17,20 @@ const ButtonStyle = styled.button`
     color: ${(props) => props.theme.colors.yellow};
     font-weight: 800;
   }
+  &.transparent {
+    background: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.main};
+    border: 1px solid ${(props) => props.theme.colors.main};
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 3px;
+    &:hover {
+      color: ${(props) => props.theme.colors.white};
+      background: ${(props) => props.theme.colors.main};
+    }
+  }
 `;
 
 export default ButtonStyle;
