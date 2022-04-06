@@ -1,188 +1,208 @@
 import React from "react";
-import { Row, Col } from "reactstrap";
+import Slider from "react-slick";
+import { Row, Col, Container } from "reactstrap";
 import Collapsible from "react-collapsible";
 import { withTheme } from "styled-components";
 import SectionStyle from "../styles/SectionStyle";
 
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 const WhyChooseUs = (props) => {
   return (
     <SectionStyle className="sectionStyle">
-      <Row>
-        <Col sm="12" md={{ size: 5, offset: 1 }}>
-          <div style={{ maxWidth: "500px" }}>
+      <Container>
+        <Row>
+          <Col>
             <p
               style={{
                 fontSize: "40px",
                 fontWeight: "400",
+                paddingLeft: "20px",
                 color: props.theme.colors.main,
               }}
             >
               Why Choose Chislon Broadway
             </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
-              possimus illo atque impedit cupiditate dicta repudiandae laborum
-              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Quasi deserunt cum odio tempora
-              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
-              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
-            </p>
-            {/* <ChislonStats /> */}
-            {/* <WhyChislon /> */}
-          </div>
-        </Col>
-        <Col sm="12" md={{ size: 6 }}>
-          <div>
-            <img
-              className="img-fluid mt-5"
-              loading="lazy"
-              style={{ maxWidth: "80%" }}
-              src="/static/images/Home/work-visa.jpeg"
-              alt="choose us now"
-            />
-          </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col sm="12" md={{ size: 5, offset: 1 }}>
-          <div>
-            <img
-              className="img-fluid"
-              loading="lazy"
-              src="/static/images/Home/work-visa.jpeg"
-              alt="choose us now"
-            />
-          </div>
-        </Col>
-        <Col sm="12" md={{ size: 6 }}>
-          <div style={{ maxWidth: "500px" }}>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
-              possimus illo atque impedit cupiditate dicta repudiandae laborum
-              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Quasi deserunt cum odio tempora
-              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
-              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
-            </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
-              possimus illo atque impedit cupiditate dicta repudiandae laborum
-              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Quasi deserunt cum odio tempora
-              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
-              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
-            </p>
-          </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col sm="12" md={{ size: 5, offset: 1 }}>
-          <div style={{ maxWidth: "500px" }}>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
-              possimus illo atque impedit cupiditate dicta repudiandae laborum
-              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Quasi deserunt cum odio tempora
-              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
-              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
-            </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
-              possimus illo atque impedit cupiditate dicta repudiandae laborum
-              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Quasi deserunt cum odio tempora
-              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
-              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
-            </p>
-          </div>
-        </Col>
-        <Col sm="12" md={{ size: 6 }}>
-          <div>
-            <img
-              className="img-fluid "
-              loading="lazy"
-              style={{ maxWidth: "80%" }}
-              src="/static/images/Home/work-visa.jpeg"
-              alt="choose us now"
-            />
-          </div>
-        </Col>
-      </Row>
-
-      <Row>
-        <Col sm="12" md={{ size: 5, offset: 1 }}>
-          <div>
-            <img
-              className="img-fluid"
-              loading="lazy"
-              src="/static/images/Home/work-visa.jpeg"
-              alt="choose us now"
-            />
-          </div>
-        </Col>
-        <Col sm="12" md={{ size: 6 }}>
-          <div style={{ maxWidth: "500px" }}>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
-              possimus illo atque impedit cupiditate dicta repudiandae laborum
-              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Quasi deserunt cum odio tempora
-              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
-              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
-            </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
-              possimus illo atque impedit cupiditate dicta repudiandae laborum
-              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Quasi deserunt cum odio tempora
-              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
-              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
-            </p>
-          </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col sm="12" md={{ size: 5, offset: 1 }}>
-          <div style={{ maxWidth: "500px" }}>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
-              possimus illo atque impedit cupiditate dicta repudiandae laborum
-              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Quasi deserunt cum odio tempora
-              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
-              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
-            </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-              deserunt cum odio tempora tempore! Magnam minima quos obcaecati,
-              possimus illo atque impedit cupiditate dicta repudiandae laborum
-              deleniti vitae suscipit amet? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Quasi deserunt cum odio tempora
-              tempore! Magnam minima quos obcaecati, possimus illo atque impedit
-              cupiditate dicta repudiandae laborum deleniti vitae suscipit amet?
-            </p>
-          </div>
-        </Col>
-        <Col sm="12" md={{ size: 6 }}>
-          <div>
-            <img
-              className="img-fluid "
-              loading="lazy"
-              style={{ maxWidth: "80%" }}
-              src="/static/images/Home/work-visa.jpeg"
-              alt="choose us now"
-            />
-          </div>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Slider {...settings}>
+          <Container fluid>
+            <Row
+              style={{
+                margin: "auto",
+              }}
+            >
+              <Col sm="12" md={{ size: 6 }}>
+                <div>
+                  <img
+                    className="img-fluid"
+                    loading="lazy"
+                    src="/static/images/Home/work-visa.jpeg"
+                    alt="choose us now"
+                  />
+                </div>
+              </Col>
+              <Col sm="12" md={{ size: 6 }}>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet? Lorem
+                    ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                    deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet? Lorem
+                    ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                    deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet?
+                  </p>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+          <Container fluid>
+            <Row
+              style={{
+                margin: "auto",
+              }}
+            >
+              <Col sm="12" md={{ size: 6 }}>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet? Lorem
+                    ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                    deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet? Lorem
+                    ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                    deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet?
+                  </p>
+                </div>
+              </Col>
+              <Col sm="12" md={{ size: 6 }}>
+                <div>
+                  <img
+                    className="img-fluid "
+                    loading="lazy"
+                    src="/static/images/Home/work-visa.jpeg"
+                    alt="choose us now"
+                  />
+                </div>
+              </Col>
+            </Row>
+          </Container>
+          <Container fluid>
+            <Row
+              style={{
+                margin: "auto",
+              }}
+            >
+              <Col sm="12" md={{ size: 6 }}>
+                <div>
+                  <img
+                    className="img-fluid"
+                    loading="lazy"
+                    src="/static/images/Home/work-visa.jpeg"
+                    alt="choose us now"
+                  />
+                </div>
+              </Col>
+              <Col sm="12" md={{ size: 6 }}>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet? Lorem
+                    ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                    deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet? Lorem
+                    ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                    deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet?
+                  </p>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+          <Container fluid>
+            <Row
+              style={{
+                margin: "auto",
+              }}
+            >
+              <Col sm="12" md={{ size: 6 }}>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet? Lorem
+                    ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                    deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet? Lorem
+                    ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                    deserunt cum odio tempora tempore! Magnam minima quos
+                    obcaecati, possimus illo atque impedit cupiditate dicta
+                    repudiandae laborum deleniti vitae suscipit amet?
+                  </p>
+                </div>
+              </Col>
+              <Col sm="12" md={{ size: 6 }}>
+                <div>
+                  <img
+                    className="img-fluid "
+                    loading="lazy"
+                    src="/static/images/Home/work-visa.jpeg"
+                    alt="choose us now"
+                  />
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </Slider>
+      </Container>
       <style>
         {`
         .sectionStyle{

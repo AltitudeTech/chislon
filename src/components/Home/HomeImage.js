@@ -11,7 +11,7 @@ function HomeImage(props) {
         <h2 className="caption">BECOME A GLOBAL CITIZEN</h2>
         <img src="/static/images/home.jpeg" className="img-fluid" />
         <div className="learnMore">
-          <ButtonStyle className="yellow" onClick={() => router.push("/about")}>
+          <ButtonStyle onClick={() => router.push("/about")}>
             LEARN MORE
           </ButtonStyle>
         </div>

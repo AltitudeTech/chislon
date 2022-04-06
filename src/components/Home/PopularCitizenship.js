@@ -91,7 +91,7 @@ const PopularCitizenship = () => {
                 fontSize: "2rem",
               }}
             >
-              POPULAR RESIDENCY PROGRAM
+              POPULAR RESIDENCY PROGRAMS
             </h5>
           </Col>
           <Col md={3}>
