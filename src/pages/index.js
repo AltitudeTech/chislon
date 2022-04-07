@@ -11,6 +11,7 @@ import VisaImage from "../components/Home/VisaImage";
 import { CountryJumbo, PopularDestination } from "../components/Countries";
 import PopularCitizenship from "../components/Home/PopularCitizenship";
 import HomeImage from "../components/Home/HomeImage";
+import ContactBox from "../components/Home/ContactBox";
 
 const Index = () => {
   return (
@@ -22,7 +23,7 @@ const Index = () => {
         country="home.jpeg"
       /> */}
       <HomeImage />
-      <ImageBox />
+
       <DoubleColumn firstColumn={<VisaImage image="passport.jpeg" />} />
       <DoubleColumn secondColumn={<VisaImage image="visaImage.jpeg" />} />
       <WhyChooseUs />
@@ -32,6 +33,8 @@ const Index = () => {
       <PopularCitizenship />
       {/* <CategoryRow /> */}
       {/* <PopularDestination /> */}
+      {/* <ImageBox /> */}
+      <ContactBox />
     </Fragment>
   );
 };

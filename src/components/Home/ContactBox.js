@@ -8,6 +8,7 @@ export default function ContactBox({
   subtitle = "",
   title = "Contact Us",
   buttonLabel = "ENQUIRY",
+  noContactButton,
 }) {
   const router = useRouter();
   return (
@@ -42,16 +43,20 @@ export default function ContactBox({
               </p>
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <ButtonStyle
-                className="transparent"
-                onClick={() => router.push("/contact")}
-              >
-                {buttonLabel}
-              </ButtonStyle>
-            </Col>
-          </Row>
+          {!noContactButton ? (
+            <Row>
+              <Col>
+                <ButtonStyle
+                  className="transparent"
+                  onClick={() => router.push("/contact")}
+                >
+                  {buttonLabel}
+                </ButtonStyle>
+              </Col>
+            </Row>
+          ) : (
+            ""
+          )}
         </Col>
         <Col
           md={{ size: 5 }}
