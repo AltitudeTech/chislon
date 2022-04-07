@@ -8,7 +8,7 @@ const ClientSection = (props) => {
   return (
     <SectionStyle className="clientBoxStyle p-0">
       <Container className="my-5">
-        <Row className="" noGutters>
+        <Row className="my-5" noGutters>
           <Col sm="12" md={{ size: 6 }}>
             <div className="clientDescription">
               <h1>Private Investor</h1>
@@ -37,7 +37,7 @@ const ClientSection = (props) => {
             </div>
           </Col>
         </Row>
-        <Row className="" noGutters>
+        <Row className="my-5" noGutters>
           <Col sm="12" md={{ size: 6 }}>
             <div
               className="clientBox"
@@ -66,7 +66,7 @@ const ClientSection = (props) => {
             </div>
           </Col>
         </Row>
-        <Row className="" noGutters>
+        <Row className="my-5" noGutters>
           <Col sm="12" md={{ size: 6 }}>
             <div className="clientDescription">
               <h1>Corporate Investor</h1>

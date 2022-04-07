@@ -4,22 +4,25 @@ import { CountryJumbo } from "../components/Countries/index";
 import CertifiedPartnerForm, {
   TextTop,
 } from "../components/Forms/CertifiedPartnerForm";
+import TopBanner from "../components/Home/TopBanner";
 import ContactHere from "../components/Home/contactHere";
+import ContactBox from "../components/Home/ContactBox";
 import DoubleColumn from "../components/Home/DoubleColumn";
 
 export default () => {
   return (
     <Fragment>
-      <CountryJumbo
+      {/* <CountryJumbo
         title="INTERNATIONAL PARTNERS"
         country="inter-part.jpeg"
         hasExtension
-      />
+      /> */}
+      <TopBanner subtitle="INTERNATIONAL" title="International Partners" />
       <DoubleColumn heading="International Partner Heading" />
       <DoubleColumn heading="International Partner Heading" />
       {/* <TextTop title="Become an International Partner" /> */}
-      <CertifiedPartnerForm />
-      {/* <ContactHere /> */}
+      {/* <CertifiedPartnerForm /> */}
+      <ContactBox />
     </Fragment>
   );
 };

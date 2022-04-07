@@ -48,11 +48,11 @@ const Countries = ({
 }) => {
   return (
     <Fragment>
-      <CountryJumbo
+      {/* <CountryJumbo
         title={title}
         country={country}
         hasExtension={hasExtension}
-      />
+      /> */}
       <Container>
         <Row className="row my-5">
           <div className="country_wrapper">
