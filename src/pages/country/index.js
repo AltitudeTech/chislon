@@ -6,7 +6,7 @@ import Countries from "../../components/Countries";
 const Country = () => {
   return (
     <Fragment>
-      <TopBanner subtitle="COUNTRY" title="Countries" />
+      <TopBanner subtitle="COUNTRY" title="Investment Migration Countries" />
       <Countries title="COUNTRY" hasExtension country="citizenship.jpeg" />
       <ContactBox />
     </Fragment>

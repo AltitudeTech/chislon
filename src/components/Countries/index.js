@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { Container, Jumbotron, Row, Col } from "reactstrap";
+import { Container, Jumbotron, Row, Col, Table } from "reactstrap";
 import "./index.scss";
 
 export const PopularDestination = () => {
@@ -48,13 +48,60 @@ const Countries = ({
 }) => {
   return (
     <Fragment>
-      {/* <CountryJumbo
-        title={title}
-        country={country}
-        hasExtension={hasExtension}
-      /> */}
       <Container>
         <Row className="row my-5">
+          <Col md={12}>
+            <p style={{ fontWeight: "400", fontSize: "40px" }}>
+              European Citizenship by Investment Programs
+            </p>
+          </Col>
+          <Col md={12}>
+            <Table>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>Minimum capital</td>
+                  <td>Processing time</td>
+                  <td>Key benefit</td>
+                  <td></td>
+                </tr>
+                {European.map(({ name, image }, key) => (
+                  <tr>
+                    <td>
+                      <p
+                        style={{
+                          fontSize: "25px",
+                          fontWeight: "300",
+                          minWidth: "300px",
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          alignItems: "center",
+                        }}
+                      >
+                        <img
+                          src={`/static/images/countries/${image}`}
+                          style={{ width: "40px" }}
+                        />
+                        <span className="px-3">{name}</span>
+                      </p>
+                    </td>
+                    <td>EUR 3 million</td>
+                    <td>24–36 months</td>
+                    <td>
+                      <p style={{ maxWidth: "200px" }}>
+                        Opportunity to become an EU citizen upon making a
+                        substantial capital contribution
+                      </p>
+                    </td>
+                    <td>
+                      More Info <sup>___</sup>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Col>
+          {/* 
           <div className="country_wrapper">
             {!category
               ? flags.map((flag, index) => {
@@ -77,7 +124,60 @@ const Countries = ({
                       </Link>
                     );
                   })}
-          </div>
+          </div> */}
+        </Row>
+        <Row className="row my-5">
+          <Col md={12}>
+            <p style={{ fontWeight: "400", fontSize: "40px" }}>
+              Caribbean Citizenship by Investment Programs
+            </p>
+          </Col>
+          <Col md={12}>
+            <Table>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>Minimum capital</td>
+                  <td>Processing time</td>
+                  <td>Key benefit</td>
+                  <td></td>
+                </tr>
+                {Carribean.map(({ name, image }, key) => (
+                  <tr>
+                    <td>
+                      <p
+                        style={{
+                          fontSize: "25px",
+                          fontWeight: "300",
+                          minWidth: "300px",
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          alignItems: "center",
+                        }}
+                      >
+                        <img
+                          src={`/static/images/countries/${image}`}
+                          style={{ width: "40px" }}
+                        />
+                        <span className="px-3">{name}</span>
+                      </p>
+                    </td>
+                    <td>EUR 3 million</td>
+                    <td>24–36 months</td>
+                    <td>
+                      <p style={{ maxWidth: "200px" }}>
+                        Opportunity to become an EU citizen upon making a
+                        substantial capital contribution
+                      </p>
+                    </td>
+                    <td>
+                      More Info <sup>___</sup>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Col>
         </Row>
       </Container>
     </Fragment>
@@ -165,6 +265,22 @@ export const CountryBody = ({ title = "USA" }) => (
     </Container>
   </Fragment>
 );
+
+const European = [
+  { name: "Austria", image: "austria.png" },
+  { name: "Malta", image: "malta.png" },
+  { name: "Montenegro", image: "montenegro.png" },
+  { name: "North Macedonia", image: "north-macedonia.png" },
+  { name: "Turkey", image: "turkey.png" },
+];
+
+const Carribean = [
+  { name: "Antigua and Barbuda", image: "antigua-barbuda.png" },
+  { name: "Dominica", image: "dominica.png" },
+  { name: "Grenada", image: "grenada.png" },
+  { name: "St. Kitts and Nevis", image: "st-kitts-nevis.png" },
+  { name: "St. Lucia", image: "st-lucia.png" },
+];
 
 export const flags = [
   {
