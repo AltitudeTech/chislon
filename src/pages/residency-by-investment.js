@@ -12,7 +12,11 @@ export default () => {
         country="residency.jpg"
         hasExtension
       /> */}
-      <TopBanner subtitle="RESIDENCY" title="Residency by Investment" />
+      <TopBanner
+        subtitle="RESIDENCY"
+        title="Residency by Investment"
+        image="residency.jpeg"
+      />
       <Container>
         <Row>
           <Col md={12}>

@@ -12,7 +12,11 @@ export default () => {
         hasExtension
         country="citizenship.jpeg"
       /> */}
-      <TopBanner subtitle="CITIZENSHIP" title="Citizenship by Investment" />
+      <TopBanner
+        subtitle="CITIZENSHIP"
+        title="Citizenship by Investment"
+        image="citizenship.jpeg"
+      />
       <DoubleColumn heading="Citizenship By Investment Heading" />
       <DoubleColumn heading="Citizenship By Investment Heading" />
       <ContactBox />
