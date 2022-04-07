@@ -9,7 +9,7 @@ function HomeImage(props) {
     <>
       <div className="homeBanner">
         <h2 className="caption">BECOME A GLOBAL CITIZEN</h2>
-        <img src="/static/images/home.jpeg" className="img-fluid" />
+        <img src="/static/images/homepage.jpeg" className="img-fluid" />
         <div className="learnMore">
           <ButtonStyle onClick={() => router.push("/about")}>
             LEARN MORE
