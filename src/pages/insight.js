@@ -8,9 +8,7 @@ import Latest from "../components/Latest";
 const Index = () => {
   return (
     <div>
-      {/* <Jumbotron title="LATEST NEWS" /> */}
-      {/* <CountryJumbo title="INSIGHT" hasExtension country="news.jpeg" /> */}
-      <TopBanner subtitle="INSIGHT" title="Insight" />
+      <TopBanner subtitle="INSIGHT" title="Insight" image="insight.jpeg" />
       <Latest />
       <ContactBox />
     </div>

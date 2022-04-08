@@ -5,12 +5,17 @@ import Jumbotron from "../components/Jumbotron";
 import SectionStyle from "../components/styles/SectionStyle";
 import Faq from "../components/Faq";
 import FaqGrid from "../components/Latest/FaqGrid";
+import ContactBox from "../components/Home/ContactBox";
+import TopBanner from "../components/Home/TopBanner";
 
 const Index = () => {
   return (
     <div>
-      {/* <Jumbotron title="FAQs" /> */}
-      <CountryJumbo title="FAQs" hasExtension country="faq.jpeg" />
+      <TopBanner
+        subtitle="FAQ"
+        title="Frequently Asked Questions"
+        image="faq.jpeg"
+      />
       <Container>
         <SectionStyle>
           <Row>
@@ -21,6 +26,7 @@ const Index = () => {
           </Row>
         </SectionStyle>
       </Container>
+      <ContactBox />
     </div>
   );
 };

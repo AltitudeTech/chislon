@@ -15,7 +15,7 @@ export default () => {
       <TopBanner
         subtitle="RESIDENCY"
         title="Residency by Investment"
-        image="residency.jpeg"
+        image="residency2.jpeg"
       />
       <Container>
         <Row>

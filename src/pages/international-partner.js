@@ -12,12 +12,11 @@ import DoubleColumn from "../components/Home/DoubleColumn";
 export default () => {
   return (
     <Fragment>
-      {/* <CountryJumbo
-        title="INTERNATIONAL PARTNERS"
-        country="inter-part.jpeg"
-        hasExtension
-      /> */}
-      <TopBanner subtitle="INTERNATIONAL" title="International Partners" />
+      <TopBanner
+        subtitle="INTERNATIONAL"
+        title="International Partners"
+        image="real-estate.jpeg"
+      />
       <DoubleColumn heading="International Partner Heading" />
       <DoubleColumn heading="International Partner Heading" />
       {/* <TextTop title="Become an International Partner" /> */}

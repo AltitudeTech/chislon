@@ -1,14 +1,18 @@
 import React, { Fragment } from "react";
-import { CountryJumbo } from "../components/Countries/index";
-import ContactHere from "../components/Home/contactHere";
 import DownloadBrochureForm from "../components/Forms/DownloadBrochureForm";
+import ContactBox from "../components/Home/ContactBox";
+import TopBanner from "../components/Home/TopBanner";
 
 const DownloadB = () => {
   return (
     <Fragment>
-      <CountryJumbo title="DOWNLOAD BROCHURE" hasExtension country="workabroad.jpeg" />
+      <TopBanner
+        subtitle="Download"
+        title="Download Brochure"
+        image="workabroad.jpeg"
+      />
       <DownloadBrochureForm />
-      {/* <ContactHere /> */}
+      <ContactBox />
     </Fragment>
   );
 };

@@ -7,7 +7,7 @@ import TopBanner from "../components/Home/TopBanner";
 export default () => {
   return (
     <Fragment>
-      <TopBanner />
+      <TopBanner image="real-estate.jpeg" />
       {/* <CountryJumbo
         title="INTERNATIONAL REAL ESTATE"
         hasExtension

@@ -12,7 +12,11 @@ export default () => {
         hasExtension
         country="citizenship.jpeg"
       /> */}
-      <TopBanner subtitle="OFFSHORE INVESTMENT" title="Offshore Investment" />
+      <TopBanner
+        subtitle="OFFSHORE INVESTMENT"
+        title="Offshore Investment"
+        image="offshore.jpeg"
+      />
       <DoubleColumn heading="Offshore Investment Heading" />
       <DoubleColumn heading="Offshore Investment Heading" />
       <DoubleColumn heading="Offshore Investment Heading" />

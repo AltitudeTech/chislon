@@ -15,6 +15,7 @@ export default () => {
       <TopBanner
         subtitle="INCORPORATION & ACCOUNT"
         title="Incorporation & Account"
+        image="incorporation.jpeg"
       />
       <DoubleColumn heading="Incorporation & Account Heading" />
       <DoubleColumn heading="Incorporation & Account Heading" />
