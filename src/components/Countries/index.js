@@ -285,6 +285,165 @@ const Countries = ({
             </Table>
           </Col>
         </Row>
+        <Row className="row my-5">
+          <Col md={12}>
+            <p style={{ fontWeight: "400", fontSize: "40px" }}>
+              American Residence by Investment Programs
+            </p>
+          </Col>
+          <Col md={12}>
+            <Table>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>Minimum capital</td>
+                  <td>Processing time</td>
+                  <td>Key benefit</td>
+                  <td></td>
+                </tr>
+                {American.map(({ name, image }, key) => (
+                  <tr>
+                    <td>
+                      <p
+                        style={{
+                          fontSize: "25px",
+                          fontWeight: "300",
+                          minWidth: "300px",
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          alignItems: "center",
+                        }}
+                      >
+                        <img
+                          src={`/static/images/countries/${image}`}
+                          style={{ width: "40px" }}
+                        />
+                        <span className="px-3">{name}</span>
+                      </p>
+                    </td>
+                    <td>EUR 3 million</td>
+                    <td>24–36 months</td>
+                    <td>
+                      <p style={{ maxWidth: "200px" }}>
+                        Opportunity to become an EU citizen upon making a
+                        substantial capital contribution
+                      </p>
+                    </td>
+                    <td>
+                      More Info <sup>___</sup>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+        <Row className="row my-5">
+          <Col md={12}>
+            <p style={{ fontWeight: "400", fontSize: "40px" }}>
+              Asian and Pacific Residence by Investment Programs
+            </p>
+          </Col>
+          <Col md={12}>
+            <Table>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>Minimum capital</td>
+                  <td>Processing time</td>
+                  <td>Key benefit</td>
+                  <td></td>
+                </tr>
+                {Asian.map(({ name, image }, key) => (
+                  <tr>
+                    <td>
+                      <p
+                        style={{
+                          fontSize: "25px",
+                          fontWeight: "300",
+                          minWidth: "300px",
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          alignItems: "center",
+                        }}
+                      >
+                        <img
+                          src={`/static/images/countries/${image}`}
+                          style={{ width: "40px" }}
+                        />
+                        <span className="px-3">{name}</span>
+                      </p>
+                    </td>
+                    <td>EUR 3 million</td>
+                    <td>24–36 months</td>
+                    <td>
+                      <p style={{ maxWidth: "200px" }}>
+                        Opportunity to become an EU citizen upon making a
+                        substantial capital contribution
+                      </p>
+                    </td>
+                    <td>
+                      More Info <sup>___</sup>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+        <Row className="row my-5">
+          <Col md={12}>
+            <p style={{ fontWeight: "400", fontSize: "40px" }}>
+              African Residence by Investment Program
+            </p>
+          </Col>
+          <Col md={12}>
+            <Table>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>Minimum capital</td>
+                  <td>Processing time</td>
+                  <td>Key benefit</td>
+                  <td></td>
+                </tr>
+                {Africa.map(({ name, image }, key) => (
+                  <tr>
+                    <td>
+                      <p
+                        style={{
+                          fontSize: "25px",
+                          fontWeight: "300",
+                          minWidth: "300px",
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          alignItems: "center",
+                        }}
+                      >
+                        <img
+                          src={`/static/images/countries/${image}`}
+                          style={{ width: "40px" }}
+                        />
+                        <span className="px-3">{name}</span>
+                      </p>
+                    </td>
+                    <td>EUR 3 million</td>
+                    <td>24–36 months</td>
+                    <td>
+                      <p style={{ maxWidth: "200px" }}>
+                        Opportunity to become an EU citizen upon making a
+                        substantial capital contribution
+                      </p>
+                    </td>
+                    <td>
+                      More Info <sup>___</sup>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
       </Container>
     </Fragment>
   );
@@ -379,7 +538,22 @@ const European = [
   { name: "North Macedonia", image: "north-macedonia.png" },
   { name: "Turkey", image: "turkey.png" },
 ];
+const American = [
+  { name: "Canada", image: "canada.png" },
+  { name: "Panama", image: "panama.png" },
+  { name: "United States of America", image: "usa.png" },
+];
+const Asian = [
+  { name: "Australia", image: "australia.png" },
+  { name: "Hong Kong", image: "hong-kong.png" },
+  { name: "Malaysia", image: "malaysia.png" },
+  { name: "New Zealand", image: "newzealand.png" },
+  { name: "Singapore", image: "singapore.png" },
+  { name: "Thailand", image: "thailand.png" },
+];
+const Africa = [{ name: "Mauritius", image: "mauritius.png" }];
 const MiddleEastern = [{ name: "Jordan", image: "jordan.png" }];
+
 const EuropeanR = [
   { name: "Austria", image: "austria.png" },
   { name: "Cyprus", image: "cyprus.png" },
