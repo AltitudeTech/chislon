@@ -20,8 +20,8 @@ const Index = () => {
         <SectionStyle>
           <Row>
             <Col md={12}>
-              {/* <Faq /> */}
-              <FaqGrid />
+              <Faq />
+              {/* <FaqGrid /> */}
             </Col>
           </Row>
         </SectionStyle>
