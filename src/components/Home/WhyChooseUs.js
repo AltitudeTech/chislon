@@ -44,7 +44,7 @@ const WhyChooseUs = (props) => {
                   <img
                     className="img-fluid"
                     loading="lazy"
-                    src="/static/images/Home/work-visa.jpeg"
+                    src="/static/images/slide/1.jpeg"
                     alt="choose us now"
                   />
                 </div>
@@ -110,7 +110,7 @@ const WhyChooseUs = (props) => {
                   <img
                     className="img-fluid "
                     loading="lazy"
-                    src="/static/images/Home/work-visa.jpeg"
+                    src="/static/images/slide/2.jpeg"
                     alt="choose us now"
                   />
                 </div>
@@ -128,7 +128,7 @@ const WhyChooseUs = (props) => {
                   <img
                     className="img-fluid"
                     loading="lazy"
-                    src="/static/images/Home/work-visa.jpeg"
+                    src="/static/images/slide/1.jpeg"
                     alt="choose us now"
                   />
                 </div>
@@ -194,7 +194,7 @@ const WhyChooseUs = (props) => {
                   <img
                     className="img-fluid "
                     loading="lazy"
-                    src="/static/images/Home/work-visa.jpeg"
+                    src="/static/images/slide/2.jpeg"
                     alt="choose us now"
                   />
                 </div>

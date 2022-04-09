@@ -16,14 +16,7 @@ import ContactBox from "../components/Home/ContactBox";
 const Index = () => {
   return (
     <Fragment>
-      {/* <Carousel /> */}
-      {/* <CountryJumbo
-        title="BECOME A GLOBAL CITIZEN"
-        hasExtension
-        country="home.jpeg"
-      /> */}
       <HomeImage />
-
       <DoubleColumn firstColumn={<VisaImage image="passport.jpeg" />} />
       <DoubleColumn secondColumn={<VisaImage image="visaImage.jpeg" />} />
       <WhyChooseUs />
