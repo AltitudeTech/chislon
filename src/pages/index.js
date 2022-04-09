@@ -27,6 +27,7 @@ const Index = () => {
       {/* <CategoryRow /> */}
       {/* <PopularDestination /> */}
       {/* <ImageBox /> */}
+      <DoubleColumn heading="" secondColumn={<VisaImage image="work-visa.jpeg" />} />
       <ContactBox />
     </Fragment>
   );
