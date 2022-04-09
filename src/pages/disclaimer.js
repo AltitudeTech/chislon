@@ -3,11 +3,13 @@ import { Container, Row, Col } from "reactstrap";
 import Jumbotron from "../components/Jumbotron";
 import SectionStyle from "../components/styles/SectionStyle";
 import ContentPages from "../components/Footer/ContentPages";
+import TopBanner from "../components/Home/TopBanner";
+import ContactBox from "../components/Home/ContactBox";
 
 export default function Disclaimer() {
   return (
     <Fragment>
-      <Jumbotron title="DISCLAIMER" />
+      <TopBanner title="Disclaimer" subtitle="DISCLAIMER" />
       <Container>
         <SectionStyle>
           <Row>
@@ -17,6 +19,7 @@ export default function Disclaimer() {
           </Row>
         </SectionStyle>
       </Container>
+      <ContactBox />
     </Fragment>
   );
 }
