@@ -4,41 +4,15 @@ import DoubleColumn from "../../components/Home/DoubleColumn";
 import TopBanner from "../../components/Home/TopBanner";
 import ContactBox from "../../components/Home/ContactBox";
 import VisaImage from "../../components/Home/VisaImage";
+import { Container, Row } from "reactstrap";
+import LifeInLocation from "../../components/Countries/lifeinlocation";
 
 export default () => {
   return (
     <Fragment>
       <TopBanner subtitle="VISAS" title="Visas" />
-      <DoubleColumn
-        heading="United States of America"
-        noContactButton
-        secondColumn={<VisaImage image="incorporation.jpeg" />}
-      />
-      <DoubleColumn
-        heading="United Kingdom"
-        noContactButton
-        firstColumn={<VisaImage image="incorporation.jpeg" />}
-      />
-      <DoubleColumn
-        heading="Canada"
-        noContactButton
-        secondColumn={<VisaImage image="incorporation.jpeg" />}
-      />
-      <DoubleColumn
-        heading="Australia"
-        noContactButton
-        firstColumn={<VisaImage image="incorporation.jpeg" />}
-      />
-      <DoubleColumn
-        heading="Newzealand"
-        noContactButton
-        secondColumn={<VisaImage image="incorporation.jpeg" />}
-      />
-      <DoubleColumn
-        heading="EU Shengen"
-        noContactButton
-        firstColumn={<VisaImage image="incorporation.jpeg" />}
-      />
+
+      <LifeInLocation />
       <ContactBox />
     </Fragment>
   );
