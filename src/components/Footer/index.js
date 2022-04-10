@@ -41,7 +41,7 @@ const Index = () => {
               style={{ maxWidth: "150px", display: "block" }}
             />
             <ButtonStyle
-              className="yellow mb-2"
+              className="transparent mb-2"
               onClick={() => {
                 router.push("/relocate-to-africa");
                 global.window.scrollTo(0, 0);
@@ -97,7 +97,7 @@ const Index = () => {
               </ul>
             </div>
           </div>
-          <div className="col-md-2 footer_links">
+          {/* <div className="col-md-2 footer_links">
             <div className="" style={{ marginRight: "14px" }}>
               <h6>SERVICES</h6>
               <ul>
@@ -124,7 +124,7 @@ const Index = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
           {/* <div className="col-md-2 footer_links">
             <h6>PROGRAMS</h6>
             <ul>

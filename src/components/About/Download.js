@@ -89,7 +89,7 @@ export const DownloadBrochure = ({ showImage = true, titleColor }) => {
             deleniti vitae suscipit amet?
           </p>
           <ButtonStyle
-            className="yellow"
+            className="transparent"
             onClick={() => {
               router.push("/download-brochure");
               global.window.scrollTo(0, 0);
