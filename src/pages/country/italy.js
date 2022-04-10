@@ -7,8 +7,8 @@ export default () => {
       <ContactBox
         noContactButton
         subtitle="COUNTRY"
-        title="Dominica"
-        image="flags/dominica.jpg"
+        title="Italy"
+        image="flags/grenada.jpg"
       />
       <ContactBox />
     </Fragment>

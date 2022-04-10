@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Link from "next/link";
 import { NavItem, NavLink } from "reactstrap";
 import { useRouter } from "next/router";
-import { flags } from "../Countries/index";
+import { Asian, EuropeanR, flags } from "../Countries/index";
 import { DownloadBrochure } from "../About/Download";
 import { SocialMedia } from "../NavBar";
 import ButtonStyle from "../styles/ButtonStyle";
@@ -141,31 +141,26 @@ const Index = () => {
               <div className="mr-2">
                 <h6>Citizenship By Investment</h6>
                 <ul className="mb-4">
-                  {flags
-                    .filter((flag) => flag.category == "citizenship")
-                    .map((flag, index) => (
-                      <li key={index}>
-                        <a href={flag.href}>{flag.name}</a>
-                      </li>
-                    ))}
+                  {Asian.map((flag, index) => (
+                    <li key={index}>
+                      <a href={flag.href}>{flag.name}</a>
+                    </li>
+                  ))}
                 </ul>
-              </div>
-              <div className="flex-grow-1">
-                <h6>Residency By Investment</h6>
-                <ul className="mb-4">
-                  {flags
-                    .filter((flag) => flag.category == "residency")
-                    .map((flag, index) => (
-                      <li key={index}>
-                        <a href={flag.href}>{flag.name}</a>
-                      </li>
-                    ))}
-                </ul>
-
                 <h6>EMAIL</h6>
                 <span class="d-block mb-4">contact@chislonbroadway.com</span>
                 <h6>PHONE</h6>
                 <span>+234 706 6315 900</span>
+              </div>
+              <div className="flex-grow-1">
+                <h6>Residency By Investment</h6>
+                <ul className="mb-4">
+                  {EuropeanR.map((flag, index) => (
+                    <li key={index}>
+                      <a href={flag.href}>{flag.name}</a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

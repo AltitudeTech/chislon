@@ -1,11 +1,16 @@
 import React, { Fragment } from "react";
-import { CountryJumbo, CountryBody } from "../../components/Countries/index";
+import ContactBox from "../../components/Home/ContactBox";
 
 export default () => {
   return (
     <Fragment>
-      <CountryJumbo title="GRENADA" className="grenada" country="grenada" />
-      <CountryBody title="GRENADA" />
+      <ContactBox
+        noContactButton
+        subtitle="COUNTRY"
+        title="Grenada"
+        image="flags/grenada.jpg"
+      />
+      <ContactBox />
     </Fragment>
   );
 };

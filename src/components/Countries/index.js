@@ -65,8 +65,8 @@ const Countries = ({
                   <td>Key benefit</td>
                   <td></td>
                 </tr>
-                {European.map(({ name, image }, key) => (
-                  <tr>
+                {European.map(({ name, image, path }, key) => (
+                  <tr key={key}>
                     <td>
                       <p
                         style={{
@@ -94,7 +94,11 @@ const Countries = ({
                       </p>
                     </td>
                     <td>
-                      More Info <sup>___</sup>
+                      <Link href={`/country/${path}`}>
+                        <a>
+                          More Info <sup>___</sup>
+                        </a>
+                      </Link>
                     </td>
                   </tr>
                 ))}
@@ -142,8 +146,8 @@ const Countries = ({
                   <td>Key benefit</td>
                   <td></td>
                 </tr>
-                {Carribean.map(({ name, image }, key) => (
-                  <tr>
+                {Carribean.map(({ name, image, path }, key) => (
+                  <tr key={key}>
                     <td>
                       <p
                         style={{
@@ -171,7 +175,11 @@ const Countries = ({
                       </p>
                     </td>
                     <td>
-                      More Info <sup>___</sup>
+                      <Link href={`/country/${path}`}>
+                        <a>
+                          More Info <sup>___</sup>
+                        </a>
+                      </Link>
                     </td>
                   </tr>
                 ))}
@@ -195,8 +203,8 @@ const Countries = ({
                   <td>Key benefit</td>
                   <td></td>
                 </tr>
-                {MiddleEastern.map(({ name, image }, key) => (
-                  <tr>
+                {MiddleEastern.map(({ name, image, path }, key) => (
+                  <tr key={key}>
                     <td>
                       <p
                         style={{
@@ -224,7 +232,11 @@ const Countries = ({
                       </p>
                     </td>
                     <td>
-                      More Info <sup>___</sup>
+                      <Link href={`/country/${path}`}>
+                        <a>
+                          More Info <sup>___</sup>
+                        </a>
+                      </Link>
                     </td>
                   </tr>
                 ))}
@@ -248,8 +260,8 @@ const Countries = ({
                   <td>Key benefit</td>
                   <td></td>
                 </tr>
-                {EuropeanR.map(({ name, image }, key) => (
-                  <tr>
+                {EuropeanR.map(({ name, image, path }, key) => (
+                  <tr key={key}>
                     <td>
                       <p
                         style={{
@@ -277,7 +289,11 @@ const Countries = ({
                       </p>
                     </td>
                     <td>
-                      More Info <sup>___</sup>
+                      <Link href={`/country/${path}`}>
+                        <a>
+                          More Info <sup>___</sup>
+                        </a>
+                      </Link>
                     </td>
                   </tr>
                 ))}
@@ -301,8 +317,8 @@ const Countries = ({
                   <td>Key benefit</td>
                   <td></td>
                 </tr>
-                {American.map(({ name, image }, key) => (
-                  <tr>
+                {American.map(({ name, image, path }, key) => (
+                  <tr key={key}>
                     <td>
                       <p
                         style={{
@@ -330,7 +346,11 @@ const Countries = ({
                       </p>
                     </td>
                     <td>
-                      More Info <sup>___</sup>
+                      <Link href={`/country/${path}`}>
+                        <a>
+                          More Info <sup>___</sup>
+                        </a>
+                      </Link>
                     </td>
                   </tr>
                 ))}
@@ -354,8 +374,8 @@ const Countries = ({
                   <td>Key benefit</td>
                   <td></td>
                 </tr>
-                {Asian.map(({ name, image }, key) => (
-                  <tr>
+                {Asian.map(({ name, image, path }, key) => (
+                  <tr key={key}>
                     <td>
                       <p
                         style={{
@@ -383,7 +403,11 @@ const Countries = ({
                       </p>
                     </td>
                     <td>
-                      More Info <sup>___</sup>
+                      <Link href={`/country/${path}`}>
+                        <a>
+                          More Info <sup>___</sup>
+                        </a>
+                      </Link>
                     </td>
                   </tr>
                 ))}
@@ -407,8 +431,8 @@ const Countries = ({
                   <td>Key benefit</td>
                   <td></td>
                 </tr>
-                {Africa.map(({ name, image }, key) => (
-                  <tr>
+                {Africa.map(({ name, image, path }, key) => (
+                  <tr key={key}>
                     <td>
                       <p
                         style={{
@@ -436,7 +460,11 @@ const Countries = ({
                       </p>
                     </td>
                     <td>
-                      More Info <sup>___</sup>
+                      <Link href={`/country/${path}`}>
+                        <a>
+                          More Info <sup>___</sup>
+                        </a>
+                      </Link>
                     </td>
                   </tr>
                 ))}
@@ -531,51 +559,69 @@ export const CountryBody = ({ title = "USA" }) => (
   </Fragment>
 );
 
-const European = [
-  { name: "Austria", image: "austria.png" },
-  { name: "Malta", image: "malta.png" },
-  { name: "Montenegro", image: "montenegro.png" },
-  { name: "North Macedonia", image: "north-macedonia.png" },
-  { name: "Turkey", image: "turkey.png" },
+export const European = [
+  { name: "Austria", image: "austria.png", path: "austria" },
+  { name: "Malta", image: "malta.png", path: "malta" },
+  { name: "Montenegro", image: "montenegro.png", path: "montenegro" },
+  {
+    name: "North Macedonia",
+    image: "north-macedonia.png",
+    path: "north-macedonia",
+  },
+  { name: "Turkey", image: "turkey.png", path: "turkey" },
 ];
 const American = [
-  { name: "Canada", image: "canada.png" },
-  { name: "Panama", image: "panama.png" },
-  { name: "United States of America", image: "usa.png" },
+  { name: "Canada", image: "canada.png", path: "canada" },
+  { name: "Panama", image: "panama.png", path: "panama" },
+  { name: "United States of America", image: "usa.png", path: "usa" },
 ];
-const Asian = [
-  { name: "Australia", image: "australia.png" },
-  { name: "Hong Kong", image: "hong-kong.png" },
-  { name: "Malaysia", image: "malaysia.png" },
-  { name: "New Zealand", image: "newzealand.png" },
-  { name: "Singapore", image: "singapore.png" },
-  { name: "Thailand", image: "thailand.png" },
+export const Asian = [
+  { name: "Australia", image: "australia.png", path: "australia" },
+  { name: "Hong Kong", image: "hong-kong.png", path: "hong-kong" },
+  { name: "Malaysia", image: "malaysia.png", path: "malaysia" },
+  { name: "New Zealand", image: "newzealand.png", path: "newzealand" },
+  { name: "Singapore", image: "singapore.png", path: "singapore" },
+  { name: "Thailand", image: "thailand.png", path: "thailand" },
 ];
-const Africa = [{ name: "Mauritius", image: "mauritius.png" }];
-const MiddleEastern = [{ name: "Jordan", image: "jordan.png" }];
+const Africa = [
+  { name: "Mauritius", image: "mauritius.png", path: "mauritius" },
+];
+const MiddleEastern = [{ name: "Jordan", image: "jordan.png", path: "jordan" }];
 
-const EuropeanR = [
-  { name: "Austria", image: "austria.png" },
-  { name: "Cyprus", image: "cyprus.png" },
-  { name: "Greece", image: "greece.png" },
-  { name: "Italy", image: "italy.png" },
-  { name: "Jersey", image: "jersey.png" },
-  { name: "Latvia", image: "latvia.png" },
-  { name: "Luxembourg", image: "luxembourg.png" },
-  { name: "Malta", image: "malta.png" },
-  { name: "Monaco", image: "monaco.png" },
-  { name: "Portugal", image: "portugal.png" },
-  { name: "Spain", image: "Spain.png" },
-  { name: "Switzerland", image: "Switzerland.png" },
-  { name: "United Kingdom", image: "united-kingdom.png" },
+export const EuropeanR = [
+  { name: "Austria", image: "austria.png", path: "austria" },
+  { name: "Cyprus", image: "cyprus.png", path: "cyprus" },
+  { name: "Greece", image: "greece.png", path: "greece" },
+  { name: "Italy", image: "italy.png", path: "italy" },
+  { name: "Jersey", image: "jersey.png", path: "jersey" },
+  { name: "Latvia", image: "latvia.png", path: "latvia" },
+  { name: "Luxembourg", image: "luxembourg.png", path: "luxembourg" },
+  { name: "Malta", image: "malta.png", path: "malta" },
+  { name: "Monaco", image: "monaco.png", path: "monaco" },
+  { name: "Portugal", image: "portugal.png", path: "portugal" },
+  { name: "Spain", image: "Spain.png", path: "Spain" },
+  { name: "Switzerland", image: "Switzerland.png", path: "Switzerland" },
+  {
+    name: "United Kingdom",
+    image: "united-kingdom.png",
+    path: "united-kingdom",
+  },
 ];
 
 const Carribean = [
-  { name: "Antigua and Barbuda", image: "antigua-barbuda.png" },
-  { name: "Dominica", image: "dominica.png" },
-  { name: "Grenada", image: "grenada.png" },
-  { name: "St. Kitts and Nevis", image: "st-kitts-nevis.png" },
-  { name: "St. Lucia", image: "st-lucia.png" },
+  {
+    name: "Antigua and Barbuda",
+    image: "antigua-barbuda.png",
+    path: "antigua-barbuda",
+  },
+  { name: "Dominica", image: "dominica.png", path: "dominica" },
+  { name: "Grenada", image: "grenada.png", path: "grenada" },
+  {
+    name: "St. Kitts and Nevis",
+    image: "st-kitts-nevis.png",
+    path: "st-kitts-nevis",
+  },
+  { name: "St. Lucia", image: "st-lucia.png", path: "st-lucia" },
 ];
 
 export const flags = [
