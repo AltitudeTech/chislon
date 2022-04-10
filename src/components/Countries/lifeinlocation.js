@@ -1,10 +1,13 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
+import ButtonStyle from "../styles/ButtonStyle";
 import Heading3Style from "../styles/Heading3";
 import "./lifeinlocation.scss";
 
 export default function LifeInLocation() {
+  const router = useRouter();
   return (
     <Container>
       {Destinations.map(({ image, path, label }, index) => {
@@ -31,6 +34,13 @@ export default function LifeInLocation() {
                   obcaecati, possimus illo atque impedit cupiditate dicta
                   repudiandae laborum deleniti vitae suscipit amet?
                 </p>
+
+                <ButtonStyle
+                  className="transparent"
+                  onClick={() => router.push("/contact")}
+                >
+                  ENQUIRY
+                </ButtonStyle>
               </div>
             </Col>
             <Col md={6} className="my-5">
@@ -77,6 +87,12 @@ export default function LifeInLocation() {
                   obcaecati, possimus illo atque impedit cupiditate dicta
                   repudiandae laborum deleniti vitae suscipit amet?
                 </p>
+                <ButtonStyle
+                  className="transparent"
+                  onClick={() => router.push("/contact")}
+                >
+                  ENQUIRY
+                </ButtonStyle>
               </div>
             </Col>
           </Row>
