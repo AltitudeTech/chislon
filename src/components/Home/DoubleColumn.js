@@ -2,11 +2,14 @@ import React from "react";
 import { Row, Col } from "reactstrap";
 import Heading3Style from "../styles/Heading3";
 import Container from "reactstrap/lib/Container";
+import ButtonStyle from "../styles/ButtonStyle";
 
 const DoubleColumn = ({
   heading = "STUDY, GET A JOB OR START A BUSINESS ANYWHERE IN THE WORLD",
   firstColumn,
   secondColumn,
+  noContactButton,
+  buttonLabel = "ENQUIRY",
 }) => {
   return (
     <Container>
@@ -35,6 +38,16 @@ const DoubleColumn = ({
                 possimus illo atque impedit cupiditate dicta repudiandae laborum
                 deleniti vitae suscipit amet?
               </p>
+              {!noContactButton ? (
+                <ButtonStyle
+                  className="transparent"
+                  onClick={() => router.push("/contact")}
+                >
+                  {buttonLabel}
+                </ButtonStyle>
+              ) : (
+                ""
+              )}
             </div>
           )}
         </Col>
@@ -62,6 +75,16 @@ const DoubleColumn = ({
                 possimus illo atque impedit cupiditate dicta repudiandae laborum
                 deleniti vitae suscipit amet?
               </p>
+              {!noContactButton ? (
+                <ButtonStyle
+                  className="transparent"
+                  onClick={() => router.push("/contact")}
+                >
+                  {buttonLabel}
+                </ButtonStyle>
+              ) : (
+                ""
+              )}
             </div>
           )}
         </Col>
