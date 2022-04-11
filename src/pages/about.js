@@ -9,14 +9,19 @@ export default () => {
   return (
     <Fragment>
       <ContactBox subtitle="ABOUT" title="About Us" image="about.jpeg" />
-      <TwoColumn headinga="Our Purpose" headingb="Our Vision" />
+      <TwoColumn
+        headinga="Our Purpose"
+        headingb="Our Vision"
+        imagea="purpose.jpeg"
+        imageb="vision.jpeg"
+      />
       <DoubleColumn
         heading="Expertise"
         secondColumn={<VisaImage image="incorporation.jpeg" />}
       />
       <DoubleColumn
         heading="Clients"
-        firstColumn={<VisaImage image="incorporation.jpeg" />}
+        firstColumn={<VisaImage image="clients.jpeg" />}
       />
       <DoubleColumn
         heading="Code of Conduct"
@@ -24,11 +29,11 @@ export default () => {
       />
       <DoubleColumn
         heading="Partner"
-        firstColumn={<VisaImage image="incorporation.jpeg" />}
+        firstColumn={<VisaImage image="partners.jpeg" />}
       />
       <DoubleColumn
         heading="Team"
-        secondColumn={<VisaImage image="incorporation.jpeg" />}
+        secondColumn={<VisaImage image="keystaff.jpeg" />}
       />
       <DoubleColumn
         heading="Career"

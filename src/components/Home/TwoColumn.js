@@ -8,6 +8,8 @@ const TwoColumn = ({
   headingb = "STUDY, GET A JOB OR START A BUSINESS ANYWHERE IN THE WORLD",
   firstColumn,
   secondColumn,
+  imagea = "client.jpg",
+  imageb = "client.jpg",
 }) => {
   return (
     <Container>
@@ -17,8 +19,15 @@ const TwoColumn = ({
             firstColumn
           ) : (
             <div>
-              <div className="pb-5">
-                <img src="/static/images/client.jpg" className="img-fluid" />
+              <div
+                className="pb-5 mb-5"
+                style={{ maxHeight: "250px", overflow: "hidden" }}
+              >
+                <img
+                  src={`/static/images/${imagea}`}
+                  className="img-fluid"
+                  style={{ height: "100%" }}
+                />
               </div>
               <Heading3Style>{headinga}</Heading3Style>
               <div style={{ maxWidth: "300px" }}>
@@ -43,8 +52,15 @@ const TwoColumn = ({
             secondColumn
           ) : (
             <div>
-              <div className="pb-5">
-                <img src="/static/images/client.jpg" className="img-fluid" />
+              <div
+                className="pb-5 mb-5"
+                style={{ maxHeight: "250px", overflow: "hidden" }}
+              >
+                <img
+                  src={`/static/images/${imageb}`}
+                  className="img-fluid"
+                  style={{ height: "100%" }}
+                />
               </div>
               <Heading3Style>{headingb}</Heading3Style>
               <div style={{ maxWidth: "300px" }}>

@@ -12,15 +12,15 @@ const Index = () => {
       {/* <ClientSection /> */}
       <DoubleColumn
         heading="Private Investor"
-        secondColumn={<VisaImage image="incorporation.jpeg" />}
+        secondColumn={<VisaImage image="client/private.jpeg" />}
       />
       <DoubleColumn
         heading="Corporate Investor"
-        firstColumn={<VisaImage image="incorporation.jpeg" />}
+        firstColumn={<VisaImage image="client/corporate.jpeg" />}
       />
       <DoubleColumn
         heading="Government Agencies"
-        secondColumn={<VisaImage image="incorporation.jpeg" />}
+        secondColumn={<VisaImage image="client/government.jpeg" />}
       />
       <ContactBox />
     </Fragment>
