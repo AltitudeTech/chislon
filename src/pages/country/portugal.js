@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import CountryCitizen from "../../components/Countries/CountryCitizen";
 import ContactBox from "../../components/Home/ContactBox";
 import DoubleColumn from "../../components/Home/DoubleColumn";
 import TopBanner from "../../components/Home/TopBanner";
@@ -14,6 +15,7 @@ export default () => {
         title="Portugal"
         image="flags/portugal.jpg"
       />
+      <CountryCitizen />
       <ContactBox />
     </Fragment>
   );

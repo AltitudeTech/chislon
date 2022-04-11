@@ -3,6 +3,13 @@ import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import { Container, Jumbotron, Row, Col, Table } from "reactstrap";
 import "./index.scss";
+import {
+  AustriaDetail,
+  MaltaDetail,
+  MontenegroDetail,
+  NorthMacedoniaDetail,
+  TurkeyDetail,
+} from "./CountryCitizen";
 
 export const PopularDestination = () => {
   return (
@@ -560,15 +567,36 @@ export const CountryBody = ({ title = "USA" }) => (
 );
 
 export const European = [
-  { name: "Austria", image: "austria.png", path: "austria" },
-  { name: "Malta", image: "malta.png", path: "malta" },
-  { name: "Montenegro", image: "montenegro.png", path: "montenegro" },
+  {
+    name: "Austria",
+    image: "austria.png",
+    path: "austria",
+    details: <AustriaDetail />,
+  },
+  {
+    name: "Malta",
+    image: "malta.png",
+    path: "malta",
+    details: <MaltaDetail />,
+  },
+  {
+    name: "Montenegro",
+    image: "montenegro.png",
+    path: "montenegro",
+    details: <MontenegroDetail />,
+  },
   {
     name: "North Macedonia",
     image: "north-macedonia.png",
     path: "north-macedonia",
+    details: <NorthMacedoniaDetail />,
   },
-  { name: "Turkey", image: "turkey.png", path: "turkey" },
+  {
+    name: "Turkey",
+    image: "turkey.png",
+    path: "turkey",
+    details: <TurkeyDetail />,
+  },
 ];
 const American = [
   { name: "Canada", image: "canada.png", path: "canada" },
@@ -630,83 +658,5 @@ export const flags = [
     href: "/country/antigua-barbuda",
     logo: "barbuda.png",
     category: "citizenship",
-  },
-  {
-    name: "Bulgaria",
-    href: "/country/bulgaria",
-    logo: "bulgaria.png",
-    category: "citizenship",
-  },
-  {
-    name: "Quebec, Canada",
-    href: "/country/quebec-canada",
-    logo: "canada.png",
-    category: "residency",
-  },
-  {
-    name: "Cyprus",
-    href: "/country/cyprus",
-    logo: "cyprus.png",
-    category: "citizenship",
-  },
-  {
-    name: "Dominica",
-    href: "/country/dominica",
-    logo: "dominica.png",
-    category: "citizenship",
-  },
-  {
-    name: "Grenada",
-    href: "/country/grenada",
-    logo: "grenada.png",
-    category: "citizenship",
-  },
-  {
-    name: "Hungary",
-    href: "/country/hungary",
-    logo: "hungary.png",
-    category: "citizenship",
-  },
-  {
-    name: "Montenegro",
-    href: "/country/montenegro",
-    logo: "montenegro.png",
-    category: "citizenship",
-  },
-  {
-    name: "Portugal",
-    href: "/country/portugal",
-    logo: "portugal.png",
-    category: "residency",
-  },
-  {
-    name: "Saint Lucia",
-    href: "/country/saint-lucia",
-    logo: "saint-lucia.png",
-    category: "citizenship",
-  },
-  {
-    name: "Spain",
-    href: "/country/spain",
-    logo: "saint-lucia.png",
-    category: "residency",
-  },
-  {
-    name: "Greece",
-    href: "/country/greece",
-    logo: "saint-lucia.png",
-    category: "residency",
-  },
-  {
-    name: "United Kingdom",
-    href: "/country/united-kingdom",
-    logo: "united-kingdom.png",
-    category: "residency",
-  },
-  {
-    name: "USA",
-    href: "/country/usa",
-    logo: "usa.png",
-    category: "residency",
   },
 ];

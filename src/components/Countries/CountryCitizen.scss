@@ -1,0 +1,38 @@
+.country-details {
+  overflow: hidden;
+  padding: 0;
+  .citizenship {
+    color: #fff;
+    background-color: #405363;
+    padding: 100px 50px;
+    .title {
+      font-weight: 400;
+      font-size: 35px;
+    }
+  }
+  .investment {
+    padding: 50px;
+    .options {
+      display: flex;
+      align-items: flex-start;
+      span {
+        font-size: 50px;
+        margin-right: 20px;
+        font-weight: normal;
+        margin-top: 5px;
+      }
+      .content {
+        p:first-child {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+.country-resume {
+  .heading {
+    font-size: 30px;
+    padding-top: 30px;
+    font-weight: 400;
+  }
+}
