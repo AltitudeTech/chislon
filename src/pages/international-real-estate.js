@@ -7,9 +7,7 @@ export default () => {
   return (
     <Fragment>
       <TopBanner image="real-estate.jpeg" />
-      <DoubleColumn heading="International Real Estate Heading" />
-      <DoubleColumn heading="International Real Estate Heading" />
-      <DoubleColumn heading="International Real Estate Heading" />
+
       <ContactBox />
     </Fragment>
   );
