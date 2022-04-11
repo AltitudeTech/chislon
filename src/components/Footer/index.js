@@ -94,6 +94,11 @@ const Index = () => {
                     <a>FAQs</a>
                   </Link>
                 </li>
+                <li>
+                  <Link href="/career">
+                    <a>Career</a>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

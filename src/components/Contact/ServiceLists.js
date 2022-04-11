@@ -99,14 +99,14 @@ const Study = () => {
     }));
   };
   return (
-    <SectionStyle className="serviceSectionStyle">
+    <SectionStyle className="serviceSectionStyle2">
       <Row>
         <Col md={{ size: 8, offset: 2 }}>
           <div className="formWrapper">
-            <Heading3Style style={{ color: "#fff" }}>
+            <Heading3Style style={{ color: "#000" }}>
               Enquiry Form
             </Heading3Style>
-            <p style={{ color: "#fff" }}>Send us a message</p>
+            <p style={{ color: "#000" }}>Send us a message</p>
             <form
               name="contact_form"
               method="POST"
@@ -305,13 +305,13 @@ const Study = () => {
                 <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Note</label>
-                    <p className="text-white">
+                    <p className="">
                       All information provided is kept highly confidential and
                       subject to our privacy policy.
                     </p>
                   </div>
                 </Col>
-                <Col md={12} md={6}>
+                <Col sd={12} md={6}>
                   <ReCAPTCHA
                     sitekey={process.env.GOOGLE_RECAPTCHA}
                     onChange={() => {
@@ -361,18 +361,18 @@ const Study = () => {
           margin : 20px auto ;
           background-color : #e5e5e5 ;
           padding : 30px ;
-          background-image: linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
+          // background-image: linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
         }
         .formWrapper label{
           display : block ;
-          color : #fff ;
+          color : #000 ;
           font-weight : bold ;
         }
         .form-group .form-control, option {
           border-radius: 0;
           // border: 0;
           box-shadow: none; 
-          color : #fff ;
+          color : #000 ;
           background-color : transparent ;
         }
         
@@ -389,13 +389,13 @@ const Study = () => {
           outline : none !important;
           border : none !important;
           background-color : transparent ;
-          color : #fff ;
+          color : #000 ;
         }
         .form-control option {
           width : 100% !important ;
           background: #004F69;
           margin: 40px;
-          color: #fff;
+          color: #000;
           text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
         }
 
