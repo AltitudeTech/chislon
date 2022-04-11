@@ -14,7 +14,7 @@ export default function CareerOppotunity() {
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((_) => (
           <Col md={4} className="mb-4">
             <div className="careers">
-              <Link href="">
+              <Link href="/career-details">
                 <a>
                   <p className="job">Client Advisor </p>
                   <p className="location">LOCATION</p>
