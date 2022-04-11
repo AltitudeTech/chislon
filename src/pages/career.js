@@ -1,12 +1,18 @@
 import React, { Fragment } from "react";
-import ServiceLists from "../components/Contact/ServiceLists";
+import CareerOppotunity from "../components/Contact/CareerOppotunity";
 import ContactBox from "../components/Home/ContactBox";
 
 const Contact = () => {
   return (
     <Fragment>
-      <ContactBox noContactButton title="Career" subtitle="CAREERS" />
-      <ServiceLists />
+      <ContactBox
+        noContactButton
+        title="Careers"
+        subtitle="CAREERS"
+        image="career.jpg"
+      />
+      <CareerOppotunity />
+      <ContactBox />
     </Fragment>
   );
 };

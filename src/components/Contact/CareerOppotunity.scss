@@ -1,0 +1,17 @@
+.careers {
+  a {
+    text-decoration: none !important;
+  }
+  .job {
+    font-size: 25px;
+    margin-bottom: 0;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .location {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+}
