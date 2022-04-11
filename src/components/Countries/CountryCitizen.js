@@ -1,13 +1,12 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
-import Austria from "../../pages/country/austria";
 import ButtonStyle from "../styles/ButtonStyle";
 import "./CountryCitizen.scss";
 
 export default function CountryCitizen({
   title = "Citizenship by Investment Overview",
   title__content = "An excellent place to establish residence within the EU, Austria is the only Western European country that offers the possibility to obtain citizenship by investment and an EU passport without prior residence requirements.",
-  detail = <Austria />,
+  detail = <AustriaDetail />,
   image = "austria_castle.jpg",
 }) {
   return (
@@ -264,7 +263,98 @@ export const MaltaDetail = () => (
     <p>There are no restrictions on dual citizenship in Malta.</p>
   </div>
 );
-export const MontenegroDetail = () => {};
+export const MontenegroDetail = () => (
+  <div className="country-resume">
+    <p className="heading">Montenegro Citizenship by Investment</p>
+    <p>
+      The Montenegro Citizenship by Investment Program was launched by the
+      Government of Montenegro as part of its ongoing efforts to attract foreign
+      direct investment and increase economic activity in the country.
+    </p>
+    <p>
+      The Montenegro Citizenship by Investment Program requires applicants to
+      make a defined economic contribution to Montenegrin society through an
+      investment in an approved development project, and a capital contribution
+      to a fund designated by the government for the advancement of
+      under-developed areas. In exchange, and subject to a stringent vetting and
+      due diligence process, including thorough background checks, applicants
+      and their families are granted citizenship.
+    </p>
+    <p className="heading">
+      Benefits of the Montenegro Citizenship by Investment Program
+    </p>
+    <p>
+      <ul>
+        <li>
+          Visa-free or visa-on-arrival access to 123 destinations including
+          Europe’s Schengen Area, Russia, and Turkey
+        </li>
+        <li>
+          Citizenship in a country that is an official EU candidate country
+        </li>
+        <li>
+          Citizenship in a multinational and multilingual European community
+          that enjoys a mild Mediterranean climate, beautiful scenery, and a low
+          cost of living
+        </li>
+        <li>
+          Citizenship in a member state of the European Monetary Union, the NATO
+          Alliance, OSCE, and the WTO
+        </li>
+        <li>Full citizenship granted to the applicant and family members</li>
+        <li>
+          Investment in a development project operated by a renowned hotel brand
+        </li>
+      </ul>
+    </p>
+    <p className="heading ">
+      Requirements of Montenegrin citizenship by investment
+    </p>
+    <p className="">
+      To qualify for the Montenegro Citizenship by Investment Program, the main
+      applicant must be over 18 years of age, meet the application requirements,
+      and make the qualifying contributions to the Government of Montenegro.
+      There are two routes to choose from to qualify for the program:
+    </p>
+    <p>
+      <ul>
+        <li>
+          An investment of EUR 450,000 to development projects in the capital of
+          Podgorica or in the coastal regions
+        </li>
+        <li>
+          An investment of EUR 250,000 to development projects in northern or
+          central Montenegro, excluding Podgorica
+        </li>
+      </ul>
+    </p>
+    <p>
+      In addition, there is a government fee of EUR 200,000 per application.
+      This contribution will be directed to a special fund for the advancement
+      of underdeveloped areas (EUR 100,000) and towards the Innovation Fund of
+      Montenegro (EUR 100,000).
+    </p>
+    <p className="heading">
+      Procedures and time frame of the Montenegro Citizenship by Investment
+      Program
+    </p>
+    <p>
+      All applications are submitted through intermediary agents such as Henley
+      & Partners, which have been officially accredited to the Government of
+      Montenegro for this purpose. Once received by the relevant government
+      department, applications are processed within six to eight months.
+    </p>
+    <p className="heading">Dual citizenship</p>
+    <p>
+      Successful applicants to the Montenegro Citizenship by Investment Program
+      are exempt from the country’s restrictions on dual citizenship stipulated
+      in Article 8 of the law on Montenegrin citizenship. Article 12 of the law
+      states that citizenship may be exceptionally granted to individuals on the
+      basis of special contributions (such as economic interest) to the country,
+      which applies to successful program applicants.
+    </p>
+  </div>
+);
 export const NorthMacedoniaDetail = () => {};
 export const TurkeyDetail = () => {};
 export const AustriaDetail5 = () => {};
