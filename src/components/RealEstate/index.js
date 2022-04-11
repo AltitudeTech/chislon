@@ -39,7 +39,7 @@ const LocationBox = ({ item }) => {
   );
 };
 
-const RealEstateLocation = [
+export const RealEstateLocation = [
   { location: "Antigua and Barbuda", image: "barbuda.jpg" },
   { location: "Cyprus", image: "cyprus.jpg" },
   { location: "Dominica", image: "dominica.jpg" },
