@@ -1,0 +1,22 @@
+.location {
+  text-decoration: none;
+  .title {
+    font-size: 20px;
+  }
+  .image__wrapper {
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+    img {
+      height: 150px;
+      transition: all 0.2s;
+      :hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+  .find__property {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
