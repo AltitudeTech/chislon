@@ -21,16 +21,20 @@ export default () => {
       />
       <DoubleColumn
         heading="Clients"
+        buttonLabel="MORE ON CLIENTS"
+        path="/services"
         firstColumn={<VisaImage image="clients.jpeg" />}
       />
       <DoubleColumn
         heading="Code of Conduct"
         path="/code-of-conduct"
         buttonLabel="MORE ON CODE OF CONDUCT"
-        secondColumn={<VisaImage image="coc.jpeg" />}
+        secondColumn={<VisaImage image="services.jpeg" />}
       />
       <DoubleColumn
         heading="Partner"
+        buttonLabel="MORE ON PARTNERS"
+        path="/international-partner"
         firstColumn={<VisaImage image="partners.jpeg" />}
       />
       <DoubleColumn

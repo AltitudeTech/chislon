@@ -7,7 +7,12 @@ const Contact = () => {
   return (
     <Fragment>
       {/* <ContactJumbotron /> */}
-      <ContactBox noContactButton title="Application Form" subtitle="APPLY" />
+      <ContactBox
+        noContactButton
+        title="Application Form"
+        subtitle="APPLY"
+        image="incorporation.jpeg"
+      />
       <ServiceLists />
     </Fragment>
   );

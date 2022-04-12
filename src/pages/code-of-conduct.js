@@ -6,7 +6,11 @@ import DoubleColumn from "../components/Home/DoubleColumn";
 export default () => {
   return (
     <Fragment>
-      <TopBanner subtitle="COBDUCT" title="Code Of Conduct" image="coc.jpeg" />
+      <TopBanner
+        subtitle="COBDUCT"
+        title="Code Of Conduct"
+        image="services.jpeg"
+      />
       <DoubleColumn heading="Code of Conduct Heading" noContactButton />
       <DoubleColumn heading="Code of Conduct Heading" noContactButton />
       <DoubleColumn heading="Code of Conduct Heading" noContactButton />

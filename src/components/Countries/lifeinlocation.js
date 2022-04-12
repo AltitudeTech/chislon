@@ -103,9 +103,29 @@ export default function LifeInLocation() {
 }
 
 const Destinations = [
-  { label: "United States of America", href: "", image: "usa.jpeg", path: "" },
-  { label: "United Kingdom", href: "", image: "uk.jpeg", path: "" },
-  { label: "Canada", href: "", image: "canada.jpeg", path: "" },
-  { label: "Australia", href: "", image: "australia.jpeg", path: "" },
-  { label: "Newzealand", href: "", image: "newzealand.jpeg", path: "" },
+  {
+    label: "United States of America",
+    href: "",
+    image: "usa.jpeg",
+    path: "/country/usa",
+  },
+  {
+    label: "United Kingdom",
+    href: "",
+    image: "uk.jpeg",
+    path: "/country/united-kingdom",
+  },
+  { label: "Canada", href: "", image: "canada.jpeg", path: "/country/canada" },
+  {
+    label: "Australia",
+    href: "",
+    image: "australia.jpeg",
+    path: "/country/australia",
+  },
+  {
+    label: "Newzealand",
+    href: "",
+    image: "newzealand.jpeg",
+    path: "/country/newzealand",
+  },
 ];

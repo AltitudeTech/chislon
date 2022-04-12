@@ -4,6 +4,7 @@ import { Container, Row, Col } from "reactstrap";
 import SectionStyle from "../styles/SectionStyle";
 import ButtonStyle from "../styles/ButtonStyle";
 import "./ServiceOptions.scss";
+import Link from "next/link";
 
 const PopularCitizenship = () => {
   const router = useRouter();
@@ -23,28 +24,36 @@ const PopularCitizenship = () => {
               POPULAR CITIZENSHIP PROGRAMS
             </h5>
           </Col>
-          {VisaPrograms.map(({ image, name }, index) => (
+          {CitizenshipPrograms.map(({ image, name, path }, index) => (
             <Col md={3} key={index}>
-              <div className="option_wrapper">
-                <img src={`/static/images/flags/homeflags/${image}`} alt="" />
-              </div>
-              <div className="text-center country_details">
-                <p className="my-4 name">{name}</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
+              <Link href={path}>
+                <a style={{ textDecoration: "none !important" }}>
+                  <div className="option_wrapper">
+                    <img
+                      src={`/static/images/flags/homeflags/${image}`}
+                      alt=""
+                    />
+                  </div>
+                  <div className="text-center country_details">
+                    <p className="my-4 name">{name}</p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                </a>
+              </Link>
             </Col>
           ))}
-          <Col md={12} className="text-center mt-5">
+          {/* <Col md={12} className="text-center mt-5">
             <ButtonStyle
               onClick={() => router.push("/country")}
               className="transparent"
             >
               OTHERS{" "}
             </ButtonStyle>
-          </Col>
+          </Col> */}
         </Row>
         <Row className="my-4">
           <Col md={12}>
@@ -59,28 +68,36 @@ const PopularCitizenship = () => {
               POPULAR RESIDENCY PROGRAMS
             </h5>
           </Col>
-          {VisaPrograms.map(({ image, name }, index) => (
+          {VisaPrograms.map(({ image, name, path }, index) => (
             <Col md={3} key={index}>
-              <div className="option_wrapper">
-                <img src={`/static/images/flags/homeflags/${image}`} alt="" />
-              </div>
-              <div className="text-center country_details">
-                <p className="my-4 name">{name}</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
+              <Link href={path}>
+                <a style={{ textDecoration: "none !important" }}>
+                  <div className="option_wrapper">
+                    <img
+                      src={`/static/images/flags/homeflags/${image}`}
+                      alt=""
+                    />
+                  </div>
+                  <div className="text-center country_details">
+                    <p className="my-4 name">{name}</p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                </a>
+              </Link>
             </Col>
           ))}
-          <Col md={12} className="text-center mt-5">
+          {/* <Col md={12} className="text-center mt-5">
             <ButtonStyle
               onClick={() => router.push("/country")}
               className="transparent"
             >
               OTHERS{" "}
             </ButtonStyle>
-          </Col>
+          </Col> */}
         </Row>
         <Row>
           <Col md={12}>
@@ -95,28 +112,28 @@ const PopularCitizenship = () => {
               POPULAR VISA PROGRAMS
             </h5>
           </Col>
-          {VisaPrograms.map(({ image, name }, index) => (
+          {VisaPrograms.map(({ image, name, path }, index) => (
             <Col md={3} key={index}>
-              <div className="option_wrapper">
-                <img src={`/static/images/flags/homeflags/${image}`} alt="" />
-              </div>
-              <div className="text-center country_details">
-                <p className="my-4 name">{name}</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
+              <Link href={path}>
+                <a style={{ textDecoration: "none !important" }}>
+                  <div className="option_wrapper">
+                    <img
+                      src={`/static/images/flags/homeflags/${image}`}
+                      alt=""
+                    />
+                  </div>
+                  <div className="text-center country_details">
+                    <p className="my-4 name">{name}</p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                </a>
+              </Link>
             </Col>
           ))}
-          <Col md={12} className="text-center mt-5">
-            <ButtonStyle
-              onClick={() => router.push("/country")}
-              className="transparent"
-            >
-              OTHERS{" "}
-            </ButtonStyle>
-          </Col>
         </Row>
       </Container>
       <style jsx>
@@ -150,8 +167,27 @@ const PopularCitizenship = () => {
 export default PopularCitizenship;
 
 const VisaPrograms = [
-  { name: "UNITED STATES OF AMERICA", image: "residency.jpg" },
-  { name: "UNITED KINGDOM", image: "citizenship.jpeg" },
-  { name: "CANADA", image: "highnetworth.jpg" },
-  { name: "AUSTRALIA", image: "residency.jpg" },
+  {
+    name: "UNITED STATES OF AMERICA",
+    image: "residency.jpg",
+    path: "/country/usa",
+  },
+  {
+    name: "UNITED KINGDOM",
+    image: "citizenship.jpeg",
+    path: "/country/united-kindgom",
+  },
+  { name: "CANADA", image: "highnetworth.jpg", path: "/country/canada" },
+  { name: "AUSTRALIA", image: "residency.jpg", path: "/country/australia" },
+];
+
+const CitizenshipPrograms = [
+  {
+    name: "ANTIGUA & BARBUDA",
+    image: "residency.jpg",
+    path: "/country/antigua-barbuda",
+  },
+  { name: "DOMINICA", image: "citizenship.jpeg", path: "/country/dominica" },
+  { name: "MALTA", image: "highnetworth.jpg", path: "/country/malta" },
+  { name: "AUSTRIA", image: "residency.jpg", path: "/country/austria" },
 ];
