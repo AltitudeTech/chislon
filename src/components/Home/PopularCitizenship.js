@@ -1,10 +1,12 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import SectionStyle from "../styles/SectionStyle";
-import HeadingStyle from "../styles/Heading3";
+import ButtonStyle from "../styles/ButtonStyle";
 import "./ServiceOptions.scss";
 
 const PopularCitizenship = () => {
+  const router = useRouter();
   return (
     <SectionStyle className="fluid" style={{ backgroundColor: "#F2F2F2" }}>
       <Container>
@@ -21,64 +23,27 @@ const PopularCitizenship = () => {
               POPULAR CITIZENSHIP PROGRAMS
             </h5>
           </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              <img src="/static/images/flags/homeflags/residency.jpg" alt="" />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              <img
-                src="/static/images/flags/homeflags/citizenship.jpeg"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              {/* <img src="/static/images/highnetworth.jpeg" alt="" /> */}
-              <img
-                src="/static/images/flags/homeflags/highnetworth.jpg"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              {/* <img src="/static/images/highnetworth.jpeg" alt="" /> */}
-              <img
-                src="/static/images/flags/homeflags/highnetworth.jpg"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
+          {VisaPrograms.map(({ image, name }, index) => (
+            <Col md={3} key={index}>
+              <div className="option_wrapper">
+                <img src={`/static/images/flags/homeflags/${image}`} alt="" />
+              </div>
+              <div className="text-center country_details">
+                <p className="my-4 name">{name}</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </Col>
+          ))}
+          <Col md={12} className="text-center mt-5">
+            <ButtonStyle
+              onClick={() => router.push("/country")}
+              className="transparent"
+            >
+              OTHERS{" "}
+            </ButtonStyle>
           </Col>
         </Row>
         <Row className="my-4">
@@ -94,64 +59,27 @@ const PopularCitizenship = () => {
               POPULAR RESIDENCY PROGRAMS
             </h5>
           </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              <img src="/static/images/flags/homeflags/residency.jpg" alt="" />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              <img
-                src="/static/images/flags/homeflags/citizenship.jpeg"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              {/* <img src="/static/images/highnetworth.jpeg" alt="" /> */}
-              <img
-                src="/static/images/flags/homeflags/highnetworth.jpg"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              {/* <img src="/static/images/highnetworth.jpeg" alt="" /> */}
-              <img
-                src="/static/images/flags/homeflags/highnetworth.jpg"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
+          {VisaPrograms.map(({ image, name }, index) => (
+            <Col md={3} key={index}>
+              <div className="option_wrapper">
+                <img src={`/static/images/flags/homeflags/${image}`} alt="" />
+              </div>
+              <div className="text-center country_details">
+                <p className="my-4 name">{name}</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </Col>
+          ))}
+          <Col md={12} className="text-center mt-5">
+            <ButtonStyle
+              onClick={() => router.push("/country")}
+              className="transparent"
+            >
+              OTHERS{" "}
+            </ButtonStyle>
           </Col>
         </Row>
         <Row>
@@ -167,69 +95,38 @@ const PopularCitizenship = () => {
               POPULAR VISA PROGRAMS
             </h5>
           </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              <img src="/static/images/flags/homeflags/residency.jpg" alt="" />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              <img
-                src="/static/images/flags/homeflags/citizenship.jpeg"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              {/* <img src="/static/images/highnetworth.jpeg" alt="" /> */}
-              <img
-                src="/static/images/flags/homeflags/highnetworth.jpg"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </Col>
-          <Col md={3}>
-            <div className="option_wrapper">
-              {/* <img src="/static/images/highnetworth.jpeg" alt="" /> */}
-              <img
-                src="/static/images/flags/homeflags/highnetworth.jpg"
-                alt=""
-              />
-            </div>
-            <div className="text-center">
-              <p className="my-4">Country Name Here</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
+          {VisaPrograms.map(({ image, name }, index) => (
+            <Col md={3} key={index}>
+              <div className="option_wrapper">
+                <img src={`/static/images/flags/homeflags/${image}`} alt="" />
+              </div>
+              <div className="text-center country_details">
+                <p className="my-4 name">{name}</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </Col>
+          ))}
+          <Col md={12} className="text-center mt-5">
+            <ButtonStyle
+              onClick={() => router.push("/country")}
+              className="transparent"
+            >
+              OTHERS{" "}
+            </ButtonStyle>
           </Col>
         </Row>
       </Container>
       <style jsx>
         {`
+          .country_details {
+          }
+          .country_details .name {
+            font-size: 18px;
+            font-weight: 500;
+          }
           .underlineBorder {
             position: relative;
             padding-bottom: 5px;
@@ -251,3 +148,10 @@ const PopularCitizenship = () => {
 };
 
 export default PopularCitizenship;
+
+const VisaPrograms = [
+  { name: "UNITED STATES OF AMERICA", image: "residency.jpg" },
+  { name: "UNITED KINGDOM", image: "citizenship.jpeg" },
+  { name: "CANADA", image: "highnetworth.jpg" },
+  { name: "AUSTRALIA", image: "residency.jpg" },
+];
