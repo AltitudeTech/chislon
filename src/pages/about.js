@@ -17,7 +17,7 @@ export default () => {
       />
       <DoubleColumn
         heading="Expertise"
-        secondColumn={<VisaImage image="incorporation.jpeg" />}
+        secondColumn={<VisaImage image="expertise.jpeg" />}
       />
       <DoubleColumn
         heading="Clients"

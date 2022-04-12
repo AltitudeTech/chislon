@@ -9,7 +9,11 @@ import ContactBox from "../components/Home/ContactBox";
 export default function Disclaimer() {
   return (
     <Fragment>
-      <TopBanner title="Cookie Policy" subtitle="COOKIE" />
+      <TopBanner
+        title="Cookie Policy"
+        subtitle="COOKIE"
+        image="services.jpeg"
+      />
       <Container>
         <SectionStyle>
           <Row>

@@ -14,7 +14,7 @@ const Index = () => {
       <TopBanner
         subtitle="FAQ"
         title="Frequently Asked Questions"
-        image="faq.jpeg"
+        image="services.jpeg"
       />
       <Container>
         <SectionStyle>
