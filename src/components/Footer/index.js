@@ -148,7 +148,11 @@ const Index = () => {
                 <ul className="mb-4">
                   {Asian.map((flag, index) => (
                     <li key={index}>
-                      <a href={flag.href}>{flag.name}</a>
+                      <Link href={`/country/${flag.path}`}>
+                        <a style={{ cursor: "pointer" }} href={flag.href}>
+                          {flag.name}
+                        </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -162,7 +166,11 @@ const Index = () => {
                 <ul className="mb-4">
                   {EuropeanR.map((flag, index) => (
                     <li key={index}>
-                      <a href={flag.href}>{flag.name}</a>
+                      <Link href={`/country/${flag.path}`}>
+                        <a style={{ cursor: "pointer" }} href={flag.href}>
+                          {flag.name}
+                        </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
