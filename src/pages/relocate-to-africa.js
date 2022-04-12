@@ -9,7 +9,7 @@ export default () => {
       <TopBanner
         subtitle="RELOCATE TO AFRICA"
         title="Welcome To Africa"
-        image="africa.jpeg"
+        image="africa2.jpeg"
       />
       <DoubleColumn heading="RESIDENCY BY INVESTMENT" />
       <DoubleColumn heading="CITIZENSHIP BY INVESTMENT" />

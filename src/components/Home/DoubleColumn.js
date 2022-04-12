@@ -3,6 +3,7 @@ import { Row, Col } from "reactstrap";
 import Heading3Style from "../styles/Heading3";
 import Container from "reactstrap/lib/Container";
 import ButtonStyle from "../styles/ButtonStyle";
+import { useRouter } from "next/router";
 
 const DoubleColumn = ({
   heading = "STUDY, GET A JOB OR START A BUSINESS ANYWHERE IN THE WORLD",
@@ -10,7 +11,9 @@ const DoubleColumn = ({
   secondColumn,
   noContactButton,
   buttonLabel = "ENQUIRY",
+  path = "/contact",
 }) => {
+  const router = useRouter();
   return (
     <Container>
       <Row style={{ padding: "2rem 0" }}>
@@ -41,7 +44,10 @@ const DoubleColumn = ({
               {!noContactButton ? (
                 <ButtonStyle
                   className="transparent"
-                  onClick={() => router.push("/contact")}
+                  onClick={() => {
+                    router.push(path);
+                    global.window.scrollTo(0, 0);
+                  }}
                 >
                   {buttonLabel}
                 </ButtonStyle>
@@ -78,7 +84,10 @@ const DoubleColumn = ({
               {!noContactButton ? (
                 <ButtonStyle
                   className="transparent"
-                  onClick={() => router.push("/contact")}
+                  onClick={() => {
+                    router.push(path);
+                    global.window.scrollTo(0, 0);
+                  }}
                 >
                   {buttonLabel}
                 </ButtonStyle>

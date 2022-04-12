@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col } from "reactstrap";
 import Heading3Style from "../styles/Heading3";
 import Container from "reactstrap/lib/Container";
+import { useRouter } from "next/router";
 
 const TwoColumn = ({
   headinga = "STUDY, GET A JOB OR START A BUSINESS ANYWHERE IN THE WORLD",
@@ -11,6 +12,7 @@ const TwoColumn = ({
   imagea = "client.jpg",
   imageb = "client.jpg",
 }) => {
+  const router = useRouter();
   return (
     <Container>
       <Row style={{ padding: "2rem 0" }}>

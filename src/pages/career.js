@@ -9,7 +9,7 @@ const Contact = () => {
         noContactButton
         title="Careers"
         subtitle="CAREERS"
-        image="career.jpg"
+        image="incorporation.jpeg"
       />
       <CareerOppotunity />
       <ContactBox />
