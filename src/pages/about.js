@@ -39,6 +39,8 @@ export default () => {
       />
       <DoubleColumn
         heading="Team"
+        buttonLabel="MORE ON TEAM"
+        path="/team"
         secondColumn={<VisaImage image="keystaff.jpeg" />}
       />
       <DoubleColumn
