@@ -25,7 +25,7 @@ export default () => {
       />
       <DoubleColumn
         heading="Code of Conduct"
-        secondColumn={<VisaImage image="incorporation.jpeg" />}
+        secondColumn={<VisaImage image="coc.jpeg" />}
       />
       <DoubleColumn
         heading="Partner"
@@ -37,7 +37,7 @@ export default () => {
       />
       <DoubleColumn
         heading="Career"
-        firstColumn={<VisaImage image="incorporation.jpeg" />}
+        firstColumn={<VisaImage image="career.jpeg" />}
       />
       <ContactBox />
     </Fragment>
