@@ -3,7 +3,8 @@
   text-align: center;
   margin: auto;
   text-align: center;
-  height: 150px;
+  height: 150px !important;
+  overflow: hidden;
   position: relative;
   overflow: hidden;
   // &:hover {

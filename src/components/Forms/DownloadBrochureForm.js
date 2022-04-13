@@ -146,7 +146,11 @@ const DownloadBrochureForm = () => {
                   sitekey="6Le0zPAZAAAAAMZdhOAPB3SJFtAa_EpOlPShHgr4"
                   onResolved={() => console.log("Human detected.")}
                 /> */}
-                <ButtonStyle type="submit" disabled={btnState}>
+                <ButtonStyle
+                  className="transparent"
+                  type="submit"
+                  disabled={btnState}
+                >
                   SUBMIT {btnState && <Loading />}
                 </ButtonStyle>
               </Col>

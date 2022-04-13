@@ -12,6 +12,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
+  autoplaySpeed: 150000,
 };
 const WhyChooseUs = (props) => {
   return (
