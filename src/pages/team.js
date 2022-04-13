@@ -6,7 +6,7 @@ import DoubleColumn from "../components/Home/DoubleColumn";
 export default () => {
   return (
     <Fragment>
-      <TopBanner subtitle="TEAM" title="Our Team" image="keystaff.jpeg" />
+      <TopBanner subtitle="TEAM" title="Our Team" image="team.jpeg" />
       <DoubleColumn heading="Our Teams Heading" />
       <DoubleColumn heading="Our Teams Heading" />
       <DoubleColumn heading="Our Teams Heading" />

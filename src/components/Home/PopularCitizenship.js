@@ -175,7 +175,7 @@ const VisaPrograms = [
   {
     name: "UNITED KINGDOM",
     image: "citizenship.jpeg",
-    path: "/country/united-kindgom",
+    path: "/country/united-kingdom",
   },
   { name: "CANADA", image: "highnetworth.jpg", path: "/country/canada" },
   { name: "AUSTRALIA", image: "residency.jpg", path: "/country/australia" },

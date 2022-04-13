@@ -41,7 +41,7 @@ export default () => {
         heading="Team"
         buttonLabel="MORE ON TEAM"
         path="/team"
-        secondColumn={<VisaImage image="keystaff.jpeg" />}
+        secondColumn={<VisaImage image="team.jpeg" />}
       />
       <DoubleColumn
         heading="Career"
