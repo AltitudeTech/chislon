@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 import axios from "axios";
 import PhoneInput from "react-phone-number-input";
 import ReCAPTCHA from "react-google-recaptcha";
 import dynamic from "next/dynamic";
 import { Loading, encode } from "../../util";
-import SectionStyle from "../styles/SectionStyle";
 import Heading3Style from "../styles/Heading3";
 import ButtonStyle from "../styles/ButtonStyle";
 import "react-phone-number-input/style.css";
@@ -29,10 +28,11 @@ const initialValues = {
   countries: [],
   phone: "",
   email: "",
+  confirm_email: "",
   message: "",
   captcha: false,
 };
-const Study = () => {
+const ContactForm = () => {
   const [form, setForm] = useState(initialValues);
   const [alertState, setAlertState] = useState(false);
   const [btnState, setBtnState] = useState(false);
@@ -61,7 +61,7 @@ const Study = () => {
   };
   useEffect(() => {
     getCountries();
-    getLocation();
+    // getLocation();
   }, []);
 
   const handleSubmit = (event) => {
@@ -99,14 +99,14 @@ const Study = () => {
     }));
   };
   return (
-    <SectionStyle className="serviceSectionStyle2">
+    <Container>
       <Row>
-        <Col md={{ size: 8, offset: 2 }}>
+        <Col md={{ size: 9 }}>
           <div className="formWrapper">
-            <Heading3Style style={{ color: "#000" }}>
+            {/* <Heading3Style style={{ color: "#000" }}>
               Enquiry Form
             </Heading3Style>
-            <p style={{ color: "#000" }}>Send us a message</p>
+            <p style={{ color: "#000" }}>Send us a message</p> */}
             <form
               name="contact_form"
               method="POST"
@@ -121,7 +121,68 @@ const Study = () => {
                 onConfirm={() => setAlertState(false)}
               />
               <Row>
-                {/* <Col sm={12} md={1}>
+                <Col md={12}>
+                  <label
+                    style={{ fontWeight: "normal", paddingBottom: "20px" }}
+                  >
+                    <input type="checkbox" />
+                    <span className="ml-3">
+                      I am interested in immigrant and non immigrant visas
+                    </span>
+                  </label>
+                </Col>
+                <Col md={12}>
+                  <label
+                    style={{ fontWeight: "normal", paddingBottom: "20px" }}
+                  >
+                    <input type="checkbox" />
+                    <span className="ml-3">
+                      I am interested in obtaining a residence permit
+                    </span>
+                  </label>
+                </Col>
+                <Col md={12}>
+                  <label
+                    style={{ fontWeight: "normal", paddingBottom: "20px" }}
+                  >
+                    <input type="checkbox" />
+                    <span className="ml-3">
+                      I am interested in obtaining an alternative citizenship
+                    </span>
+                  </label>
+                </Col>
+                <Col md={12}>
+                  <label
+                    style={{ fontWeight: "normal", paddingBottom: "20px" }}
+                  >
+                    <input type="checkbox" />
+                    <span className="ml-3">
+                      I am interested in acquiring real estate
+                    </span>
+                  </label>
+                </Col>
+                <Col md={12}>
+                  <div className="form-group">
+                    <label>I have a specific question</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      className="form-control"
+                      value={form.message}
+                      onChange={handleChange}
+                      required
+                      rows="5"
+                    />
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={12} className="my-4">
+                  <Heading3Style style={{ color: "#000" }}>
+                    Contact Information
+                  </Heading3Style>
+                </Col>
+                <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Salutation</label>
                     <select
@@ -138,7 +199,9 @@ const Study = () => {
                       <option value="Prof.">Prof.</option>
                     </select>
                   </div>
-                </Col> */}
+                </Col>
+              </Row>
+              <Row>
                 <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>First Name</label>
@@ -167,7 +230,7 @@ const Study = () => {
                     />
                   </div>
                 </Col>
-                <Col sm={12} md={6}>
+                {/* <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Organization</label>
                     <input
@@ -180,7 +243,7 @@ const Study = () => {
                       required
                     />
                   </div>
-                </Col>
+                </Col> 
                 <Col sm={12} md={6}>
                   <div className="form-group">
                     <label>Position</label>
@@ -194,7 +257,7 @@ const Study = () => {
                       required
                     />
                   </div>
-                </Col>
+                </Col> */}
                 <Col sm={12} md={6}>
                   <div className="form-group">
                     <label htmlFor="">
@@ -242,40 +305,6 @@ const Study = () => {
                 </Col>
                 <Col sm={12} md={6}>
                   <div className="form-group">
-                    <label>Website</label>
-                    <input
-                      type="url"
-                      name="website"
-                      id="website"
-                      className="form-control"
-                      value={form.website}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                </Col>
-                <Col sm={12} md={6}>
-                  <div className="form-group">
-                    <label>Phone Number</label>
-                    <PhoneInput
-                      placeholder="Enter phone number"
-                      country="NG"
-                      value={form.phone}
-                      name="phone"
-                      onChange={(phone) => {
-                        console.log(phone);
-                        setForm((prevValues) => ({
-                          ...prevValues,
-                          phone,
-                        }));
-                      }}
-                      required
-                      className="form-control"
-                    />
-                  </div>
-                </Col>
-                <Col sm={12} md={6}>
-                  <div className="form-group">
                     <label>Email</label>
                     <input
                       type="email"
@@ -290,28 +319,48 @@ const Study = () => {
                 </Col>
                 <Col sm={12} md={6}>
                   <div className="form-group">
-                    <label>Your Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
+                    <label>Retype Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
                       className="form-control"
-                      value={form.message}
+                      value={form.confirm_email}
                       onChange={handleChange}
                       required
-                      rows="5"
                     />
                   </div>
                 </Col>
-                <Col sm={12} md={6}>
+                <Col sm={12}>
                   <div className="form-group">
-                    <label>Note</label>
-                    <p className="">
-                      All information provided is kept highly confidential and
-                      subject to our privacy policy.
-                    </p>
+                    <label>Phone Number</label>
+                    {/* <PhoneInput
+                      placeholder="Enter phone number"
+                      country="NG"
+                      value={form.phone}
+                      name="phone"
+                      onChange={(phone) => {
+                        console.log(phone);
+                        setForm((prevValues) => ({
+                          ...prevValues,
+                          phone,
+                        }));
+                      }}
+                      required
+                      className="form-control"
+                    /> */}
+                    <input
+                      placeholder="Enter phone number"
+                      className="form-control"
+                      value={form.phone}
+                      onChange={handleChange}
+                      required
+                      name="phone"
+                    />
                   </div>
                 </Col>
-                <Col sd={12} md={6}>
+
+                <Col sd={12}>
                   <ReCAPTCHA
                     sitekey={process.env.GOOGLE_RECAPTCHA}
                     onChange={() => {
@@ -336,9 +385,9 @@ const Study = () => {
                 </Col>
 
                 <Col md={12} className="my-4">
-                  <div className="form-group text-center">
+                  <div className="form-group">
                     <ButtonStyle
-                      className="gold"
+                      className="transparent"
                       type="submit"
                       disabled={btnState}
                     >
@@ -353,32 +402,29 @@ const Study = () => {
       </Row>
       <style>
         {`
-        .serviceSectionStyle{
-          padding : 5rem 3rem ;
-          background-color: #f2f2f2 ;
-        }
         .formWrapper{
           margin : 20px auto ;
-          background-color : #e5e5e5 ;
-          padding : 30px ;
-          // background-image: linear-gradient(114.17deg, #003e52 -0.69%, #00b8f2 100%);
+          padding : 100px ;
+          box-shadow: 5px 5px 10px grey , -5px -5px 10px grey;
         }
         .formWrapper label{
           display : block ;
           color : #000 ;
           font-weight : bold ;
+          margin-top: 20px;
         }
         .form-group .form-control, option {
           border-radius: 0;
-          // border: 0;
           box-shadow: none; 
+          border: none ;
+          border-bottom:  1px solid #01384B ;
           color : #000 ;
           background-color : transparent ;
         }
         
         .form-group .form-control:focus {
-          box-shadow: -1px 3px 11px -3px #01384B;
-          border : 1px solid #01384B ;
+          // box-shadow: -1px 3px 11px -3px #01384B;
+          // border : 1px solid #01384B ;
         }
         textarea,
         textarea:focus{
@@ -393,7 +439,7 @@ const Study = () => {
         }
         .form-control option {
           width : 100% !important ;
-          background: #004F69;
+          // background: #004F69;
           margin: 40px;
           color: #000;
           text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
@@ -401,11 +447,11 @@ const Study = () => {
 
       `}
       </style>
-    </SectionStyle>
+    </Container>
   );
 };
 
-export default Study;
+export default ContactForm;
 
 const Services = [
   { text: "Business Investment", image: "business.jpg" },

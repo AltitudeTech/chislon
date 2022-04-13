@@ -135,6 +135,19 @@ const PopularCitizenship = () => {
             </Col>
           ))}
         </Row>
+        <Row>
+          <Col md={12} className="text-center mt-5">
+            <ButtonStyle
+              onClick={() => {
+                router.push("/country");
+                global.window.scrollTo(0, 0);
+              }}
+              className="transparent"
+            >
+              ALL PROGRAMS
+            </ButtonStyle>
+          </Col>
+        </Row>
       </Container>
       <style jsx>
         {`

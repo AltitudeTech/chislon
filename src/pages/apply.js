@@ -1,19 +1,17 @@
 import React, { Fragment } from "react";
-import ContactJumbotron from "../components/Contact/Jumbotron";
-import ServiceLists from "../components/Contact/ServiceLists";
 import ContactBox from "../components/Home/ContactBox";
+import ApplyForm from "../components/Contact/ApplyForm";
 
 const Contact = () => {
   return (
     <Fragment>
-      {/* <ContactJumbotron /> */}
       <ContactBox
         noContactButton
         title="Application Form"
         subtitle="APPLY"
         image="incorporation.jpeg"
       />
-      <ServiceLists />
+      <ApplyForm />
     </Fragment>
   );
 };
