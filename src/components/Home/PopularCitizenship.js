@@ -29,10 +29,7 @@ const PopularCitizenship = () => {
               <Link href={path}>
                 <a style={{ textDecoration: "none !important" }}>
                   <div className="option_wrapper">
-                    <img
-                      src={`/static/images/flags/homeflags/${image}`}
-                      alt=""
-                    />
+                    <img src={`/static/images/flags/${image}`} alt="" />
                   </div>
                   <div className="text-center country_details">
                     <p className="my-4 name">{name}</p>
@@ -73,10 +70,7 @@ const PopularCitizenship = () => {
               <Link href={path}>
                 <a style={{ textDecoration: "none !important" }}>
                   <div className="option_wrapper">
-                    <img
-                      src={`/static/images/flags/homeflags/${image}`}
-                      alt=""
-                    />
+                    <img src={`/static/images/flags/${image}`} alt="" />
                   </div>
                   <div className="text-center country_details">
                     <p className="my-4 name">{name}</p>
@@ -117,10 +111,7 @@ const PopularCitizenship = () => {
               <Link href={path}>
                 <a style={{ textDecoration: "none !important" }}>
                   <div className="option_wrapper">
-                    <img
-                      src={`/static/images/flags/homeflags/${image}`}
-                      alt=""
-                    />
+                    <img src={`/static/images/flags/${image}`} alt="" />
                   </div>
                   <div className="text-center country_details">
                     <p className="my-4 name">{name}</p>
@@ -182,25 +173,25 @@ export default PopularCitizenship;
 const VisaPrograms = [
   {
     name: "UNITED STATES OF AMERICA",
-    image: "residency.jpg",
+    image: "usa.jpg",
     path: "/country/usa",
   },
   {
     name: "UNITED KINGDOM",
-    image: "citizenship.jpeg",
+    image: "united-kingdom.jpg",
     path: "/country/united-kingdom",
   },
-  { name: "CANADA", image: "highnetworth.jpg", path: "/country/canada" },
-  { name: "AUSTRALIA", image: "residency.jpg", path: "/country/australia" },
+  { name: "CANADA", image: "canada.jpg", path: "/country/canada" },
+  { name: "AUSTRALIA", image: "australia.png", path: "/country/australia" },
 ];
 
 const CitizenshipPrograms = [
   {
     name: "ANTIGUA & BARBUDA",
-    image: "residency.jpg",
+    image: "barbuda.jpg",
     path: "/country/antigua-barbuda",
   },
-  { name: "DOMINICA", image: "citizenship.jpeg", path: "/country/dominica" },
-  { name: "MALTA", image: "highnetworth.jpg", path: "/country/malta" },
-  { name: "AUSTRIA", image: "residency.jpg", path: "/country/austria" },
+  { name: "DOMINICA", image: "dominica.png", path: "/country/dominica" },
+  { name: "MALTA", image: "malta.jpg", path: "/country/malta" },
+  { name: "AUSTRIA", image: "austriaf.jpg", path: "/country/austria" },
 ];

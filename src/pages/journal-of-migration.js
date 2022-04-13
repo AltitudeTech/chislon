@@ -8,7 +8,7 @@ export default () => {
     <Fragment>
       <TopBanner
         subtitle="JOURNAL OF MIGRATION"
-        title="Jorunal of Migration"
+        title="Journal of Migration"
         image="insight.jpeg"
       />
       <DoubleColumn heading="Journal of Migration Heading" />
