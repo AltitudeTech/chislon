@@ -58,7 +58,7 @@ const Menus = [
   },
   { label: "International Partners", href: "/international-partner" },
   { label: "Insight", href: "/insight" },
-  { label: "News", href: "/latest-news" },
+  { label: "Global Manpower News", href: "/global-manpower-news" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -169,36 +169,66 @@ export const SocialMedia = () => {
         <SocialIcon
           network="twitter"
           className="icons"
+          fgColor="#fff"
           url="//twitter.com/BroadwayChislon"
-          style={{ width: "30px", height: "30px", margin: "5px" }}
+          style={{
+            width: "30px",
+            height: "30px",
+            margin: "5px",
+            backgroundColor: "#00ACED",
+          }}
         />
 
         <SocialIcon
           network="facebook"
           className="icons"
+          fgColor="#fff"
           url="//www.facebook.com/Chislon-broadway-417594015502295/?modal=admin_todo_tour"
-          style={{ width: "30px", height: "30px", margin: "5px" }}
+          style={{
+            width: "30px",
+            height: "30px",
+            margin: "5px",
+            backgroundColor: "#3B5998",
+          }}
         />
 
         <SocialIcon
           network="whatsapp"
           className="icons"
+          fgColor="#fff"
           url="https://api.whatsapp.com/send/?phone=+2347066315900"
-          style={{ width: "30px", height: "30px", margin: "5px" }}
+          style={{
+            width: "30px",
+            height: "30px",
+            margin: "5px",
+            backgroundColor: "#25D366",
+          }}
         />
 
         <SocialIcon
           network="pinterest"
           className="icons"
+          fgColor="#fff"
           url="https://api.whatsapp.com/send/?phone=+2347066315900"
-          style={{ width: "30px", height: "30px", margin: "5px" }}
+          style={{
+            width: "30px",
+            height: "30px",
+            margin: "5px",
+            backgroundColor: "#CB2128",
+          }}
         />
 
         <SocialIcon
           network="linkedin"
           className="icons"
+          fgColor="#fff"
           url="//www.linkedin.com/company/chislon-broadway/?viewAsMember=true"
-          style={{ width: "30px", height: "30px", margin: "5px" }}
+          style={{
+            width: "30px",
+            height: "30px",
+            margin: "5px",
+            backgroundColor: "#007FB1",
+          }}
         />
       </div>
       <style jsx>{`
@@ -276,8 +306,8 @@ const ContactPhone = withTheme((props) => {
   return (
     <>
       <div className="contactPhone">
-        <Link href="tel:+2347066315900">
-          <a className="phoneBox">+234 706 6315 900</a>
+        <Link href="/resume">
+          <a className="phoneBox">RESUME</a>
         </Link>
         <Link href="/contact">
           <a className="contactBox">CONTACT US</a>

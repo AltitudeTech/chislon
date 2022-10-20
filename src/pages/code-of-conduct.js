@@ -7,7 +7,7 @@ export default () => {
   return (
     <Fragment>
       <TopBanner
-        subtitle="COBDUCT"
+        subtitle="CONDUCT"
         title="Code Of Conduct"
         image="services.jpeg"
       />
