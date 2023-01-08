@@ -8,6 +8,8 @@ import { SocialMedia } from "../NavBar";
 import ButtonStyle from "../styles/ButtonStyle";
 
 import "./index.scss";
+import DoubleColumn from "../Home/DoubleColumn";
+import Heading3Style from "../styles/Heading3";
 
 const APP_DOMAIN = "chislonbroadway.com";
 
@@ -21,6 +23,52 @@ const Index = () => {
   const router = useRouter();
   return (
     <Fragment>
+      <div className="container">
+        <div className="row">
+          <DoubleColumn
+            firstColumn={
+              <div>
+                <Heading3Style>SPONSORED EMPLOYER</Heading3Style>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                  obcaecati, possimus illo atque impedit cupiditate dicta
+                  repudiandae laborum deleniti vitae suscipit amet?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                  obcaecati, possimus illo atque impedit cupiditate dicta
+                  repudiandae laborum deleniti vitae suscipit amet?
+                </p>
+                <ButtonStyle onClick={() => router.push("/sponsored")}>
+                  Read More
+                </ButtonStyle>
+              </div>
+            }
+            secondColumn={
+              <div>
+                <Heading3Style>NON-SPONSORED EMPLOYER</Heading3Style>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                  obcaecati, possimus illo atque impedit cupiditate dicta
+                  repudiandae laborum deleniti vitae suscipit amet?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Quasi deserunt cum odio tempora tempore! Magnam minima quos
+                  obcaecati, possimus illo atque impedit cupiditate dicta
+                  repudiandae laborum deleniti vitae suscipit amet?
+                </p>
+                <ButtonStyle onClick={() => router.push("/non-sponsored")}>
+                  Read More
+                </ButtonStyle>
+              </div>
+            }
+          />
+        </div>
+      </div>
       <div className="container-fluid footer">
         <div className="row" style={{ position: "relative", zIndex: "5" }}>
           <div className="col-md-3 footer_links">
@@ -194,7 +242,7 @@ const Index = () => {
 
       <div className="copyrightBar">
         <p>
-          Copyright 2022 <span>Chislon Broadway Visa Services</span> All Rights
+          Copyright 2023 <span>Chislon Broadway Visa Services</span> All Rights
           Reserved
         </p>
         <div className="d-flex">

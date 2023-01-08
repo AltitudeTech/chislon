@@ -12,7 +12,7 @@ const PopularCitizenship = () => {
     <SectionStyle className="fluid" style={{ backgroundColor: "#F2F2F2" }}>
       <Container>
         <Row>
-          <Col md={12}>
+          {/* <Col md={12}>
             <h5
               className="underlineBorder"
               style={{
@@ -23,8 +23,8 @@ const PopularCitizenship = () => {
             >
               POPULAR CITIZENSHIP PROGRAMS
             </h5>
-          </Col>
-          {CitizenshipPrograms.map(({ image, name, path }, index) => (
+          </Col> */}
+          {/* {CitizenshipPrograms.map(({ image, name, path }, index) => (
             <Col md={3} key={index}>
               <Link href={path}>
                 <a style={{ textDecoration: "none !important" }}>
@@ -42,7 +42,7 @@ const PopularCitizenship = () => {
                 </a>
               </Link>
             </Col>
-          ))}
+          ))} */}
           {/* <Col md={12} className="text-center mt-5">
             <ButtonStyle
               onClick={() => router.push("/country")}
@@ -65,8 +65,8 @@ const PopularCitizenship = () => {
               POPULAR RESIDENCY PROGRAMS
             </h5>
           </Col>
-          {VisaPrograms.map(({ image, name, path }, index) => (
-            <Col md={3} key={index}>
+          {VisaPrograms.map(({ image, name, path, label }, index) => (
+            <Col className="mb-5" md={4} key={index}>
               <Link href={path}>
                 <a style={{ textDecoration: "none !important" }}>
                   <div className="option_wrapper">
@@ -74,11 +74,7 @@ const PopularCitizenship = () => {
                   </div>
                   <div className="text-center country_details">
                     <p className="my-4 name">{name}</p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p>
+                    <p>{label}</p>
                   </div>
                 </a>
               </Link>
@@ -107,7 +103,7 @@ const PopularCitizenship = () => {
             </h5>
           </Col>
           {VisaPrograms.map(({ image, name, path }, index) => (
-            <Col md={3} key={index}>
+            <Col md={4} className="mb-5" key={index}>
               <Link href={path}>
                 <a style={{ textDecoration: "none !important" }}>
                   <div className="option_wrapper">
@@ -175,14 +171,38 @@ const VisaPrograms = [
     name: "UNITED STATES OF AMERICA",
     image: "usa.jpg",
     path: "/country/usa",
+    label: "USA SHORTAGE OCCUPATIONS",
   },
   {
     name: "UNITED KINGDOM",
     image: "united-kingdom.jpg",
     path: "/country/united-kingdom",
+    label: "UK SHORTAGE OCCUPATIONS",
   },
-  { name: "CANADA", image: "canada.jpg", path: "/country/canada" },
-  { name: "AUSTRALIA", image: "australia.png", path: "/country/australia" },
+  {
+    name: "CANADA",
+    image: "canada.jpg",
+    path: "/country/canada",
+    label: "CANADA SHORTAGE OCCUPATIONS",
+  },
+  {
+    name: "AUSTRALIA",
+    image: "australia.png",
+    path: "/country/australia",
+    label: "AUSTRALIA SHORTAGE OCCUPATIONS",
+  },
+  {
+    name: "IRELAND",
+    image: "ireland.jpg",
+    path: "/country/ireland",
+    label: "IRELAND SHORTAGE OCCUPATIONS",
+  },
+  {
+    name: "NEWZEALAND",
+    image: "australia.png",
+    path: "/country/newzealand",
+    label: "NEWZEALAND SHORTAGE OCCUPATIONS",
+  },
 ];
 
 const CitizenshipPrograms = [

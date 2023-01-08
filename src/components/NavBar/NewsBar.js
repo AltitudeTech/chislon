@@ -1,10 +1,15 @@
 import React, { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import Ticker from "react-ticker";
+import Link from "next/link";
+import useSWR from "swr";
 import { withTheme } from "styled-components";
+
+export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 function NewsBar(props) {
   const [news, setNews] = useState([]);
+  const { data } = useSWR("/api/newsfeeds", fetcher);
   const getNews = async () => {
     try {
       const response = await axios.get(
@@ -29,12 +34,29 @@ function NewsBar(props) {
       <div className="newsBar">
         <div className="title">Latest news</div>
         <div className="links_to_news">
-          {news.length > 0 ? (
+          {/* {news.length > 0 ? (
             <marquee>
               {news.map((singleNews, index) => (
                 <New singleNews={singleNews} key={index} />
               ))}
             </marquee>
+          ) : (
+            "Loading News, Please Wait ..."
+          )} */}
+          {data ? (
+            data?.data?.length > 0 ? (
+              <marquee style={{ width: "100%" }} scrollamount={1}>
+                {data?.data?.map((item, index) => (
+                  <Link href={`/company-news/${item._id}`} key={index}>
+                    <a style={{ color: "#fff", fontSize: "12px" }}>
+                      <span> * {item.title}</span>
+                    </a>
+                  </Link>
+                ))}
+              </marquee>
+            ) : (
+              "No News Uploaded"
+            )
           ) : (
             "Loading News, Please Wait ..."
           )}
@@ -51,12 +73,14 @@ function NewsBar(props) {
           border-right: 2px solid gray;
           padding-right: 10px;
           flex-shrink: 0;
+          text-decoration: none !important;
           color: ${props.theme.colors.yellow};
           text-transform: uppercase;
           font-weight: 600;
         }
         .newsBar .links_to_news {
           padding: 0px 10px;
+          flex-grow: 1;
         }
         .newsBar .links_to_news marquee a {
           color: #fff !important;
